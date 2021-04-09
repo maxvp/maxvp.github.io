@@ -1,16 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 html { 
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
 body {
-    font-size: 16px;
-    line-height: 22px;
-    font-family: sans-serif;
-    width: 540px;
-    margin: 42px auto;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #FEFCFB;
+}
+
+/* The navigation bar */
+.navbar {
+    margin: 0;
+    overflow: hidden;
+    background-color: #1282A2;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Title inside navbar */
+.title {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16   px;
+    background-color: #034078;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    margin: 0;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
   
-  h1 {
-    color: pink;
-    text-align: center;
-  }
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+  
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+    padding: 16px;
+}
+
