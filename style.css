@@ -71,7 +71,7 @@ body {
   
 /* Main content */
 .main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
+    margin-top: 1vw; /* Add a top margin to avoid content overlay */
     padding: 16px;
 }
 
