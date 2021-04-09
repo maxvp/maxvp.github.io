@@ -1,10 +1,16 @@
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+}
 
 body {
-    background-color: lightblue;
-  }
+    font-size: 16px;
+    line-height: 22px;
+    font-family: sans-serif;
+    width: 540px;
+    margin: 42px auto;
+}
   
   h1 {
-    color: navy;
-    margin-left: 20px;
+    color: pink;
+    text-align: center;
   }
