@@ -7,17 +7,18 @@ html {
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #FEFCFB;
+    background-color: #FAFFFD;
 }
 
 /* The navigation bar */
 .navbar {
     margin: 0;
     overflow: hidden;
-    background-color: #1282A2;
+    background-color: #7C8483;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    /*box-shadow: 5px 5px rgba(0, 0, 0, 0.5);*/
 }
 
 /* Title inside navbar */
@@ -29,7 +30,7 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 16   px;
-    background-color: #034078;
+    background-color: #454ADE;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -49,6 +50,23 @@ body {
 .navbar a:hover {
     background: #ddd;
     color: black;
+}
+
+.hvr-fade {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+    background-color: #7C8483;
+    color: white;
 }
   
 /* Main content */
