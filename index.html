@@ -18,7 +18,7 @@
             <a href="#work">data</a>
             <a href="#work">video</a>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="icon" onclick="hamburger()">
             <i class="fa fa-bars"></i></a>
         </div>
           
@@ -64,11 +64,12 @@
             </div>
         <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-        function myFunction() {
+        function hamburger() {
             var x = document.getElementById("topnav");
             if (x.className === "navbar") {
                 x.className += " responsive";
-            } else {
+            } 
+            else {
                 x.className = "navbar";
             }
         }
