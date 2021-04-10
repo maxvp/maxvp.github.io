@@ -52,7 +52,8 @@ body {
     color: black;
 }
 
-.hvr-fade {
+/* Navbar hover animations */
+/*.hvr-fade {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -71,7 +72,26 @@ body {
   
 /* Main content */
 .main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
+    margin-top: 50px; /* Add a top margin to avoid content overlay */
+    margin-left: 72px;
+    margin-right: 72px;
     padding: 16px;
 }
 
+/* Content row */
+.row {
+    display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    flex-basis: auto;
+    padding: 10px;
+}
+
+/* List that's not a list */
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
