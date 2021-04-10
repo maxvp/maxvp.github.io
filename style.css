@@ -142,3 +142,13 @@ a.links:active {
     color: white;
     background-color: #1B1F3B;
 }
+
+/* Compensate for fixed menu on jump*/
+h2::before {
+    display: block; 
+    content: " "; 
+    margin-top: -56px; 
+    height: 56px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
