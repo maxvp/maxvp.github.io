@@ -95,3 +95,20 @@ ul.no-bullets {
     margin: 0;
     padding: 0;
 }
+
+/* Links */
+a.links:link, a.links:visited {
+    text-decoration: none;
+    color: #982649;
+    font-style: italic;
+}
+
+a.links:hover {
+    color: white;
+    background-color: #982649;
+}
+
+a.links:active {
+    color: white;
+    background-color: #1B1F3B;
+}
