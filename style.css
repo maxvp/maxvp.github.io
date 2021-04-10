@@ -10,6 +10,11 @@ body {
     background-color: #FAFFFD;
 }
 
+/* Handling images */
+img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* The navigation bar */
 .navbar {
     margin: 0;
@@ -18,7 +23,7 @@ body {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    /*box-shadow: 5px 5px rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -108,9 +113,20 @@ body {
     padding: 16px;
 }
 
+/* Responsive media */
+.rspnsv {
+    display: flex;
+}
+
 /* Content row */
 .row {
     display: flex;
+}
+
+@media (max-width: 800px) {
+    .row {
+      flex-direction: column;
+    }
 }
 
 /* Create two equal columns that sits next to each other */
@@ -151,4 +167,17 @@ h2::before {
     height: 56px; 
     visibility: hidden; 
     pointer-events: none;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
