@@ -11,14 +11,14 @@
     <body>
         <!-- top fixed navbar -->
         <div class="navbar" id="topnav">
-            <a href="#about" class="title">Maximillian V. Phillips</a>
-            <a href="#work">work</a>
-            <a href="#work">design</a>
-            <a href="#work">data</a>
-            <a href="#work">video</a>
-            <a href="#resume">résumé</a>
+            <a href="#about" class="title" onclick="disappear()">Maximillian V. Phillips</a>
+            <a href="#work" onclick="disappear()">work</a>
+            <a href="#design" onclick="disappear()">design</a>
+            <a href="#data" onclick="disappear()">data</a>
+            <a href="#video" onclick="disappear()">video</a>
+            <a href="#resume" onclick="disappear()">résumé</a>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onmouseover="hamburger()">
+            <a href="javascript:void(0);" class="icon" onclick="hamburger()">
             <i class="fa fa-bars"></i>
             </a>
         </div>
@@ -54,6 +54,7 @@
             <p>Amet lectus massa duis ac nisl imperdiet. Tempus nisi quam feugiat at lacinia amet mattis ipsum congue. Platea taciti aliquam vehicula lectus risus taciti nulla augue? Cras hendrerit porttitor rutrum viverra ut risus odio primis. Torquent, laoreet facilisi mauris fusce. Congue velit malesuada litora feugiat. Euismod erat facilisis aenean tempus rutrum suscipit bibendum fames tellus libero. Consectetur facilisi orci magna montes justo tincidunt curae; fames aliquam. Cubilia ligula interdum cursus libero dictum. Egestas purus ut facilisis ante bibendum. Rhoncus egestas curae; vitae volutpat curae; commodo erat magnis mattis. Porttitor nascetur fusce nisi suscipit ultricies cursus!</p>
             <p>Turpis suscipit cursus duis ornare natoque cubilia eu quam dolor mus hendrerit. Risus faucibus himenaeos placerat gravida egestas turpis curae;, vehicula penatibus diam semper. Accumsan; suscipit dictum duis aptent sem enim penatibus blandit porttitor mi phasellus. Tellus suscipit pulvinar, conubia praesent nulla himenaeos lectus. Etiam malesuada inceptos feugiat mus tempor porta magna. Id ullamcorper lobortis enim erat vulputate in egestas suscipit cursus gravida congue id? Vulputate duis sociosqu at pellentesque penatibus ullamcorper. Laoreet convallis molestie laoreet in iaculis amet neque metus varius arcu, ante aenean. Justo parturient fames luctus hendrerit nulla purus luctus commodo rutrum sollicitudin facilisi. Lacus rhoncus dapibus vulputate arcu netus senectus cursus suscipit sociosqu penatibus molestie at. Turpis ligula cursus imperdiet enim magna sociis. Lobortis montes porttitor nisl tincidunt! Adipiscing cubilia justo netus lacinia. Amet sociosqu, per aliquet nam litora habitant sit tortor. Accumsan leo ultricies id conubia.</p>
             </div>
+        
         <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
         function hamburger() {
@@ -65,7 +66,16 @@
                 x.className = "navbar";
             }
         }
+
+        /* Toggles menu visibility when link is clicked*/
+        function disappear() {
+            var x = document.getElementById("topnav");
+            if (x.className != "navbar") {
+                x.className = "navbar";
+            }
+        }
         </script>
+        
     </body>
 
     <footer>
