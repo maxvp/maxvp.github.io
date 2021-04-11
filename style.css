@@ -133,6 +133,7 @@ img {
 .column {
     flex-basis: auto;
     padding: 10px;
+    padding-top: 0;
 }
 
 /* List that's not a list */
@@ -143,18 +144,18 @@ ul.no-bullets {
 }
 
 /* Links */
-a.links:link, a.links:visited {
+p a:link, ul a:link, p a:visited, ul a:visited {
     text-decoration: none;
     color: #982649;
     font-style: italic;
 }
 
-a.links:hover {
+p a:hover, ul a:hover {
     color: white;
     background-color: #982649;
 }
 
-a.links:active {
+p a:active, ul a:active{
     color: white;
     background-color: #1B1F3B;
 }
@@ -178,6 +179,6 @@ footer {
     left: 0;
     text-align: center;
     font-size: 10px;
-    padding-top: 6px;
+    padding-top: 20px;
     padding-bottom: 6px;
 }
