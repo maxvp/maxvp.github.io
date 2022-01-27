@@ -1,9 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* links */
+a:link {
+    text-decoration: none;
+    font-style: italic;
+    color: grey;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:hover {
+    color: white;
+    background-color: grey;
+}
+
+a:active {
+    background-color: black;
 }
