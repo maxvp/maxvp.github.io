@@ -9,21 +9,29 @@ body {
 }
 
 /* links */
-a:link {
+p a:link {
     text-decoration: none;
     font-style: italic;
-    color: grey;
+    color: #5d576b;
 }
 
-a:visited {
-    color: grey;
+p a:visited {
+    color: #5d576b;
 }
 
-a:hover {
+p a:hover {
     color: white;
-    background-color: grey;
+    background-color: #5d576b;
 }
 
-a:active {
+p a:active {
     background-color: black;
+}
+
+/* images */
+img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
