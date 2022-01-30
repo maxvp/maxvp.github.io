@@ -12,20 +12,20 @@ body {
 p a:link {
     text-decoration: none;
     font-style: italic;
-    color: #5d576b;
+    color: #fc2f00;
 }
 
 p a:visited {
-    color: #5d576b;
+    color: #fc2f00;
 }
 
 p a:hover {
     color: white;
-    background-color: #5d576b;
+    background-color: #fc2f00;
 }
 
 p a:active {
-    background-color: black;
+    background-color: #5d576b;
 }
 
 /* images */
