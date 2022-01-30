@@ -1,37 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
-html {
-    scroll-behavior: smooth;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {
+html {
+    scroll-behavior: smooth;
     font-family: "IBM Plex Sans", sans-serif;
 }
 
-/* links */
-p a:link {
+/* body text */
+p {
+    margin-bottom: 1em;
+}
+
+a:link {
     text-decoration: none;
     font-style: italic;
     color: #fc2f00;
 }
 
-p a:visited {
+a:visited {
     color: #fc2f00;
 }
 
-p a:hover {
+a:hover {
     color: white;
     background-color: #fc2f00;
 }
 
-p a:active {
+a:active {
     background-color: #5d576b;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* images */
 img {
-    max-width: 30%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: block;
+    max-width: 100%;
+}
+
+/* responsive YouTube videos */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    box-shadow: rgba(93, 87, 107, 0.4) -5px 5px;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* sections */
+section {
+    padding: 3rem 0;
+}
+
+.container {
+    margin: auto;
+    width: min(90%, 70.5rem);
+    margin-bottom: 2em;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;
+    }
+
+    .split > * + * {
+        margin-left: 2em;
+    }
 }
