@@ -39,10 +39,15 @@ ul {
     list-style-type: none;
 }
 
-/* images */
+/* images and videos */
 img {
     display: block;
     max-width: 100%;
+    box-shadow: rgba(93, 87, 107, 0.4) -5px 5px;
+}
+
+iframe {
+    box-shadow: rgba(93, 87, 107, 0.4) -5px 5px;
 }
 
 /* responsive YouTube videos */
