@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
 
 * {
     box-sizing: border-box;
@@ -9,6 +9,11 @@
 html {
     scroll-behavior: smooth;
     font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* sidebar nav */
+.nav {
+    position: fixed;
 }
 
 /* body text */
@@ -98,4 +103,12 @@ section {
     .split > * + * {
         margin-left: 2em;
     }
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 1em;
 }

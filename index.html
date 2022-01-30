@@ -39,6 +39,18 @@
         <title>MVP</title>
     </head>
     <body>
+        <div class="nav">
+            <a href="#about">
+                <h1>maximillian v. phillips</h1>
+            </a>
+            <ul>
+                <li><a href="#design">design</a></li>
+                <li><a href="#data">data</a></li>
+                <li><a href="interaction">interaction</a></li>
+                <li><a href="media">media</a></li>
+            </ul>
+        </div>
+
         <!-- NOTE TO SELF: adding divs in "split" creates columns, divs in "container" creates rows-->
         <!-- about me -->
         <section id="about">
@@ -126,6 +138,18 @@
                         </a>
                     </div>
                     <div>
+                        <a
+                            href="work/design/integrating/four_page/four_page.pdf"
+                        >
+                            <img
+                                src="work/design/integrating/four_page/4page_mockup2.png"
+                                alt="four page design mockup 2"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="split">
+                    <div>
                         <h3>Four Page Design</h3>
                         <p>
                             Music magazine article mockup celebrating the work
@@ -134,14 +158,6 @@
                             harmonically resonate.
                         </p>
                     </div>
-                </div>
-                <div class="split">
-                    <a href="work/design/integrating/four_page/four_page.pdf">
-                        <img
-                            src="work/design/integrating/four_page/4page_mockup2.png"
-                            alt="four page design mockup 2"
-                        />
-                    </a>
                 </div>
             </div>
 
@@ -500,4 +516,18 @@
             </div>
         </section>
     </body>
+
+    <!-- copyright footer -->
+    <footer>
+        Copyright &copy;
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+        Maximillian V. Phillips. Last updated
+        <script>
+            document.write(document.lastModified.slice(0, 10) + ".");
+        </script>
+        Made with <i class="fas fa-heart" style="color: #982649"></i> in
+        Pennsylvania.
+    </footer>
 </html>
