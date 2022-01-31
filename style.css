@@ -14,7 +14,10 @@ html {
 /* sidebar nav */
 .nav {
     position: fixed;
-    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    left: 1em;
 }
 
 /* body text */
