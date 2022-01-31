@@ -11,6 +11,19 @@ html {
     font-family: "IBM Plex Sans", sans-serif;
 }
 
+/* skip navigation button */
+.skip-nav {
+    position: absolute;
+    top: 0;
+    transform: translateY(-120%);
+    background-color: black;
+    z-index: 2;
+    transition: transform 250ms ease-in;
+}
+.skip-nav:focus {
+    transform: translateY(0);
+}
+
 /* navbar */
 .navbar {
     background-color: white;
