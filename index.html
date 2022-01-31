@@ -39,17 +39,19 @@
         <title>MVP</title>
     </head>
     <body>
-        <!-- responsive sidebar nav -->
-        <div class="nav">
-            <a href="#about">
-                <h1>maximillian v. phillips</h1>
+        <!-- top navbar -->
+        <div class="navbar" id="topnav">
+            <a href="#about" class="title" onclick="disappear()"
+                >Maximillian V. Phillips</a
+            >
+            <a href="#interaction" onclick="disappear()">interaction</a>
+            <a href="#design" onclick="disappear()">design</a>
+            <a href="#data" onclick="disappear()">data</a>
+            <a href="#media" onclick="disappear()">media</a>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                <i class="fa fa-bars"></i>
             </a>
-            <ul>
-                <li><a href="#interaction">interaction</a></li>
-                <li><a href="#design">design</a></li>
-                <li><a href="#data">data</a></li>
-                <li><a href="#media">media</a></li>
-            </ul>
         </div>
 
         <!-- NOTE TO SELF: adding divs in "split" creates columns, divs in "container" creates rows-->
@@ -525,6 +527,26 @@
             </div>
         </section>
     </body>
+
+    <!-- navbar js-->
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function hamburger() {
+            var x = document.getElementById("topnav");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+        /* Toggles menu visibility when link is clicked*/
+        function disappear() {
+            var x = document.getElementById("topnav");
+            if (x.className != "navbar") {
+                x.className = "navbar";
+            }
+        }
+    </script>
 
     <!-- copyright footer -->
     <footer>
