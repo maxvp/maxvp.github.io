@@ -15,7 +15,7 @@ html {
 .navbar {
     margin: 0;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: white;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -27,44 +27,44 @@ html {
 .navbar .icon {
     display: none;
 }
+
 /* Title inside navbar */
 .title {
     float: left;
     display: block;
-    color: #ffffff;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    font-size: 16 px;
-    background-color: #ffffff;
+    background-color: white;
     text-transform: uppercase;
     font-weight: 700;
 }
+
 /* Links inside the navbar */
 .navbar a {
     margin: 0;
     float: left;
     display: block;
-    color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 1em 1em;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is small, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the topnav (.icon) */
 @media only screen and (orientation: portrait) {
     .navbar a:not(:first-child) {
         display: none;
     }
     .navbar {
-        background-color: #ffffff;
+        background-color: white;
     }
     .navbar a.icon {
         float: right;
         display: block;
     }
 }
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media only screen and (orientation: portrait) {
     .navbar.responsive {
         position: fixed;
@@ -82,6 +82,9 @@ html {
 }
 
 /* body text */
+body {
+    margin-top: 3rem;
+}
 p {
     margin-bottom: 1em;
 }
