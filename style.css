@@ -13,22 +13,20 @@ html {
 
 /* navbar */
 .navbar {
-    margin: 0;
-    overflow: hidden;
     background-color: white;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed;
+    top: 0;
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
+/* hide hamburger on large screens */
 .navbar .icon {
     display: none;
 }
 
-/* Title inside navbar */
+/* navbar title */
 .title {
     float: left;
     display: block;
@@ -39,7 +37,7 @@ html {
     font-weight: 700;
 }
 
-/* Links inside the navbar */
+/* navbar links */
 .navbar a {
     margin: 0;
     float: left;
@@ -89,6 +87,7 @@ p {
     margin-bottom: 1em;
 }
 
+/* links */
 a:link {
     text-decoration: none;
     font-style: italic;
@@ -116,11 +115,11 @@ ul {
 img {
     display: block;
     max-width: 100%;
-    box-shadow: rgba(93, 87, 107, 0.4) -5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 iframe {
-    box-shadow: rgba(93, 87, 107, 0.4) -5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* responsive YouTube videos */
@@ -130,7 +129,7 @@ iframe {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    box-shadow: rgba(93, 87, 107, 0.4) -5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .embed-container iframe,
 .embed-container object,
@@ -144,7 +143,7 @@ iframe {
 
 /* sections */
 section {
-    padding: 3rem 0;
+    padding: 1em;
 }
 
 .container {
