@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;1,300;0,400;0,700;1,400&display=swap");
 
 * {
     box-sizing: border-box;
@@ -110,6 +110,13 @@ p {
     margin-bottom: 1em;
 }
 
+/* credit in main section */
+.credit {
+    color: #666666;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
 /* links */
 a:link {
     text-decoration: none;
@@ -132,6 +139,19 @@ a:active {
 
 ul {
     list-style-type: none;
+}
+
+/* credit in main section */
+.credit,
+.credit a:link,
+.credit a:visited {
+    color: #666666;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.credit a:hover {
+    color: white;
 }
 
 /* images and videos */
