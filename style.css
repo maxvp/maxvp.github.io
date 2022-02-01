@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;1,300;0,400;0,700;1,400&display=swap");
 
+:root {
+    --orange: #fc2f00;
+    --purple: #5d576b;
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -40,7 +46,7 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--shadow);
     z-index: 1;
 }
 
@@ -158,11 +164,11 @@ ul {
 img {
     display: block;
     max-width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--shadow);
 }
 
 iframe {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--shadow);
 }
 
 /* responsive YouTube videos */
@@ -172,7 +178,7 @@ iframe {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--shadow);
 }
 .embed-container iframe,
 .embed-container object,
