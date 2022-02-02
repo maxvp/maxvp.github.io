@@ -3,7 +3,10 @@
 :root {
     --orange: #fc2f00;
     --purple: #5d576b;
-    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*--shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;*/
+    --shadow: rgba(93, 87, 107, 0.4) -5px 5px, rgba(93, 87, 107, 0.3) -10px 10px,
+        rgba(93, 87, 107, 0.2) -15px 15px, rgba(93, 87, 107, 0.1) -20px 20px,
+        rgba(93, 87, 107, 0.05) -25px 25px;
 }
 
 * {
@@ -23,7 +26,7 @@ html {
     top: 0;
     transform: translateY(-120%);
     background-color: black;
-    z-index: 2;
+    z-index: 99;
     transition: transform 250ms ease-in;
 }
 .skip-nav:focus {
@@ -46,7 +49,9 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: var(--shadow);
+    box-shadow: rgba(93, 87, 107, 0.4) 0px 5px, rgba(93, 87, 107, 0.3) 0px 10px,
+        rgba(93, 87, 107, 0.2) 0px 15px, rgba(93, 87, 107, 0.1) 0px 20px,
+        rgba(93, 87, 107, 0.05) 0px 25px;
     z-index: 1;
 }
 
@@ -165,10 +170,12 @@ img {
     display: block;
     max-width: 100%;
     box-shadow: var(--shadow);
+    margin-bottom: 1em;
 }
 
 iframe {
     box-shadow: var(--shadow);
+    margin-bottom: 1em;
 }
 
 /* responsive YouTube videos */
