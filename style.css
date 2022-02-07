@@ -121,6 +121,11 @@ p {
     margin-bottom: 1em;
 }
 
+h1 {
+    color: var(--orange);
+    font-size: 3em;
+}
+
 /* credit in main section */
 .credit {
     color: #666666;
@@ -148,8 +153,17 @@ a:active {
     background-color: #5d576b;
 }
 
+/* global ul style (links, list) */
 ul {
     list-style-type: none;
+}
+
+/* lists in writing section */
+h2 {
+    margin-bottom: 1em;
+}
+.list li {
+    margin-bottom: 1em;
 }
 
 /* credit in main section */
