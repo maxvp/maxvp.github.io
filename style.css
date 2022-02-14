@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap");
 
 :root {
+    --text: #444444;
+    --text-light: #666666;
     --orange: #fc2f00;
     --purple: #5d576b;
     --shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
@@ -15,6 +17,7 @@
 html {
     scroll-behavior: smooth;
     font-family: "IBM Plex Sans", sans-serif;
+    color: var(--text);
 }
 
 /* skip navigation button */
@@ -166,7 +169,7 @@ h2 {
 .credit,
 .credit a:link,
 .credit a:visited {
-    color: #666666;
+    color: var(--text-light);
     font-weight: 300;
     font-size: 0.9em;
 }
@@ -241,6 +244,7 @@ section {
 
 footer {
     text-align: center;
+    color: var(--text-light);
     font-size: 0.8em;
     font-weight: 300;
     width: 100%;
