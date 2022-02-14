@@ -3,10 +3,7 @@
 :root {
     --orange: #fc2f00;
     --purple: #5d576b;
-    /*--shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;*/
-    --shadow: rgba(93, 87, 107, 0.4) -5px 5px, rgba(93, 87, 107, 0.3) -10px 10px,
-        rgba(93, 87, 107, 0.2) -15px 15px, rgba(93, 87, 107, 0.1) -20px 20px,
-        rgba(93, 87, 107, 0.05) -25px 25px;
+    --shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 * {
@@ -46,13 +43,11 @@ html {
 /* navbar */
 .navbar {
     background-color: white;
+    box-shadow: var(--shadow);
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: rgba(93, 87, 107, 0.4) 0px 5px, rgba(93, 87, 107, 0.3) 0px 10px,
-        rgba(93, 87, 107, 0.2) 0px 15px, rgba(93, 87, 107, 0.1) 0px 20px,
-        rgba(93, 87, 107, 0.05) 0px 25px;
-    z-index: 1;
+    z-index: 98;
 }
 
 /* hide hamburger on large screens */
@@ -67,7 +62,7 @@ html {
     text-align: center;
     text-decoration: none;
     background-color: white;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-weight: 700;
 }
 
@@ -124,6 +119,7 @@ p {
 h1 {
     color: var(--orange);
     font-size: 3em;
+    margin-bottom: 0;
 }
 
 /* credit in main section */
@@ -184,6 +180,7 @@ img {
     display: block;
     max-width: 100%;
     box-shadow: var(--shadow);
+    border-radius: 16px;
     margin-bottom: 1em;
 }
 
@@ -219,13 +216,13 @@ section {
 .container {
     margin: auto;
     width: min(90%, 70.5rem);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .split {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 @media (min-width: 40em) {
