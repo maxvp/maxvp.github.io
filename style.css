@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap");
 
 :root {
     --text: #444444;
@@ -16,7 +16,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Inter", sans-serif;
     color: var(--text);
 }
 
@@ -48,6 +48,9 @@ html {
     background-color: white;
     box-shadow: var(--shadow);
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     top: 0;
     width: 100%;
     z-index: 98;
@@ -69,15 +72,6 @@ html {
     font-weight: 700;
 }
 
-/* navbar links */
-.navbar a {
-    margin: 0;
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 1em 1em;
-}
-
 /* When the screen is small, hide all links, except for the first one ("Home"). 
 Show the link that contains should open and close the topnav (.icon) */
 @media only screen and (orientation: portrait) {
@@ -86,6 +80,7 @@ Show the link that contains should open and close the topnav (.icon) */
     }
     .navbar {
         background-color: white;
+        display: block;
     }
     .navbar a.icon {
         float: right;
@@ -121,7 +116,9 @@ p {
 
 h1 {
     color: var(--orange);
+    font-weight: 900;
     font-size: 3em;
+    text-transform: uppercase;
     margin-bottom: 0;
 }
 
@@ -132,10 +129,11 @@ h1 {
     font-size: 0.8em;
 }
 
-/* links */
+/* LINKS */
+/* body text */
 a:link {
     text-decoration: none;
-    font-style: italic;
+    font-style: none;
     color: #fc2f00;
 }
 
@@ -150,6 +148,18 @@ a:hover {
 
 a:active {
     background-color: #5d576b;
+}
+
+/* navbar links */
+.navbar a {
+    margin: 0;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 1em 1em;
+}
+.navbar a:not(:first-child) {
+    text-transform: uppercase;
 }
 
 /* global ul style (links, list) */
