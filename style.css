@@ -1,11 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap");
 
 :root {
+    --background: white;
     --text: #444444;
     --text-light: #666666;
-    --orange: #fc2f00;
+    --orange: #ff5630;
     --purple: #5d576b;
     --shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #121212;
+        --text: white;
+        --text-light: #aaaaaa;
+        --orange: #ff8a6a;
+        --shadow: rgba(255, 255, 255, 0.2) 0px 18px 50px -10px;
+    }
 }
 
 * {
@@ -17,6 +29,7 @@
 html {
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
+    background-color: var(--background);
     color: var(--text);
 }
 
@@ -45,7 +58,7 @@ html {
 
 /* navbar */
 .navbar {
-    background-color: white;
+    background-color: var(--background);
     box-shadow: var(--shadow);
     position: fixed;
     display: flex;
@@ -67,7 +80,6 @@ html {
     display: block;
     text-align: center;
     text-decoration: none;
-    background-color: white;
     text-transform: lowercase;
     font-weight: 700;
 }
@@ -79,7 +91,6 @@ Show the link that contains should open and close the topnav (.icon) */
         display: none;
     }
     .navbar {
-        background-color: white;
         display: block;
     }
     .navbar a.icon {
@@ -134,20 +145,20 @@ h1 {
 a:link {
     text-decoration: none;
     font-style: none;
-    color: #fc2f00;
+    color: var(--orange);
 }
 
 a:visited {
-    color: #fc2f00;
+    color: var(--orange);
 }
 
 a:hover {
     color: white;
-    background-color: #fc2f00;
+    background-color: var(--orange);
 }
 
 a:active {
-    background-color: #5d576b;
+    background-color: var(--purple);
 }
 
 /* navbar links */
