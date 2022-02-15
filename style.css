@@ -125,7 +125,8 @@ p {
     margin-bottom: 1em;
 }
 
-h1 {
+/* section headings */
+.heading h1 {
     color: var(--orange);
     font-weight: 900;
     font-size: 3em;
