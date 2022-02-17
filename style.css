@@ -89,7 +89,7 @@ html {
 /* When the screen is small, hide all links, except for the first one ("Home"). 
 Show the link that contains should open and close the topnav (.icon) */
 @media only screen and (orientation: portrait) {
-    .navbar a:not(:first-child) {
+    .navbar a:not(.title) {
         display: none;
     }
     .navbar {
@@ -178,7 +178,7 @@ a:active {
     text-align: center;
     padding: 1em 1em;
 }
-.navbar a:not(:first-child) {
+.navbar a:not(.title) {
     text-transform: uppercase;
 }
 
