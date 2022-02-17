@@ -1,2 +1,2 @@
 # portfolio
-My personal portofolio website, hosted at [maxvphillips.com/](maxvphillips.com).
+My personal portofolio website, found at [maxvphillips.com](https://www.maxvphillips.com/).
