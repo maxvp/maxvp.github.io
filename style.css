@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap");
-
 :root {
     --background: white;
     --text: rgb(68, 68, 68);
@@ -30,7 +28,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: "Inter", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     background-color: var(--background);
     color: var(--text);
 }
