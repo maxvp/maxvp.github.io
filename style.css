@@ -6,6 +6,7 @@
     --purple: rgb(93, 87, 107);
     --shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     --heart: rgb(152, 38, 72);
+    --border: 1px solid black;
 }
 
 /* dark mode */
@@ -17,6 +18,7 @@
         --orange: rgb(228, 121, 78);
         --shadow: rgba(128, 128, 128, 0.2) 0px 18px 50px -10px;
         --heart: rgb(214, 84, 123);
+        --border: 1px solid white;
     }
 }
 
@@ -29,6 +31,7 @@
 html {
     scroll-behavior: smooth;
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.25em;
     background-color: var(--background);
     color: var(--text);
 }
@@ -59,7 +62,6 @@ html {
 /* navbar */
 .navbar {
     background-color: var(--background);
-    box-shadow: var(--shadow);
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -127,11 +129,9 @@ p {
 
 /* section headings */
 .heading h1 {
-    color: var(--orange);
     font-weight: 900;
     font-size: 3em;
     text-transform: uppercase;
-    margin-bottom: 0;
 }
 
 /* credit in main section */
@@ -140,7 +140,7 @@ p {
 .credit a:visited {
     color: var(--text-light);
     font-weight: 300;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .credit a:hover {
@@ -149,14 +149,12 @@ p {
 
 /* LINKS */
 /* body text */
-a:link {
-    text-decoration: none;
-    font-style: none;
-    color: var(--orange);
-}
-
+a:link,
 a:visited {
-    color: var(--orange);
+    text-decoration: underline dotted;
+    font-style: none;
+    color: inherit;
+    transition-duration: 150ms;
 }
 
 a:hover {
@@ -175,6 +173,7 @@ a:active {
     display: block;
     text-align: center;
     padding: 1em 1em;
+    text-decoration: none;
 }
 .navbar a:not(.title) {
     text-transform: uppercase;
@@ -197,14 +196,13 @@ h2 {
 img {
     display: block;
     max-width: 100%;
-    box-shadow: var(--shadow);
-    border-radius: 16px;
     margin-bottom: 1em;
+    border: var(--border);
 }
 
 iframe {
-    box-shadow: var(--shadow);
     margin-bottom: 1em;
+    border: var(--border);
 }
 
 /* responsive YouTube videos */
@@ -214,7 +212,6 @@ iframe {
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    box-shadow: var(--shadow);
 }
 .embed-container iframe,
 .embed-container object,
