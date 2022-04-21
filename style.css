@@ -4,8 +4,6 @@
     --text-light: rgb(102, 102, 102);
     --orange: rgb(255, 86, 48);
     --purple: rgb(93, 87, 107);
-    --shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-    --heart: rgb(152, 38, 72);
     --border: 1px solid black;
 }
 
@@ -16,8 +14,6 @@
         --text: white;
         --text-light: rgb(170, 170, 170);
         --orange: rgb(228, 121, 78);
-        --shadow: rgba(128, 128, 128, 0.2) 0px 18px 50px -10px;
-        --heart: rgb(214, 84, 123);
         --border: 1px solid white;
     }
 }
@@ -48,16 +44,6 @@ html {
 .skip-nav:focus {
     transform: translateY(0);
 }
-
-/* old */
-/* sidebar nav */
-/* .nav { */
-/* position: fixed; */
-/* display: flex; */
-/* flex-direction: column; */
-/* flex-basis: 100%; */
-/* left: 1em; */
-/* } */
 
 /* navbar */
 .navbar {
@@ -257,12 +243,9 @@ section {
 footer {
     text-align: center;
     color: var(--text-light);
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-weight: 300;
     width: 100%;
     margin-top: 5rem;
     margin-bottom: 0.5em;
-}
-.fa-heart {
-    color: var(--heart);
 }
