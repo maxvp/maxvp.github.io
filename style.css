@@ -1,251 +1,77 @@
-:root {
-    --background: white;
-    --text: rgb(68, 68, 68);
-    --text-light: rgb(102, 102, 102);
-    --orange: rgb(255, 86, 48);
-    --purple: rgb(93, 87, 107);
-    --border: 1px solid black;
-}
-
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: rgb(18, 18, 18);
-        --text: white;
-        --text-light: rgb(170, 170, 170);
-        --orange: rgb(228, 121, 78);
-        --border: 1px solid white;
-    }
-}
-
-* {
+/*** Andy Bell Modern CSS Reset ***/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-html {
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
     scroll-behavior: smooth;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 1.25em;
-    background-color: var(--background);
-    color: var(--text);
 }
 
-/* skip navigation button */
-.skip-nav {
-    position: absolute;
-    top: 0;
-    transform: translateY(-120%);
-    background-color: black;
-    z-index: 99;
-    transition: transform 250ms ease-in;
-}
-.skip-nav:focus {
-    transform: translateY(0);
-}
-
-/* navbar */
-.navbar {
-    background-color: var(--background);
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    top: 0;
-    width: 100%;
-    z-index: 98;
-}
-
-/* hide hamburger on large screens */
-.navbar .icon {
-    display: none;
-}
-
-/* navbar title */
-.title {
-    float: left;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    text-transform: lowercase;
-    font-weight: 700;
-}
-
-/* When the screen is small, hide all links, except for the first one ("Home"). 
-Show the link that contains should open and close the topnav (.icon) */
-@media only screen and (orientation: portrait) {
-    .navbar a:not(.title) {
-        display: none;
-    }
-    .navbar {
-        display: block;
-    }
-    .navbar a.icon {
-        float: right;
-        display: block;
-    }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
-This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media only screen and (orientation: portrait) {
-    .navbar.responsive {
-        position: fixed;
-    }
-    .navbar.responsive a.icon {
-        position: fixed;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
-/* body text */
+/* Set core body defaults */
 body {
-    margin-top: 5rem;
-}
-p {
-    margin-bottom: 1em;
-}
-
-/* section headings */
-.heading h1 {
-    font-weight: 900;
-    font-size: 3em;
-    text-transform: uppercase;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 
-/* credit in main section */
-.credit,
-.credit a:link,
-.credit a:visited {
-    color: var(--text-light);
-    font-weight: 300;
-    font-size: 0.8em;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
 }
 
-.credit a:hover {
-    color: white;
-}
-
-/* LINKS */
-/* body text */
-a:link,
-a:visited {
-    text-decoration: underline dotted;
-    font-style: none;
-    color: inherit;
-    transition-duration: 150ms;
-}
-
-a:hover {
-    color: white;
-    background-color: var(--orange);
-}
-
-a:active {
-    background-color: var(--purple);
-}
-
-/* navbar links */
-.navbar a {
-    margin: 0;
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 1em 1em;
-    text-decoration: none;
-}
-.navbar a:not(.title) {
-    text-transform: uppercase;
-}
-
-/* global ul style (links, list) */
-ul {
-    list-style-type: none;
-}
-
-/* lists in writing section */
-h2 {
-    margin-bottom: 1em;
-}
-.list li {
-    margin-bottom: 1em;
-}
-
-/* images and videos */
-img {
-    display: block;
+/* Make images easier to work with */
+img,
+picture {
     max-width: 100%;
-    margin-bottom: 1em;
-    border: var(--border);
+    display: block;
 }
 
-iframe {
-    margin-bottom: 1em;
-    border: var(--border);
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 
-/* responsive YouTube videos */
-.embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* sections */
-section {
-    padding: 1em;
-}
-
-.container {
-    margin: auto;
-    width: min(90%, 70.5rem);
-    margin-bottom: 1em;
-}
-
-.split {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2em;
-}
-
-@media (min-width: 40em) {
-    .split {
-        flex-direction: row;
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
     }
 
-    .split > * {
-        flex-basis: 100%;
-    }
-
-    .split > * + * {
-        margin-left: 2em;
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
-footer {
-    text-align: center;
-    color: var(--text-light);
-    font-size: 0.6em;
-    font-weight: 300;
-    width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 0.5em;
-}
+/*** My stuff ***/
