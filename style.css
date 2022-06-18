@@ -86,15 +86,13 @@ html {
 body {
     font-family: "Work Sans", Helvetica, Arial, sans-serif;
     font-size: 3.6rem;
-
-    counter-reset: links;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: ". item-1 ." ". item-2 .";
+    grid-template-areas: ". item-1 link-list" ". item-2 .";
     height: 100vh;
 
     overflow: auto;
@@ -124,11 +122,25 @@ body {
     line-height: 1.25em;
 
     grid-area: item-2;
+
+    counter-reset: links;
 }
 
-.grid-content a:link {
+a:link {
     text-decoration: none;
     color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: pink;
 }
 
 .grid-content a:link::after {
@@ -140,14 +152,17 @@ body {
     font-size: 2.4rem;
 }
 
-.grid-content a:visited {
-    color: inherit;
+.link-list {
+    grid-area: link-list;
+
+    counter-reset: list;
+
+    font-size: 1.8rem;
 }
 
-.grid-content a:hover {
-    color: red;
-}
-
-.grid-content a:active {
-    color: pink;
+.link-list a:link::before {
+    counter-increment: list;
+    content: counter(list);
+    display: inline-flex;
+    vertical-align: super;
 }
