@@ -78,6 +78,7 @@ select {
 
 /*** My stuff ***/
 
+/* global */
 html {
     /* 62.5% of 16px browser font size is 10px */
     font-size: 62.5%;
@@ -88,6 +89,7 @@ body {
     font-size: 3.6rem;
 }
 
+/* main grid container */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -98,6 +100,7 @@ body {
     overflow: auto;
 }
 
+/* inner grid cells */
 .grid-item {
     display: flex;
     flex-direction: column;
@@ -107,6 +110,7 @@ body {
     background-color: white;
 }
 
+/* title/name cell */
 #title {
     font-size: 7.2rem;
     letter-spacing: -0.1em;
@@ -117,6 +121,7 @@ body {
     justify-content: center;
 }
 
+/* write-up cell */
 .grid-content {
     letter-spacing: -0.07em;
     line-height: 1.25em;
@@ -126,38 +131,38 @@ body {
     counter-reset: links;
 }
 
+/* links */
 a:link {
     text-decoration: none;
     color: inherit;
 }
-
 a:visited {
     color: inherit;
 }
-
 a:hover {
     color: red;
 }
-
 a:active {
     color: pink;
 }
-
+/* footnote superscripts */
 .grid-content a:link::after {
     counter-increment: links;
     content: counter(links);
     display: inline-flex;
-    vertical-align: super;
+    position: absolute;
+    transform: translateY(-1.2rem);
 
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
+/* link list */
 .link-list {
     grid-area: link-list;
 
     counter-reset: list;
 
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .link-list a:link::before {
