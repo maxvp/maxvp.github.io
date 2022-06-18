@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,700;1,400&display=swap");
 
 /*** Andy Bell Modern CSS Reset ***/
 /* Box sizing rules */
@@ -84,39 +84,60 @@ html {
 }
 
 body {
-    font-family: "Space Grotesk", Helvetica, Arial, sans-serif;
+    font-family: "Work Sans", Helvetica, Arial, sans-serif;
     font-size: 3.6rem;
-    line-height: 1em;
+
+    counter-reset: links;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: ". item-1 ." ". item-2 ." ". item-3 .";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". item-1 ." ". item-2 .";
     height: 100vh;
 }
 
 .grid-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    padding: 0.5em;
 
-    padding: 0.25em;
+    background-color: white;
+}
 
-    border-top: 4px solid black;
-    border-inline: 4px solid black;
+.grid-content {
+    letter-spacing: -0.1em;
+    line-height: 1.25em;
 }
 
 #title {
-    font-size: 4.8rem;
+    font-size: 7.2rem;
+    letter-spacing: -0.1em;
+    line-height: 1.5em;
+
     grid-area: item-1;
 }
 
-#school {
+#info {
     grid-area: item-2;
 }
 
-#work {
-    grid-area: item-3;
+a:link {
+    text-decoration: none;
+}
+
+a:link::after {
+    counter-increment: links;
+    content: counter(links);
+    display: inline-flex;
+    vertical-align: super;
+
+    font-size: 2.4rem;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: red;
 }
