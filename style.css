@@ -96,11 +96,11 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: ". item-1 link-list" ". item-2 .";
+    grid-template-rows: 12fr 12fr 1fr;
+    grid-template-areas: ". item-1 link-list" ". item-2 ." "archive archive archive";
     height: 100vh;
 
-    overflow: auto;
+    overflow: hidden;
 }
 
 /* skip to main content button */
@@ -175,8 +175,15 @@ a:active {
 .link-list {
     grid-area: link-list;
 
-    counter-reset: list;
+    display: flex;
+    align-items: center;
 
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    list-style-position: inside;
+
+    counter-reset: list;
     font-size: 1.6rem;
     line-height: 0.9em;
 }
@@ -186,4 +193,16 @@ a:active {
     content: counter(list);
     display: inline-flex;
     vertical-align: super;
+}
+
+/* archive link */
+#archive-link {
+    grid-area: archive;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-size: 1.6rem;
+    background-color: lightblue;
 }
