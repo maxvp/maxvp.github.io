@@ -88,6 +88,9 @@ body {
     font-family: "Work Sans", Helvetica, Arial, sans-serif;
     font-size: 3.6rem;
 }
+::selection {
+    background: pink;
+}
 
 /* main grid container */
 .grid-container {
@@ -98,6 +101,18 @@ body {
     height: 100vh;
 
     overflow: auto;
+}
+
+/* skip to main content button */
+.skip-nav-link {
+    position: absolute;
+    transform: translateY(-2.4em);
+
+    background-color: pink;
+    transition: transform 500ms;
+}
+.skip-nav-link:focus {
+    transform: translateY(2.4em);
 }
 
 /* inner grid cells */
@@ -163,6 +178,7 @@ a:active {
     counter-reset: list;
 
     font-size: 1.6rem;
+    line-height: 0.9em;
 }
 
 .link-list a:link::before {
