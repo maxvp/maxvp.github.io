@@ -189,6 +189,10 @@ a:active {
     line-height: 0.9em;
 }
 
+ul {
+    margin: 0;
+}
+
 .link-list a:link::before {
     counter-increment: list;
     content: counter(list);
