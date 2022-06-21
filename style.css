@@ -176,9 +176,10 @@ a:active {
     grid-area: link-list;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-    padding: 0;
+    padding-left: 2em;
     margin: 0;
     list-style-type: none;
     list-style-position: inside;
