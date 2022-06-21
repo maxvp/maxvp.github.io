@@ -156,6 +156,7 @@ a:visited {
 }
 a:hover {
     color: red;
+    text-decoration: underline wavy;
 }
 a:active {
     color: pink;
