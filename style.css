@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,700;1,400&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+html {
+    font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    html {
+        font-family: "Inter var", sans-serif;
+    }
+}
 
 /*** Andy Bell Modern CSS Reset ***/
 /* Box sizing rules */
@@ -85,7 +93,7 @@ html {
 }
 
 body {
-    font-family: "Work Sans", Helvetica, Arial, sans-serif;
+    font-family: Inter, Helvetica, Arial, sans-serif;
     font-size: 3.6rem;
 }
 ::selection {
@@ -129,7 +137,7 @@ body {
 #title {
     font-size: 8rem;
     letter-spacing: -0.1em;
-    line-height: 0.9em;
+    line-height: 1.5em;
 
     grid-area: item-1;
 
