@@ -1,12 +1,4 @@
-@import url("https://rsms.me/inter/inter.css");
-html {
-    font-family: "Inter", sans-serif;
-}
-@supports (font-variation-settings: normal) {
-    html {
-        font-family: "Inter var", sans-serif;
-    }
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 
 /*** Andy Bell Modern CSS Reset ***/
 /* Box sizing rules */
@@ -90,11 +82,13 @@ select {
 html {
     /* 62.5% of 16px browser font size is 10px */
     font-size: 62.5%;
+    background-color: #fdfdfd;
 }
 
 body {
-    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-family: "Roboto Mono", "Courier New", Courier, monospace;
     font-size: 3.6rem;
+    color: #2f2f2f;
 }
 ::selection {
     background: pink;
@@ -129,14 +123,11 @@ body {
     flex-direction: column;
 
     padding: 0;
-
-    background-color: white;
 }
 
 /* title/name cell */
 #title {
     font-size: 8rem;
-    letter-spacing: -0.1em;
     line-height: 1.5em;
 
     grid-area: item-1;
@@ -147,7 +138,7 @@ body {
 /* write-up cell */
 .grid-content {
     letter-spacing: -0.07em;
-    line-height: 1.25em;
+    line-height: 1.2em;
 
     grid-area: item-2;
 
@@ -164,7 +155,6 @@ a:visited {
 }
 a:hover {
     color: red;
-    text-decoration: underline wavy;
 }
 a:active {
     color: pink;
@@ -174,8 +164,7 @@ a:active {
     counter-increment: links;
     content: counter(links);
     display: inline-flex;
-    position: absolute;
-    transform: translateY(-1.2rem);
+    vertical-align: super;
 
     font-size: 2rem;
 }
