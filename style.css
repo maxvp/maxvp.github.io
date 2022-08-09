@@ -80,14 +80,11 @@ select {
 
 /* global */
 html {
-    /* 62.5% of 16px browser font size is 10px */
-    font-size: 62.5%;
     background-color: #fdfdfd;
 }
 
 body {
     font-family: "Roboto Mono", "Courier New", Courier, monospace;
-    font-size: 3.6rem;
     color: #2f2f2f;
 }
 ::selection {
@@ -97,24 +94,9 @@ body {
 /* main grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 12fr 12fr 1fr;
-    grid-template-areas: ". item-1 ." ". item-2 link-list" "archive archive archive";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     height: 100vh;
-
-    overflow: hidden;
-}
-
-/* skip to main content button */
-.skip-nav-link {
-    position: absolute;
-    transform: translateY(-2.4em);
-
-    background-color: pink;
-    transition: transform 500ms;
-}
-.skip-nav-link:focus {
-    transform: translateY(2.4em);
 }
 
 /* inner grid cells */
@@ -122,90 +104,37 @@ body {
     display: flex;
     flex-direction: column;
 
-    padding: 0;
+    padding: 3em;
 }
 
 /* title/name cell */
 #title {
-    font-size: 8rem;
-    line-height: 1.5em;
-
-    grid-area: item-1;
+    grid-area: 2 / 2 / 2 / 12;
 
     justify-content: center;
 }
 
 /* write-up cell */
-.grid-content {
+#info {
+    grid-area: 3 / 2 / 3 / 12;
+
     letter-spacing: -0.07em;
     line-height: 1.2em;
-
-    grid-area: item-2;
-
-    counter-reset: links;
 }
 
 /* links */
 a:link {
     text-decoration: none;
+    background-color: lightgray;
     color: inherit;
 }
 a:visited {
     color: inherit;
 }
 a:hover {
-    color: red;
+    color: white;
+    background-color: black;
 }
 a:active {
-    color: pink;
-}
-/* footnote superscripts */
-.grid-content a:link::after {
-    counter-increment: links;
-    content: counter(links);
-    display: inline-flex;
-    vertical-align: super;
-
-    font-size: 2rem;
-}
-
-/* link list */
-.link-list {
-    grid-area: link-list;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    padding-left: 2em;
-    margin: 0;
-    list-style-type: none;
-    list-style-position: inside;
-
-    counter-reset: list;
-    font-size: 1.6rem;
-    line-height: 0.9em;
-}
-
-ul {
-    margin: 0;
-}
-
-.link-list a:link::before {
-    counter-increment: list;
-    content: counter(list);
-    display: inline-flex;
-    vertical-align: super;
-}
-
-/* archive link */
-#archive-link {
-    grid-area: archive;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    font-size: 1.6rem;
-    background-color: lightblue;
+    color: red;
 }
