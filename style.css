@@ -1,4 +1,17 @@
 /* Variables */
+:root {
+    --background: #fdfdfd;
+    --color: #2f2f2f;
+    --highlight: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #2f2f2f;
+        --color: #fdfdfd;
+        --highlight: rgba(255, 255, 255, 0.2);
+    }
+}
 
 /*** Andy Bell Modern CSS Reset ***/
 /* Box sizing rules */
@@ -80,12 +93,12 @@ select {
 
 /* global */
 html {
-    background-color: #fdfdfd;
+    background-color: var(--background);
 }
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #2f2f2f;
+    color: var(--color);
     font-size: 1.3em;
 }
 ::selection {
@@ -127,7 +140,7 @@ body {
 /* links */
 a:link {
     text-decoration: none;
-    background-color: gainsboro;
+    background-color: var(--highlight);
     color: inherit;
 
     transition: all 100ms linear;
@@ -137,8 +150,8 @@ a:visited {
     color: inherit;
 }
 a:hover {
-    color: white;
-    background-color: black;
+    color: var(--background);
+    background-color: var(--color);
 }
 a:active {
     color: red;
