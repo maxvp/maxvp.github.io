@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 
+/* Variables */
+
 /*** Andy Bell Modern CSS Reset ***/
 /* Box sizing rules */
 *,
@@ -84,8 +86,9 @@ html {
 }
 
 body {
-    font-family: "Roboto Mono", "Courier New", Courier, monospace;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #2f2f2f;
+    font-size: 1.3em;
 }
 ::selection {
     background: pink;
@@ -112,21 +115,25 @@ body {
     grid-area: 2 / 2 / 2 / 12;
 
     justify-content: center;
+
+    text-transform: uppercase;
 }
 
 /* write-up cell */
 #info {
     grid-area: 3 / 2 / 3 / 12;
 
-    letter-spacing: -0.07em;
-    line-height: 1.2em;
+    line-height: 1.27em;
 }
 
 /* links */
 a:link {
     text-decoration: none;
-    background-color: lightgray;
+    background-color: gainsboro;
     color: inherit;
+
+    transition: all 100ms linear;
+    transition-property: background-color, color;
 }
 a:visited {
     color: inherit;
