@@ -1,15 +1,18 @@
 /* Variables */
 :root {
-    --background: #fdfdfd;
-    --color: #2f2f2f;
-    --highlight: rgba(0, 0, 0, 0.1);
+    --background: #fefffe;
+    --color: #363537;
+    --link: rgba(0, 0, 0, 0.1);
+    --highlight: #ffbf46;
+    --accent: #e9e6ff;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #2f2f2f;
-        --color: #fdfdfd;
-        --highlight: rgba(255, 255, 255, 0.2);
+        --background: #363537;
+        --color: #fefffe;
+        --link: rgba(255, 255, 255, 0.2);
+        --accent: #2176ff;
     }
 }
 
@@ -102,7 +105,7 @@ body {
     font-size: 1.3em;
 }
 ::selection {
-    background: pink;
+    background: var(--highlight);
 }
 
 /* main grid container */
@@ -153,7 +156,7 @@ body {
 /* links */
 a:link {
     text-decoration: none;
-    background-color: var(--highlight);
+    background-color: var(--link);
     color: inherit;
 
     transition: all 100ms linear;
@@ -167,5 +170,5 @@ a:hover {
     background-color: var(--color);
 }
 a:active {
-    color: red;
+    color: var(--accent);
 }
