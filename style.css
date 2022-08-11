@@ -209,6 +209,8 @@ a:active {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
+
+    margin-bottom: 2em;
 }
 .grid-item--archive {
     display: flex;
