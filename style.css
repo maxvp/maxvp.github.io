@@ -200,13 +200,7 @@ a:active {
 /* mobile layout */
 @media only screen and (max-width: 768px) {
     .grid-item {
-        padding: 2em;
-    }
-    #title {
-        grid-area: 2 / 1 / 2 / 13;
-    }
-    #info {
-        grid-area: 3 / 1 / 3 / 13;
+        padding: 0.5em;
     }
 }
 
