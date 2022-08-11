@@ -108,6 +108,26 @@ body {
     background: var(--highlight);
 }
 
+/* links */
+a:link {
+    text-decoration: none;
+    background-color: var(--link);
+    color: inherit;
+
+    transition: all 100ms linear;
+    transition-property: background-color, color;
+}
+a:visited {
+    color: inherit;
+}
+a:hover {
+    color: var(--background);
+    background-color: var(--color);
+}
+a:active {
+    color: var(--accent);
+}
+
 /* main grid container */
 .grid-container {
     display: grid;
@@ -121,13 +141,13 @@ body {
     display: flex;
     flex-direction: column;
 
-    padding: 3em;
+    grid-area: auto / 3 / auto / 11;
+
+    padding: 1em;
 }
 
 /* title/name cell */
 #title {
-    grid-area: 2 / 2 / 2 / 12;
-
     justify-content: center;
 
     text-transform: uppercase;
@@ -135,9 +155,31 @@ body {
 
 /* write-up cell */
 #info {
-    grid-area: 3 / 2 / 3 / 12;
-
     line-height: 1.27em;
+}
+
+#projects {
+    text-transform: lowercase;
+}
+
+.grid-project {
+    display: flex;
+    flex-direction: column;
+}
+
+#project-1 {
+    grid-area: auto / 3 / auto / 5;
+    background-color: #2176ff;
+}
+
+#project-2 {
+    grid-area: auto / 6 / auto / 8;
+    background-color: yellow;
+}
+
+#project-3 {
+    grid-area: auto / 9 / auto / 11;
+    background-color: pink;
 }
 
 /* mobile layout */
@@ -161,43 +203,15 @@ body {
 }
 .grid-item--archive {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 
     grid-area: auto / 2 / auto / 12;
 }
 .grid-item--archive * {
     font-weight: 400;
+    line-height: 1.27em;
 }
 .grid-section-title {
     border-bottom: 2px solid var(--link);
-}
-.grid-item--archive-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    line-height: 1.27em;
-}
-.grid-item--archive-content > * {
-    max-width: 50%;
-}
-
-/* links */
-a:link {
-    text-decoration: none;
-    background-color: var(--link);
-    color: inherit;
-
-    transition: all 100ms linear;
-    transition-property: background-color, color;
-}
-a:visited {
-    color: inherit;
-}
-a:hover {
-    color: var(--background);
-    background-color: var(--color);
-}
-a:active {
-    color: var(--accent);
 }
