@@ -168,8 +168,12 @@ a:active {
 
     font-weight: 700;
     font-size: 3rem;
+    line-height: 1em;
 
     text-transform: uppercase;
+}
+.name-break {
+    display: none;
 }
 
 /* write-up cell */
@@ -205,6 +209,13 @@ a:active {
 @media only screen and (max-width: 768px) {
     .grid-item {
         padding: 0.5em;
+        margin-bottom: 1em;
+    }
+    #title {
+        font-size: 2rem;
+    }
+    .name-break {
+        display: block;
     }
 }
 
