@@ -154,6 +154,7 @@ a:active {
     grid-area: auto / 3 / auto / 11;
 
     padding: 1em;
+    padding-left: 0;
 }
 
 /* space out adjacent paragraphs */
@@ -164,6 +165,9 @@ a:active {
 /* title/name cell */
 #title {
     justify-content: center;
+
+    font-weight: 700;
+    font-size: 3rem;
 
     text-transform: uppercase;
 }
