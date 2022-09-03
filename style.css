@@ -166,11 +166,9 @@ a:active {
 #title {
     justify-content: center;
 
-    color: transparent;
     font-weight: 700;
     font-size: 5rem;
     line-height: 1em;
-    -webkit-text-stroke: 2px white;
 
     text-transform: uppercase;
 }
