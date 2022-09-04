@@ -7,6 +7,8 @@
     --accent: #e9e6ff;
 }
 
+/* If user prefers dark mode */
+/*
 @media (prefers-color-scheme: dark) {
     :root {
         --background: black;
@@ -15,6 +17,7 @@
         --accent: #2176ff;
     }
 }
+*/
 
 /*** Andy Bell Modern CSS Reset ***/
 /* Box sizing rules */
@@ -132,7 +135,7 @@ a:active {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 1fr;
+    grid-template-rows: repeat(6, 1fr);
     height: 100vh;
 }
 
@@ -142,7 +145,7 @@ a:active {
     align-items: center;
     justify-content: center;
 
-    grid-area: 1 / 2 / 1 / 12;
+    grid-area: 3 / 2 / 5 / 12;
 }
 
 /* Name header text (font styling) */
@@ -153,4 +156,12 @@ a:active {
 
     line-height: 0.8em;
     letter-spacing: -0.05em;
+}
+
+/* Floating div test */
+.floating-div {
+    grid-area: 2 / 9 / 4 / 12;
+    background-color: rgba(33, 118, 255, 0.75);
+    backdrop-filter: blur(5px);
+    padding: 1em;
 }
