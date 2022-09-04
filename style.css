@@ -3,7 +3,7 @@
     --background: white;
     --color: black;
     --link: rgba(0, 0, 0, 0.1);
-    --highlight: rgba(255, 191, 70, 0.75);
+    --highlight: pink;
     --accent: #e9e6ff;
 }
 
@@ -107,28 +107,14 @@ body {
     color: var(--color);
     font-size: 1.3em;
 }
-::selection {
-    background: var(--highlight);
-}
 
 /* Links */
 a:link {
-    text-decoration: none;
-    background-color: var(--link);
+    text-decoration: underline dotted;
     color: inherit;
-
-    transition: all 100ms linear;
-    transition-property: background-color, color;
 }
 a:visited {
     color: inherit;
-}
-a:hover {
-    color: var(--background);
-    background-color: var(--color);
-}
-a:active {
-    color: var(--accent);
 }
 
 /* Main grid container */
@@ -145,7 +131,7 @@ a:active {
     align-items: center;
     justify-content: center;
 
-    grid-area: 3 / 2 / 5 / 12;
+    grid-area: 2 / 2 / 6 / 12;
 }
 
 /* Name header text (font styling) */
@@ -158,10 +144,23 @@ a:active {
     letter-spacing: -0.05em;
 }
 
-/* Floating div test */
-.floating-div {
-    grid-area: 2 / 9 / 4 / 12;
-    background-color: rgba(33, 118, 255, 0.75);
-    backdrop-filter: blur(5px);
+/* Floating div */
+.grid-float {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1em;
+    line-height: 1.25em;
+
+    backdrop-filter: blur(5px);
+}
+
+#school {
+    grid-area: 2 / 10 / 3 / 12;
+    background-color: rgba(33, 118, 255, 0.75);
+}
+
+#work {
+    grid-area: 5 / 2 / 6 / 4;
+    background-color: rgba(244, 129, 32, 0.75);
 }
