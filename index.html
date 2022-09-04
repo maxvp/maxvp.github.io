@@ -11,53 +11,47 @@
     </head>
 
     <body>
-        <section class="grid-container">
+        <section class="grid-container" id="main">
             <!-- Main section -->
 
             <div class="grid-item">
                 <h1 id="name-header">Maximillian V. Phillips</h1>
             </div>
 
-            <div class="floating-div">
-                <p>
-                    Digital Narrative and Interactive Design student at the
-                    University of Pittsburgh, graduating in December 2022.
-                </p>
-            </div>
-
-            <!--
-            <div class="grid-item" id="info">
-                <p>
-                    I am a
+            <div class="grid-float draggable" id="school">
+                <p class="content">
                     <a
                         href="https://www.sci.pitt.edu/academics/undergraduate-majors/digital-narrative-and-interactive-design"
                         >Digital Narrative and Interactive Design</a
                     >
-                    student at the University of Pittsburgh, studying technical
-                    writing and UX design and graduating in December 2022.
+                    student at the University of Pittsburgh, graduating in
+                    December 2022.
                 </p>
-                <p>
-                    I
+            </div>
+
+            <div class="grid-float draggable" id="work">
+                <p class="content">
+                    Former
                     <a href="https://www.linkedin.com/in/maxvphillips/"
-                        >previously worked</a
+                        >Tech Writer Intern</a
                     >
-                    as a Tech Writer Intern at Cloudflare.
+                    at Cloudflare.
                 </p>
+            </div>
+
+            <!--
+
                 <p>
                     More info can be found in my
                     <a href="MaxPhillips_resume.pdf">résumé</a>. You can reach
                     me at <a href="mailto:max.p@pitt.edu">max.p@pitt.edu</a>.
                 </p>
             </div>-->
-
-            <!--<span class="grid-item" id="projects">Recent projects</span>
-
-            <div class="grid-item grid-project" id="project-1">
-                <h3></h3>
-            </div>
-            <div class="grid-item grid-project" id="project-2">yes</div>
-            <div class="grid-item grid-project" id="project-3">yes</div>-->
         </section>
+
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+        <script src="index.js"></script>
     </body>
 
     <!-- copyright footer
