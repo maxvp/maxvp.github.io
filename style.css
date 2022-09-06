@@ -121,8 +121,9 @@ a:visited {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
     height: 100vh;
+    gap: 1em;
 }
 
 /* Grid items */
@@ -131,13 +132,16 @@ a:visited {
     align-items: center;
     justify-content: center;
 
-    grid-area: 2 / 2 / 6 / 12;
+    grid-area: 1 / 2 / 6 / 12;
+
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 /* Name header text (font styling) */
 #name-header {
     font-weight: 400;
-    font-size: 16vw;
+    font-size: 18vw;
     text-align: center;
 
     line-height: 0.8em;
@@ -149,18 +153,50 @@ a:visited {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em;
+    padding: 2em;
     line-height: 1.25em;
 
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(5px);
+
+    word-wrap: break-word;
 }
 
 #school {
-    grid-area: 2 / 10 / 3 / 12;
-    background-color: rgba(33, 118, 255, 0.75);
+    grid-area: 3 / 3 / 3 / 5;
+    background-color: rgba(111, 156, 235, 0.75);
 }
 
 #work {
-    grid-area: 5 / 2 / 6 / 4;
+    grid-area: 3 / 5 / 3 / 7;
     background-color: rgba(244, 129, 32, 0.75);
+}
+
+#contact {
+    grid-area: 3 / 7 / 3 / 9;
+    background-color: rgba(255, 184, 28, 0.75);
+}
+
+#archive {
+    grid-area: 3 / 9 / 3 / 11;
+    background-color: rgba(169, 169, 169, 0.75);
+}
+
+/* Mobile layout */
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+    #school {
+        grid-area: 2 / 2 / 3 / 7;
+    }
+    #work {
+        grid-area: 2 / 7 / 3 / 12;
+    }
+    #contact {
+        grid-area: 4 / 2 / 5 / 7;
+    }
+    #archive {
+        grid-area: 4 / 7 / 5 / 12;
+    }
 }
