@@ -130,7 +130,6 @@ a:visited {
 .grid-item {
     display: flex;
     align-items: center;
-    justify-content: center;
 
     grid-area: 1 / 2 / 6 / 12;
 
@@ -142,7 +141,7 @@ a:visited {
 #name-header {
     font-weight: 400;
     font-size: 18vw;
-    text-align: center;
+    text-align: left;
 
     line-height: 0.8em;
     letter-spacing: -0.05em;
