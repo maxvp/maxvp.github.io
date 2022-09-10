@@ -117,20 +117,31 @@ a:visited {
     color: inherit;
 }
 
-/* Main grid container */
-.grid-container {
+/* Archive item grid container */
+.archive-item {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-auto-rows: 1fr;
-    grid-auto-flow: column;
-    height: 100vh;
+    margin-bottom: 1em;
 }
 
-/* Grid items */
-.grid-item {
-    display: flex;
+/* Archive item sections */
+.date,
+.client {
+    grid-area: auto / 2 / auto / 3;
+}
+.title,
+.description {
+    grid-area: auto / 4 / auto / 8;
+}
 
-    grid-area: auto / 2 / auto / 12;
+/* Sort buttons */
+.sort.asc::after {
+    content: "\002B06";
+    padding-left: 3px;
+}
+.sort.desc::after {
+    content: "\002B07";
+    padding-left: 3px;
 }
 
 /* Name header text (font styling) */
@@ -141,9 +152,4 @@ a:visited {
 
     line-height: 0.8em;
     letter-spacing: -0.05em;
-}
-
-/* Archive */
-.grid-archive-section-header {
-    grid-area: auto / 2 / auto / 3;
 }
