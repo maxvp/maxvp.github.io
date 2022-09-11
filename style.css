@@ -108,29 +108,36 @@ body {
 }
 
 /* Links */
-a:link {
-    text-decoration: none;
-    color: inherit;
-    text-decoration: underline solid 1px;
-}
+.title a:link,
+p a:link,
 a:visited {
-    color: inherit;
+    color: var(--color);
 }
-a:active {
+.title a:link {
+    text-decoration: none;
+}
+.title a:hover {
+    text-decoration: underline;
+}
+.title a:active,
+p a:active {
     color: var(--accent);
 }
 
 /* Archive item grid container */
-.archive-item {
+.archive-item,
+.grid-container {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.archive-item {
     margin-bottom: 2em;
 }
 
 /* Archive item sections */
 .date,
 .client {
-    grid-area: auto / 2 / auto / 3;
+    grid-area: auto / 2 / auto / 4;
 }
 .title,
 .description {
