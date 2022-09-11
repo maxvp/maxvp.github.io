@@ -11,17 +11,20 @@
     <body>
         <div id="archive">
             <nav class="grid-container">
+                <div class="archive-heading">
+                    <a href="/">Maximillian V. Phillips</a> / Archive
+                </div>
                 <div class="sort-buttons">
-                    <button class="sort desc" data-sort="date">
-                        Sort by date
-                    </button>
+                    <button class="sort desc" data-sort="date">Date</button>
+                    <!--<input type="checkbox" id="school" name="school-toggle" />
+                    <label for="school-toggle">Toggle student projects</label>-->
                 </div>
                 <input class="search" placeholder="Search" />
                 <!--<button class="sort" data-sort="type">Sort by type</button>-->
             </nav>
 
             <main class="list">
-                <div class="archive-item">
+                <div class="archive-item featured">
                     <p class="date" real-date="2022-08">August 2022</p>
                     <h3 class="title">
                         <a
@@ -35,7 +38,7 @@
                         all product landing pages.
                     </p>
                 </div>
-                <div class="archive-item">
+                <div class="archive-item featured">
                     <p class="date" real-date="2022-07">July 2022</p>
                     <h3 class="title">
                         <a
@@ -48,7 +51,7 @@
                         New documentation for a previously scattered product.
                     </p>
                 </div>
-                <div class="archive-item">
+                <div class="archive-item featured">
                     <p class="date" real-date="2022-04">April 2022</p>
                     <h3 class="title">
                         <a href="/drops/">Drops</a>
@@ -60,7 +63,7 @@
                         pseudo-retro operating system.
                     </p>
                 </div>
-                <div class="archive-item">
+                <div class="archive-item featured">
                     <p class="date" real-date="2022-03">March 2022</p>
                     <h3 class="title">
                         <a
@@ -94,10 +97,29 @@
                         >.
                     </p>
                     <div class="content">
-                        <a
-                            href="https://soundcloud.com/maxvphillips/hackers-delight-deluxe"
-                            >soundcloud embed here</a
-                        >
+                        <iframe
+                            width="100%"
+                            height="300"
+                            scrolling="no"
+                            frameborder="no"
+                            allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1178520319&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                        ></iframe>
+                        <div
+                            style="
+                                font-size: 10px;
+                                color: #cccccc;
+                                line-break: anywhere;
+                                word-break: normal;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                font-family: Interstate, Lucida Grande,
+                                    Lucida Sans Unicode, Lucida Sans, Garuda,
+                                    Verdana, Tahoma, sans-serif;
+                                font-weight: 100;
+                            "
+                        ></div>
                     </div>
                 </div>
                 <div class="archive-item">
@@ -227,7 +249,15 @@
                         psychological horror/thriller films.
                     </p>
                     <div class="content">
-                        youtube embed here https://youtu.be/BOkxbVqXIes
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube-nocookie.com/embed/BOkxbVqXIes"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
                     </div>
                 </div>
                 <div class="archive-item">
@@ -252,7 +282,7 @@
                         /></a>
                     </div>
                 </div>
-                <div class="archive-item">
+                <div class="archive-item featured">
                     <p class="date" real-date="2021-09">September 2021</p>
                     <h3 class="title">
                         <a href="design/integrating/four_page/four_page.pdf"
@@ -336,7 +366,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="archive-item">
+                <div class="archive-item featured">
                     <p class="date" real-date="2021-04">April 2021</p>
                     <h3 class="title">
                         <a href="https://youtu.be/OUJijGtilJw">Max's Journey</a>
@@ -351,7 +381,15 @@
                         >.
                     </p>
                     <div class="content">
-                        youtube embed here https://youtu.be/OUJijGtilJw
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube-nocookie.com/embed/OUJijGtilJw"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
                     </div>
                 </div>
                 <div class="archive-item">
@@ -398,6 +436,25 @@
                 <div class="archive-item">
                     <p class="date" real-date="2021-03">March 2021</p>
                     <h3 class="title">
+                        <a href="design/techcomm/infographic.pdf"
+                            >Computer Vision Syndrome poster</a
+                        >
+                    </h3>
+                    <p class="client">Student</p>
+                    <p class="description">
+                        Infographic warning of the dangers of computer vision
+                        syndrome. Part of series designed to showcase UX design
+                        thinking in a technical writing environment.
+                    </p>
+                    <div class="content horizontal">
+                        <a href="design/techcomm/infographic.pdf"
+                            ><img src="design/techcomm/infographic.jpg" alt=""
+                        /></a>
+                    </div>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-03">March 2021</p>
+                    <h3 class="title">
                         <a href="https://youtu.be/ac1TIaOCNH8">Burghquest</a>
                     </h3>
                     <p class="client">Student</p>
@@ -406,26 +463,38 @@
                         Pittsburgh history through regional food and popular
                         culture.
                     </p>
-                </div>
-                <div class="archive-item">
-                    <p class="date" real-date="2021-03">March 2021</p>
-                    <h3 class="title">Technical Writing posters</h3>
-                    <p class="client">Student</p>
-                    <p class="description">
-                        Posters designed to showcase UX design thinking in a
-                        technical writing environment. Print poster promoting
-                        safety in the ShopRite frozen foods department.
-                        Infographic warning of the dangers of computer vision
-                        syndrome.
-                    </p>
-                    <div class="content horizontal">
-                        <img src="design/techcomm/safety.jpg" alt="" /><img
-                            src="design/techcomm/infographic.jpg"
-                            alt=""
-                        />
+                    <div class="content">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube-nocookie.com/embed/ac1TIaOCNH8"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
                     </div>
                 </div>
                 <div class="archive-item">
+                    <p class="date" real-date="2021-03">March 2021</p>
+                    <h3 class="title">
+                        <a href="design/techcomm/safety.pdf"
+                            >Frozen Safety poster</a
+                        >
+                    </h3>
+                    <p class="client">Student</p>
+                    <p class="description">
+                        Print poster promoting safety in the ShopRite frozen
+                        foods department. Part of series designed to showcase UX
+                        design thinking in a technical writing environment.
+                    </p>
+                    <div class="content horizontal">
+                        <a href="design/techcomm/safety.pdf"
+                            ><img src="design/techcomm/safety.jpg" alt=""
+                        /></a>
+                    </div>
+                </div>
+                <div class="archive-item featured">
                     <p class="date" real-date="2021-03">March 2021</p>
                     <h3 class="title">
                         <a href="https://github.com/maxvp/PGH-food-deserts"
