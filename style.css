@@ -125,13 +125,12 @@ p a:active {
 }
 
 /* Archive item grid container */
-.archive-item,
-.grid-container {
+.grid-container,
+.archive-item {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-.archive-item {
-    margin-bottom: 2em;
+    column-gap: 1em;
+    margin-bottom: 3em;
 }
 
 /* Archive item sections */
@@ -140,8 +139,23 @@ p a:active {
     grid-area: auto / 2 / auto / 4;
 }
 .title,
-.description {
+.description,
+.sort-buttons {
     grid-area: auto / 4 / auto / 9;
+}
+/* Content containers */
+.content,
+.search {
+    grid-area: auto / 9 / auto / 12;
+
+    display: flex;
+    gap: 0.5em;
+}
+.vertical {
+    flex-direction: column;
+}
+.horizontal {
+    flex-direction: row;
 }
 
 /* Sort buttons */
