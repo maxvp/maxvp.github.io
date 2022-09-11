@@ -1,20 +1,19 @@
 /* Variables */
 :root {
-    --background: white;
-    --color: black;
+    --background: #fffff8;
+    --color: #111111;
     --link: rgba(0, 0, 0, 0.1);
-    --highlight: pink;
-    --accent: #e9e6ff;
+    --accent: #06f;
 }
 
 /* If user prefers dark mode */
 /*
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: black;
-        --color: white;
-        --link: rgba(255, 255, 255, 0.2);
-        --accent: #2176ff;
+        --background: #111111;
+        --color: #fffff8;
+    --link: rgba(0, 0, 0, 0.1);
+    --accent: #06f;
     }
 }
 */
@@ -110,18 +109,22 @@ body {
 
 /* Links */
 a:link {
-    text-decoration: underline dotted;
+    text-decoration: none;
     color: inherit;
+    text-decoration: underline solid 1px;
 }
 a:visited {
     color: inherit;
+}
+a:active {
+    color: var(--accent);
 }
 
 /* Archive item grid container */
 .archive-item {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 /* Archive item sections */
@@ -131,7 +134,7 @@ a:visited {
 }
 .title,
 .description {
-    grid-area: auto / 4 / auto / 8;
+    grid-area: auto / 4 / auto / 9;
 }
 
 /* Sort buttons */
