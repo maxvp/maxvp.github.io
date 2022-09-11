@@ -126,7 +126,7 @@ p a:active {
     color: var(--accent);
 }
 
-/* Archive item grid container */
+/* Grid container */
 .grid-container,
 .archive-item {
     display: grid;
@@ -135,7 +135,26 @@ p a:active {
     margin-bottom: 3em;
 }
 
-/* Archive item sections */
+/*** Main page ***/
+#main {
+    padding-top: 1em;
+}
+/* Name header text (font styling) */
+.grid-item {
+    grid-area: auto / 2 / auto / 12;
+}
+.name-header {
+    font-weight: 400;
+    text-align: left;
+
+    font-size: 3vw;
+
+    line-height: 0.8em;
+    letter-spacing: -0.03em;
+}
+
+/*** Archive ***/
+/* Grid item sections */
 #archive {
     padding-top: 1em;
 }
@@ -188,20 +207,10 @@ p a:active {
 
 /* Sort buttons */
 .sort.asc::after {
-    content: "\0025B2";
+    content: "\0025B4";
     padding-left: 3px;
 }
 .sort.desc::after {
-    content: "\0025BC";
+    content: "\0025BE";
     padding-left: 3px;
-}
-
-/* Name header text (font styling) */
-#name-header {
-    font-weight: 400;
-    font-size: 5vw;
-    text-align: left;
-
-    line-height: 0.8em;
-    letter-spacing: -0.05em;
 }
