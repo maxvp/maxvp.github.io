@@ -113,9 +113,11 @@ p a:link,
 a:visited {
     color: var(--color);
 }
+.archive-heading a:link,
 .title a:link {
     text-decoration: none;
 }
+.archive-heading a:hover,
 .title a:hover {
     text-decoration: underline;
 }
@@ -134,8 +136,12 @@ p a:active {
 }
 
 /* Archive item sections */
+#archive {
+    padding-top: 1em;
+}
 .date,
-.client {
+.client,
+.archive-heading {
     grid-area: auto / 2 / auto / 4;
 }
 .title,
@@ -143,6 +149,21 @@ p a:active {
 .sort-buttons {
     grid-area: auto / 4 / auto / 9;
 }
+
+/* Text styling */
+.title {
+    font-weight: 400;
+}
+.description {
+    /*font-family: "Times New Roman", Times, serif;*/
+}
+
+/* Heading section */
+.sort-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Content containers */
 .content,
 .search {
@@ -158,13 +179,20 @@ p a:active {
     flex-direction: row;
 }
 
+/* Feature works */
+.featured::before {
+    display: flex;
+    justify-content: flex-end;
+    content: "★";
+}
+
 /* Sort buttons */
 .sort.asc::after {
-    content: "\002B06";
+    content: "\0025B2";
     padding-left: 3px;
 }
 .sort.desc::after {
-    content: "\002B07";
+    content: "\0025BC";
     padding-left: 3px;
 }
 
