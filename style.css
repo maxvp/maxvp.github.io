@@ -139,13 +139,20 @@ a:active {
 #main {
     padding-top: 1em;
 }
-/* Name header text (font styling) */
+/* Font styling */
 .grid-item {
     grid-area: auto / 2 / auto / 12;
 }
 .name-header {
     font-weight: 400;
     text-align: left;
+}
+/* Headshot image */
+.headshot {
+    grid-area: auto / 2 / auto / 6;
+    padding: 1em;
+    padding-left: 0;
+    filter: grayscale();
 }
 
 /*** Archive ***/
