@@ -148,7 +148,7 @@ a:active {
 }
 /* Font styling */
 .grid-item {
-    grid-area: auto / 2 / auto / 12;
+    grid-area: auto / 2 / auto / 7;
 }
 .name-header,
 .archive-heading {
@@ -160,7 +160,7 @@ a:active {
 }
 /* Headshot image */
 .headshot {
-    grid-area: auto / 2 / auto / 6;
+    grid-area: auto / 2 / auto / 7;
     padding: 1em;
     padding-inline: 0;
 }
