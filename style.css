@@ -159,7 +159,6 @@ a:active {
     grid-area: auto / 2 / auto / 6;
     padding: 1em;
     padding-inline: 0;
-    filter: grayscale();
 }
 
 /*** Archive ***/
