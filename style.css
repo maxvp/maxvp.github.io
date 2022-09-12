@@ -164,6 +164,9 @@ a:active {
     padding: 1em;
     padding-inline: 0;
 }
+.title {
+    line-height: 1em;
+}
 
 /*** Archive ***/
 /* Grid item sections */
@@ -171,7 +174,7 @@ a:active {
     padding-top: 1em;
 }
 .date {
-    grid-area: auto / 2 / auto / 4;
+    grid-area: auto / 2 / span 2 / 4;
 }
 .archive-heading {
     grid-area: auto / 2 / span 2 / 4;
@@ -195,10 +198,6 @@ a:active {
 .title {
     font-weight: 400;
 }
-.client {
-    display: inline-block;
-    white-space: nowrap;
-}
 .description {
     padding-top: 1em;
     /*font-family: "Times New Roman", Times, serif;*/
@@ -206,7 +205,7 @@ a:active {
 .date {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
 }
 .credit {
     font-family: "Courier New", Courier, monospace;
@@ -307,7 +306,10 @@ a:active {
         margin-bottom: 1em;
     }
     .client {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
+    }
+    .description {
+        padding: 0;
     }
     .grid-item a:link,
     .archive-heading a:link {
@@ -315,5 +317,8 @@ a:active {
     }
     .title a:link::after {
         content: " →";
+    }
+    .content {
+        margin-bottom: 0.5em;
     }
 }
