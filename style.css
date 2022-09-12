@@ -9,7 +9,7 @@
 }
 
 /* If user prefers dark mode */
-/*
+
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #111111;
@@ -19,7 +19,7 @@
         --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
             brightness(111%) contrast(105%);
     }
-}*/
+}
 
 /*** Andy Bell Modern CSS Reset ***/
 /* Box sizing rules */
