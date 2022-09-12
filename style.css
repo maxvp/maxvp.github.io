@@ -270,6 +270,7 @@ a:active {
     background-color: var(--background);
     border: 1px solid var(--color);
     color: var(--color);
+    padding-inline: 0.5em;
 }
 .sort.asc::after {
     content: "\0025B4";
