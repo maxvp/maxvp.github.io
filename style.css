@@ -128,9 +128,16 @@ a:active {
 
 /* Grid container */
 .grid-container,
+.archive-heading-container,
 .archive-item {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.archive-heading-container {
+    margin-bottom: 5em;
+    column-gap: 1em;
+}
+.archive-item {
     column-gap: 5em;
     margin-bottom: 7em;
 }
@@ -151,7 +158,7 @@ a:active {
 .headshot {
     grid-area: auto / 2 / auto / 6;
     padding: 1em;
-    padding-left: 0;
+    padding-inline: 0;
     filter: grayscale();
 }
 
@@ -160,15 +167,19 @@ a:active {
 #archive {
     padding-top: 1em;
 }
-.date,
-.archive-heading {
+.date {
     grid-area: auto / 2 / auto / 4;
+}
+.archive-heading {
+    grid-area: auto / 2 / span 2 / 4;
+}
+.archive-heading span {
+    white-space: nowrap;
 }
 .title,
 .description,
 .client,
-.credit,
-.sort-buttons {
+.credit {
     grid-area: auto / 4 / auto / 9;
 }
 
@@ -209,13 +220,17 @@ a:active {
 
 /* Heading section */
 .sort-buttons {
+    grid-area: auto / 4 / auto / 9;
+
     display: flex;
     justify-content: flex-end;
 }
+.search {
+    grid-area: auto / 9 / auto / 12;
+}
 
 /* Content containers */
-.content,
-.search {
+.content {
     grid-area: auto / 9 / span 4 / 12;
 
     display: flex;
@@ -245,6 +260,18 @@ a:active {
 }*/
 
 /* Sort buttons */
+.sort {
+    background-color: var(--color);
+    color: var(--background);
+    border: none;
+    padding: 0.5em;
+}
+.search {
+    background-color: var(--background);
+    border: 1px solid var(--color);
+    color: var(--color);
+    padding: 0.5em;
+}
 .sort.asc::after {
     content: "\0025B4";
     padding-left: 3px;
@@ -260,9 +287,16 @@ a:active {
         padding: 1em;
     }
     .grid-container,
+    .archive-heading-container,
     .archive-item {
         display: flex;
         flex-direction: column;
+    }
+    .archive-heading-container {
+        row-gap: 1em;
+    }
+    .sort {
+        width: 100%;
     }
     .grid-item {
         padding-inline: 2em;
