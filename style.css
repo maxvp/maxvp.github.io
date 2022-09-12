@@ -150,9 +150,13 @@ a:active {
 .grid-item {
     grid-area: auto / 2 / auto / 12;
 }
-.name-header {
+.name-header,
+.archive-heading {
     font-weight: 400;
     text-align: left;
+}
+.archive-heading {
+    font-size: 1.17em;
 }
 /* Headshot image */
 .headshot {
