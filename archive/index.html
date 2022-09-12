@@ -9,127 +9,133 @@
         <title>MVP / Archive</title>
     </head>
     <body>
-        <div class="grid-container--archive">
-            <span class="grid-item--archive"
-                ><h1>
+        <div id="archive">
+            <nav class="grid-container">
+                <div class="archive-heading">
                     <a href="/">Maximillian V. Phillips</a> / Archive
-                </h1></span
-            >
-        </div>
+                </div>
+                <div class="sort-buttons">
+                    <button class="sort desc" data-sort="date">Date</button>
+                    <!--<input type="checkbox" id="school" name="school-toggle" />
+                    <label for="school-toggle">Toggle student projects</label>-->
+                </div>
+                <input class="search" placeholder="Search" />
+                <!--<button class="sort" data-sort="type">Sort by type</button>-->
+            </nav>
 
-        <!--TODO: Add List.JS for sortability -->
-
-        <!--INTERACTION-->
-        <section class="grid-container--archive" id="interaction">
-            <span class="grid-item--archive grid-section-title">
-                <h2>Interaction</h2>
-            </span>
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Max's Journey</h3>
-                    <p>
-                        Interactive multimedia illustration of boat scene from
-                        Maurice Sendak's
+            <main class="list">
+                <div class="archive-item">
+                    <p class="date" real-date="2022-08">August 2022</p>
+                    <h3 class="title featured">
                         <a
-                            href="https://en.wikipedia.org/wiki/Where_the_Wild_Things_Are"
-                            >Where the Wild Things Are</a
+                            href="https://developers.cloudflare.com/argo-smart-routing/"
+                            >Docs Overview page redesign</a
+                        >
+                    </h3>
+                    <p class="client">Cloudflare</p>
+                    <p class="description">
+                        Implemented HTML components for site builder to organize
+                        all product landing pages.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2022-07">July 2022</p>
+                    <h3 class="title featured">
+                        <a
+                            href="https://developers.cloudflare.com/argo-smart-routing/"
+                            >Argo Smart Routing docs</a
+                        >
+                    </h3>
+                    <p class="client">Cloudflare</p>
+                    <p class="description">
+                        New documentation for a previously scattered product.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2022-04">April 2022</p>
+                    <h3 class="title featured">
+                        <a href="/drops/">Drops</a>
+                    </h3>
+                    <p class="client student">
+                        Advanced Research in Literature
+                    </p>
+                    <p class="description">
+                        Senior English capstone project exploring Internet
+                        archival history in the form of an imaginary
+                        pseudo-retro operating system.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2022-03">March 2022</p>
+                    <h3 class="title featured">
+                        <a
+                            href="https://docs.google.com/document/d/1IVoFkgSIVHPiuTxGolC7UF_lzEB8N5hRnRXsZ7SwFmI/edit?usp=sharing"
+                            >Rate Your Music Heuristic UX Evaluation Report</a
+                        >
+                    </h3>
+                    <p class="client student">
+                        Usability Testing in Technical Writing
+                    </p>
+                    <p class="description">
+                        Heuristic usability and accessibility evaluation of
+                        <a href="https://rateyourmusic.com/">Rate Your Music</a
                         >.
                     </p>
-                    <p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-12">December 2021</p>
+                    <h3 class="title">
+                        <a
+                            href="https://soundcloud.com/maxvphillips/hackers-delight-deluxe"
+                            >Hacker's Delight: Redefining Music Technology</a
+                        >
+                    </h3>
+                    <p class="client student">Digital Humanity</p>
+                    <div class="content">
+                        <iframe
+                            width="100%"
+                            height="300"
+                            scrolling="no"
+                            frameborder="no"
+                            allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1178520319&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                        ></iframe>
+                        <div
+                            style="
+                                font-size: 10px;
+                                color: #cccccc;
+                                line-break: anywhere;
+                                word-break: normal;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                font-family: Interstate, Lucida Grande,
+                                    Lucida Sans Unicode, Lucida Sans, Garuda,
+                                    Verdana, Tahoma, sans-serif;
+                                font-weight: 100;
+                            "
+                        ></div>
+                    </div>
+                    <p class="description">
+                        Audio podcast exploring the relationship between music
+                        and technology. Why don't we hold musical innovation to
+                        the same degree as "pure" technological innovation?
                         Featured in the
                         <a href="https://dmap.pitt.edu/showcase"
-                            >Pitt Digital Media & Design Showcase</a
+                            >Pitt Spring 2022 Digital Media & Design Showcase</a
                         >.
                     </p>
                 </div>
-                <div>
-                    <div class="embed-container">
-                        <iframe
-                            src="https://www.youtube.com/embed/OUJijGtilJw"
-                            frameborder="0"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Burghquest</h3>
-                    <p>
-                        Interactive augmented reality experience exploring
-                        Pittsburgh history through regional food and popular
-                        culture.
-                    </p>
-                </div>
-                <div class="embed-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/ac1TIaOCNH8"
-                        frameborder="0"
-                        allowfullscreen
-                    ></iframe>
-                </div>
-            </div>
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Pitt Campus Corner</h3>
-                    <p>
-                        Crowd-sourced knowledge site for University of
-                        Pittsburgh housing. Iterated according to user feedback
-                        from
-                        <a
-                            href="https://docs.google.com/document/d/1exbQ0cWPyKKMXNjN7Dya8x8CNWpj1u4kDbNIhBdjmuE/edit?usp=sharing"
-                            >usability survey</a
-                        >.
-                    </p>
-                    <p class="credit">
-                        <abbr title="Bootstrap"
-                            ><i class="fab fa-bootstrap"></i
-                        ></abbr>
-                    </p>
-                </div>
-                <a href="https://github.com/maxvp/pitt-campus-corner"
-                    ><img
-                        src="design/techcomm/pcc.png"
-                        alt="Pitt Campus Corner logo"
-                /></a>
-            </div>
-        </section>
-
-        <!--WRITING-->
-        <section class="grid-container--archive" id="writing">
-            <span class="grid-item--archive grid-section-title">
-                <h2>Writing</h2>
-            </span>
-            <div class="grid-item--archive">
-                <h3>Critical</h3>
-                <div>
-                    <a href="writing/chianti.pdf"
-                        >Queering the Gaze with Some Fava Beans and a Nice
-                        Chianti</a
-                    >
-                    <p>
-                        Analysis of Buffalo Bill and Hannibal Lecter's
-                        subversion of Hollywood's heteronormative movie killer
-                        tropes in
-                        <a href="https://www.imdb.com/title/tt0102926/"
-                            >Silence of the Lambs</a
-                        >.
-                    </p>
-                </div>
-                <div>
-                    <a href="writing/robot.pdf">All's Fair in Robot War</a>
-                    <p>
-                        Call to create a standardized hierarchy of
-                        responsibility for the actions of artificial
-                        intelligence.
-                    </p>
-                </div>
-                <div>
-                    <a href="writing/mistrust.pdf"
-                        >Mistrust in the Age of Panoptic Power</a
-                    >
-                    <p>
-                        Application of Foucault's
+                <div class="archive-item">
+                    <p class="date" real-date="2021-11">November 2021</p>
+                    <h3 class="title">
+                        <a href="writing/mistrust.pdf"
+                            >Mistrust in the Age of Panoptic Power</a
+                        >
+                    </h3>
+                    <p class="client student">Digital Humanity</p>
+                    <p class="description">
+                        Application of Michel Foucault's
                         <a
                             href="https://en.wikipedia.org/wiki/Panopticon#Criticism_and_use_as_metaphor"
                             >Panopticon</a
@@ -137,11 +143,48 @@
                         to modern ideas of surveillance.
                     </p>
                 </div>
-                <div>
-                    <a href="writing/labor.pdf"
-                        >Simulated Management and Labor Dignity</a
-                    >
-                    <p>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-11">November 2021</p>
+                    <h3 class="title">
+                        <a href="design/integrating/instagram/instagram.pdf"
+                            >LaCroix Instagram story</a
+                        >
+                    </h3>
+                    <p class="client student">Integrating Writing and Design</p>
+                    <div class="content">
+                        <a href="design/integrating/instagram/instagram.pdf"
+                            ><img
+                                src="design/integrating/instagram/lacroix_mockup.png"
+                                alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
+                        Instagram story mockup advertising LaCroix sparkling
+                        water in the style of '70s/'80s print ads (with a modern
+                        twist). Can images from lacroixwater.com. Fruit images
+                        from Unsplash. Lion image by @charl_durand on Unsplash.
+                        Zebra image by @ramona_89 on Unsplash. David photo by
+                        Jörg Bittner Unna on Wikimedia, licensed under
+                        <a
+                            href="https://creativecommons.org/licenses/by-sa/3.0/deed.en"
+                            >Creative Commons Attribution-Share Alike 3.0
+                            Unported license</a
+                        >. Modified by me. Instagram story mockup by Marina
+                        Dillaco. Licensed under
+                        <a href="https://creativecommons.org/licenses/by/4.0/"
+                            >CC BY 4.0</a
+                        >. Extended from original.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-10">October 2021</p>
+                    <h3 class="title">
+                        <a href="writing/labor.pdf"
+                            >Simulated Management and Labor Dignity</a
+                        >
+                    </h3>
+                    <p class="client student">Digital Humanity</p>
+                    <p class="description">
                         Reflection on Simon Head's
                         <a
                             href="https://www.basicbooks.com/titles/simon-head/mindless/9780465018444/"
@@ -150,352 +193,70 @@
                         and simulacra in the workforce.
                     </p>
                 </div>
-            </div>
-            <div class="grid-item--archive">
-                <h3>Technical</h3>
-                <div>
-                    <a
-                        href="https://docs.google.com/document/d/1IVoFkgSIVHPiuTxGolC7UF_lzEB8N5hRnRXsZ7SwFmI/edit?usp=sharing"
-                        >Rate Your Music Heuristic Evaluation Report</a
-                    >
-                    <p>
-                        Heuristic usability and accessibility evaluation of
-                        <a href="https://rateyourmusic.com/">Rate Your Music</a
-                        >.
-                    </p>
-                </div>
-                <div>
-                    <a href="https://github.com/maxvp/pitt-campus-corner"
-                        >Pitt Campus Corner documentation</a
-                    >
-                    <p>
-                        README and Contributing statement for website project.
-                    </p>
-                </div>
-                <div>
-                    <a
-                        href="https://docs.google.com/document/d/1exbQ0cWPyKKMXNjN7Dya8x8CNWpj1u4kDbNIhBdjmuE/edit?usp=sharing"
-                        >Pitt Campus Corner usability report</a
-                    >
-                    <p>
-                        Report on the iterative process creating
-                        <a
-                            href="https://www.maxvphillips.com/pitt-campus-corner/"
-                            >Pitt Campus Corner</a
-                        >.
-                    </p>
-                </div>
-                <div>
-                    <a href="https://github.com/hunterbash/0010-final-project"
-                        >CMPINF0010 Final Project documentation</a
-                    >
-                    <p>
-                        Contributions to README for neighborhood project in Big
-                        Ideas in Computing and Information.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!--DESIGN-->
-        <section class="grid-container--archive" id="design">
-            <span class="grid-item--archive grid-section-title">
-                <h2>Design</h2>
-            </span>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Four Page Design</h3>
-                    <p>
-                        Music magazine article mockup celebrating the work of
-                        Steve Reich. The repeating title recalls Reich's
-                        repetitious compositions, which fall out of step to
-                        harmonically resonate.
-                    </p>
-                    <p class="credit">
-                        Cover photo by Jeffrey Herman. <br />
-                        Left photo by Richard Landry. <br />
-                        Right photo by Ian Oliver, licensed under CC BY 2.0,
-                        <a
-                            href="https://creativecommons.org/licenses/by/2.0/deed.en"
-                            >https://creativecommons.org/licenses/by/2.0/deed.en</a
-                        >.
-                    </p>
-                </div>
-                <a href="design/integrating/four_page/four_page.pdf">
-                    <img
-                        src="design/integrating/four_page/4page_mockup1.png"
-                        alt="four page design mockup 1"
-                    />
-                </a>
-                <a href="design/integrating/four_page/four_page.pdf">
-                    <img
-                        src="design/integrating/four_page/4page_mockup2.png"
-                        alt="four page design mockup 2"
-                    />
-                </a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>LaCroix Instagram story</h3>
-                    <p>
-                        Instagram story mockup advertising LaCroix sparkling
-                        water in the style of '70s/'80s print ads (with a modern
-                        twist).
-                    </p>
-                    <p class="credit">
-                        Can images from lacroixwater.com. <br />
-                        Fruit images from Unsplash. <br />
-                        Lion image by @charl_durand on Unsplash. <br />
-                        Zebra image by @ramona_89 on Unsplash. <br />
-                        David photo by Jörg Bittner Unna on Wikimedia, licensed
-                        under Creative Commons Attribution-Share Alike 3.0
-                        Unported license,
-                        <a
-                            href="https://creativecommons.org/licenses/by-sa/3.0/deed.en"
-                            >https://creativecommons.org/licenses/by-sa/3.0/deed.en</a
-                        >. Modified by me. <br />
-                        Instagram story mockup by Marina Dillaco. Licensed under
-                        CC BY 4.0,
-                        <a href="https://creativecommons.org/licenses/by/4.0/"
-                            >https://creativecommons.org/licenses/by/4.0/</a
-                        >. Extended from original.
-                    </p>
-                </div>
-                <a href="design/integrating/instagram/instagram.pdf">
-                    <img
-                        src="design/integrating/instagram/lacroix_mockup.png"
-                        alt="LaCroix instagram story mockup"
-                    />
-                </a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Inclusive Design class poster</h3>
-                    <p>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-10">October 2021</p>
+                    <h3 class="title">
+                        <a href="design/integrating/inclusive/inclusive.pdf"
+                            >Inclusive Design class poster</a
+                        >
+                    </h3>
+                    <p class="client student">Integrating Writing and Design</p>
+                    <div class="content">
+                        <a href="design/integrating/inclusive/inclusive.pdf"
+                            ><img
+                                src="design/integrating/inclusive/inclusive.jpg"
+                                alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
                         Poster advertising upcoming class offerings with focus
-                        on accessible design.
-                    </p>
-                    <p class="credit">
-                        Clock and face icons by Font Awesome. <br />
-                        Accessibility icon by Alfonso Melolonta Urbán from The
-                        Noun Project.
+                        on accessible design. Clock and face icons by Font
+                        Awesome. Accessibility icon by Alfonso Melolonta Urbán
+                        from The Noun Project.
                     </p>
                 </div>
-                <a href="design/integrating/inclusive/inclusive.pdf"
-                    ><img
-                        src="design/integrating/inclusive/inclusive.jpg"
-                        alt="inclusive design poster"
-                /></a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Frozen Safety poster</h3>
-                    <p>
-                        Print poster promoting safety in the ShopRite frozen
-                        foods department.
-                    </p>
-                </div>
-                <a href="design/techcomm/infographic.pdf">
-                    <img
-                        src="design/techcomm/infographic.jpg"
-                        alt="computer vision syndrome safety poster"
-                    />
-                </a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>CVS poster</h3>
-                    <p>
-                        Infographic warning of the dangers of computer vision
-                        syndrome.
-                    </p>
-                </div>
-                <a href="design/techcomm/safety.pdf">
-                    <img
-                        src="design/techcomm/safety.jpg"
-                        alt="ShopRite frozen safety poster"
-                    />
-                </a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Grower's Association postcard</h3>
-                    <p>
-                        Postcard for the Pennsylvania Co-Operative Potato
-                        Growers.
-                    </p>
-                    <p class="credit">
-                        Background photo by @lmablankers on Unsplash. <br />
-                        Potato photo from StickPNG. <br />
-                        Growers logo is a trademark of the Pennsylvania
-                        Co-Operative Potato Growers.
-                    </p>
-                </div>
-                <a href="design/integrating/postcard/postcard.pdf"
-                    ><img
-                        src="design/integrating/postcard/postcard_mockup.png"
-                        alt="potato postcard mockup"
-                /></a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Quote poster</h3>
-                    <p>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-10">October 2021</p>
+                    <h3 class="title">
+                        <a href="design/integrating/quote/quote.pdf"
+                            >Quote poster</a
+                        >
+                    </h3>
+                    <p class="client student">Integrating Writing and Design</p>
+                    <div class="content">
+                        <a href="design/integrating/quote/quote.pdf"
+                            ><img
+                                src="design/integrating/quote/quote_mockup.png"
+                                alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
                         Quote poster pastiched after American public school
                         imagery: motivational class posters and math textbook
-                        covers.
-                    </p>
-                    <p class="credit">
-                        Head icons by Adrien Coquet on The Noun Project.
-                        <br />
+                        covers. Head icons by Adrien Coquet on The Noun Project.
                         3D objects from Adobe Stock.
                     </p>
                 </div>
-                <a href="design/integrating/quote/quote.pdf"
-                    ><img
-                        src="design/integrating/quote/quote_mockup.png"
-                        alt="quote poster mockup"
-                /></a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Redesign</h3>
-                    <p>
-                        One-to-one recreation of classic General Electric print.
-                    </p>
-                    <p class="credit">
-                        Original ad design by General Electric. <br />
-                        Headphone image by Retrospekt. <br />
-                        Cloud photo by @enginakyurt on Unsplash. <br />
-                        "Stereo Tape Escape" photo by /u/11bulletcatcher on
-                        reddit. <br />
-                        "Stereo Radio Escape" photo by flips288 on eBay.
-                        <br />
-                        "Stereo Great Escape" photo by eden1tribe1 on eBay.
-                        <br />
-                        GE logo is a registered trademark of the General
-                        Electric Company.
-                    </p>
-                </div>
-                <a href="design/integrating/redesign/escape.jpg">
-                    <img
-                        src="design/integrating/redesign/escape.jpg"
-                        alt="original piece"
-                    />
-                </a>
-                <a href="design/integrating/redesign/redesign.pdf">
-                    <img
-                        src="design/integrating/redesign/redesign.png"
-                        alt="redesigned piece"
-                    />
-                </a>
-            </div>
-        </section>
-
-        <!--DATA-->
-        <section class="grid-container--archive" id="data">
-            <span class="grid-item--archive grid-section-title">
-                <h2>Data</h2>
-            </span>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Pittsburgh Food Deserts</h3>
-                    <p>
-                        Geographic data visualization identifying food deserts
-                        within Pittsburgh city limits.
-                    </p>
-                </div>
-                <a href="https://github.com/maxvp/PGH-food-deserts"
-                    ><img src="data/map.png" alt="food desert map"
-                /></a>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>¡Presidente Pedro!</h3>
-                    <p>
-                        Generative narrative study analyzing Midwestern Bush-era
-                        attitudes towards race and class in
-                        <a href="https://www.imdb.com/title/tt0374900/"
-                            >Napoleon Dynamite</a
-                        >.
-                    </p>
-                </div>
-                <a
-                    href="https://github.com/maxvp/presidente-pedro/blob/main/Schelling_NapoleonDynamite.ipynb"
-                    ><img
-                        src="data/pedro.png"
-                        alt="Napoleon Dynamite relationship map"
-                /></a>
-            </div>
-        </section>
-
-        <!--MEDIA-->
-        <section class="grid-container--archive" id="media">
-            <span class="grid-item--archive grid-section-title">
-                <h2>Media</h2>
-            </span>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Hacker's Delight: Redefining Music Technology</h3>
-                    <p>
-                        Audio podcast exploring the relationship between music
-                        and technology. Why don't we hold musical innovation to
-                        the same degree as "pure" technological innovation?
-                    </p>
-                    <p>
-                        Featured in the
-                        <a href="https://dmap.pitt.edu/showcase"
-                            >Pitt Digital Media & Design Showcase</a
-                        >.
-                    </p>
-                </div>
-                <div>
-                    <iframe
-                        width="100%"
-                        height="166"
-                        scrolling="no"
-                        frameborder="no"
-                        allow="autoplay"
-                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1178520319&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                    ></iframe>
-                </div>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>PolicyFlow introduction video</h3>
-                    <p>
-                        Video introducing PICSO's PolicyFlow, an interactive
-                        system for understanding public policy diffusion
-                        patterns over time.
-                    </p>
-                </div>
-                <div>
-                    <div class="embed-container">
+                <div class="archive-item">
+                    <p class="date" real-date="2021-10">October 2021</p>
+                    <h3 class="title">
+                        <a href="https://youtu.be/BOkxbVqXIes"
+                            >Rushmore Horror edit</a
+                        >
+                    </h3>
+                    <p class="client student">Visual Literacy</p>
+                    <div class="content">
                         <iframe
-                            src="https://www.youtube.com/embed/28BIgwUZypc"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube-nocookie.com/embed/BOkxbVqXIes"
+                            title="YouTube video player"
                             frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
                         ></iframe>
                     </div>
-                </div>
-            </div>
-
-            <div class="grid-item--archive">
-                <div>
-                    <h3>Rushmore Horror edit</h3>
-                    <p>
+                    <p class="description">
                         Trailer for Wes Anderson's
                         <a href="https://www.imdb.com/title/tt0128445/"
                             >Rushmore</a
@@ -503,14 +264,301 @@
                         psychological horror/thriller films.
                     </p>
                 </div>
-                <div class="embed-container">
-                    <iframe
-                        src="https://www.youtube.com/embed/BOkxbVqXIes"
-                        frameborder="0"
-                        allowfullscreen
-                    ></iframe>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-09">September 2021</p>
+                    <h3 class="title featured">
+                        <a href="design/integrating/four_page/four_page.pdf"
+                            >Four Page Design</a
+                        >
+                    </h3>
+                    <p class="client student">Integrating Writing and Design</p>
+                    <div class="content vertical">
+                        <a href="design/integrating/four_page/four_page.pdf">
+                            <img
+                                src="design/integrating/four_page/4page_mockup1.png"
+                                alt=""
+                            />
+                        </a>
+                        <a href="design/integrating/four_page/four_page.pdf">
+                            <img
+                                src="design/integrating/four_page/4page_mockup2.png"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <p class="description">
+                        Music magazine article mockup celebrating the work of
+                        Steve Reich. The repeating title recalls Reich's
+                        repetitious compositions, which fall out of step to
+                        harmonically resonate. Cover photo by Jeffrey Herman.
+                        Left photo by Richard Landry. Right photo by Ian Oliver,
+                        licensed under
+                        <a
+                            href="https://creativecommons.org/licenses/by/2.0/deed.en"
+                            >CC BY 2.0</a
+                        >.
+                    </p>
                 </div>
-            </div>
-        </section>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-09">September 2021</p>
+                    <h3 class="title">
+                        <a href="design/integrating/event/event.pdf"
+                            >Event poster</a
+                        >
+                    </h3>
+                    <p class="client student">Integrating Writing and Design</p>
+                    <div class="content">
+                        <a href="design/integrating/event/event.pdf">
+                            <img
+                                src="design/integrating/event/poster_mockup.png"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <p class="description">
+                        Poster mock-up for Protomartyr show.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-09">September 2021</p>
+                    <h3 class="title">
+                        <a href="design/integrating/redesign/redesign.pdf"
+                            >Redesign</a
+                        >
+                    </h3>
+                    <p class="client student">Integrating Writing and Design</p>
+                    <div class="content">
+                        <a href="design/integrating/redesign/redesign.pdf">
+                            <img
+                                src="design/integrating/redesign/redesign.png"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                    <p class="description">
+                        One-to-one recreation of
+                        <a href="design/integrating/redesign/escape.jpg">
+                            classic General Electric print ad </a
+                        >. Original ad design by General Electric. Headphone
+                        image by Retrospekt. Cloud photo by @enginakyurt on
+                        Unsplash. "Stereo Tape Escape" photo by
+                        /u/11bulletcatcher on reddit. "Stereo Radio Escape"
+                        photo by flips288 on eBay. "Stereo Great Escape" photo
+                        by eden1tribe1 on eBay. GE logo is a registered
+                        trademark of the General Electric Company.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-04">April 2021</p>
+                    <h3 class="title featured">
+                        <a href="https://youtu.be/OUJijGtilJw">Max's Journey</a>
+                    </h3>
+                    <p class="client student">
+                        Digital Narrative and Interactive Design
+                    </p>
+                    <div class="content">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube-nocookie.com/embed/OUJijGtilJw"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <p class="description">
+                        Interactive multimedia illustration of boat scene from
+                        Maurice Sendak's Where the Wild Things Are. Featured in
+                        the
+                        <a href="https://dmap.pitt.edu/showcase"
+                            >Pitt Spring 2022 Digital Media & Design Showcase</a
+                        >.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-04">April 2021</p>
+                    <h3 class="title">
+                        <a
+                            href="https://github.com/hunterbash/0010-final-project"
+                            >Pittsburgh Neighborhood Project</a
+                        >
+                    </h3>
+                    <p class="client student">
+                        Big Ideas in Computing and Information
+                    </p>
+                    <div class="content">
+                        <a
+                            href="https://github.com/hunterbash/0010-final-project"
+                            ><img src="data/neighborhoods.png" alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
+                        Contributions to README for neighborhood project in Big
+                        Ideas in Computing and Information.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-04">April 2021</p>
+                    <h3 class="title">
+                        <a href="/pitt-campus-corner/">Pitt Campus Corner</a>
+                    </h3>
+                    <p class="client student">
+                        Introduction to Technical Writing
+                    </p>
+                    <div class="content">
+                        <a href="/pitt-campus-corner/"
+                            ><img src="design/techcomm/pcc.png" alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
+                        Crowd-sourced knowledge site for University of
+                        Pittsburgh housing. Iterated according to user feedback
+                        from survey.
+                        <a
+                            href="https://docs.google.com/document/d/1exbQ0cWPyKKMXNjN7Dya8x8CNWpj1u4kDbNIhBdjmuE/edit?usp=sharing"
+                            >Pitt Campus Corner usability report</a
+                        >
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-03">March 2021</p>
+                    <h3 class="title">
+                        <a href="design/techcomm/infographic.pdf"
+                            >Computer Vision Syndrome poster</a
+                        >
+                    </h3>
+                    <p class="client student">
+                        Introduction to Technical Writing
+                    </p>
+                    <div class="content horizontal">
+                        <a href="design/techcomm/infographic.pdf"
+                            ><img src="design/techcomm/infographic.jpg" alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
+                        Infographic warning of the dangers of computer vision
+                        syndrome. Part of series designed to showcase UX design
+                        thinking in a technical writing environment.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-03">March 2021</p>
+                    <h3 class="title">
+                        <a href="https://youtu.be/ac1TIaOCNH8">Burghquest</a>
+                    </h3>
+                    <p class="client student">
+                        Digital Narrative and Interactive Design
+                    </p>
+                    <div class="content">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube-nocookie.com/embed/ac1TIaOCNH8"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <p class="description">
+                        Interactive augmented reality experience exploring
+                        Pittsburgh history through regional food and popular
+                        culture.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-03">March 2021</p>
+                    <h3 class="title">
+                        <a href="design/techcomm/safety.pdf"
+                            >Frozen Safety poster</a
+                        >
+                    </h3>
+                    <p class="client student">
+                        Introduction to Technical Writing
+                    </p>
+                    <div class="content horizontal">
+                        <a href="design/techcomm/safety.pdf"
+                            ><img src="design/techcomm/safety.jpg" alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
+                        Print poster promoting safety in the ShopRite frozen
+                        foods department. Part of series designed to showcase UX
+                        design thinking in a technical writing environment.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-03">March 2021</p>
+                    <h3 class="title featured">
+                        <a href="https://github.com/maxvp/PGH-food-deserts"
+                            >Pittsburgh Food Deserts</a
+                        >
+                    </h3>
+                    <p class="client student">
+                        Digital Narrative and Interactive Design
+                    </p>
+                    <div class="content">
+                        <a href="https://github.com/maxvp/PGH-food-deserts"
+                            ><img src="/archive/data/map.png" alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
+                        Geographic data visualization identifying food deserts
+                        within Pittsburgh city limits.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2021-02">February 2021</p>
+                    <h3 class="title">
+                        <a
+                            href="https://github.com/maxvp/presidente-pedro/blob/main/Schelling_NapoleonDynamite.ipynb"
+                            >¡Presidente Pedro!</a
+                        >
+                    </h3>
+                    <p class="client student">
+                        Digital Narrative and Interactive Design
+                    </p>
+                    <div class="content">
+                        <a
+                            href="https://github.com/maxvp/presidente-pedro/blob/main/Schelling_NapoleonDynamite.ipynb"
+                            ><img src="data/pedro.png" alt=""
+                        /></a>
+                    </div>
+                    <p class="description">
+                        Generative narrative study analyzing Midwestern Bush-era
+                        attitudes towards race and class in
+                        <a href="https://www.imdb.com/title/tt0374900/"
+                            >Napoleon Dynamite</a
+                        >.
+                    </p>
+                </div>
+                <div class="archive-item">
+                    <p class="date" real-date="2020-11">November 2020</p>
+                    <h3 class="title">
+                        <a href="writing/chianti.pdf">
+                            Queering the Gaze with Some Fava Beans and a Nice
+                            Chianti
+                        </a>
+                    </h3>
+                    <p class="client student">Introduction to Film</p>
+                    <p class="description">
+                        Analysis of Buffalo Bill and Hannibal Lecter's
+                        subversion of Hollywood's heteronormative movie killer
+                        tropes in
+                        <a href="https://www.imdb.com/title/tt0102926/"
+                            >Silence of the Lambs</a
+                        >.
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <!-- JavaScript -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="/index.js"></script>
     </body>
 </html>
