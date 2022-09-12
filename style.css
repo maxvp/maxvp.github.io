@@ -110,8 +110,7 @@ body {
 }
 
 /* Links */
-.title a:link,
-p a:link,
+a:link,
 a:visited {
     color: var(--color);
 }
@@ -133,7 +132,7 @@ a:active {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: 5em;
-    margin-bottom: 3em;
+    margin-bottom: 7em;
 }
 
 /*** Main page ***/
@@ -161,9 +160,18 @@ a:active {
 .title,
 .description,
 .client,
+.credit,
 .sort-buttons {
     grid-area: auto / 4 / auto / 9;
 }
+
+/* Archive item */
+/*
+.archive-item {
+    border: 1px solid var(--color);
+    padding: 1em;
+}
+*/
 
 /* Text styling */
 .title {
@@ -174,13 +182,22 @@ a:active {
     white-space: nowrap;
 }
 .description {
-    padding-top: 0.4em;
+    padding-top: 1em;
     /*font-family: "Times New Roman", Times, serif;*/
 }
 .date {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+.credit {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.7em;
+
+    list-style-type: none;
+    margin: 0;
+    margin-top: 2em;
+    padding: 0;
 }
 
 /* Heading section */
@@ -192,7 +209,7 @@ a:active {
 /* Content containers */
 .content,
 .search {
-    grid-area: auto / 9 / span 3 / 12;
+    grid-area: auto / 9 / span 4 / 12;
 
     display: flex;
     gap: 0.5em;
