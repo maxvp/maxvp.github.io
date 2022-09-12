@@ -247,7 +247,11 @@ a:active {
         justify-content: flex-start;
         border-top: 1px solid var(--color);
     }
-    a:link {
-        text-decoration: initial;
+    .grid-item a:link,
+    .archive-heading a:link {
+        text-decoration: underline;
+    }
+    .title a:link::after {
+        content: " →";
     }
 }
