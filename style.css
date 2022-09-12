@@ -173,9 +173,6 @@ a:active {
 .archive-heading {
     grid-area: auto / 2 / span 2 / 4;
 }
-.archive-heading span {
-    white-space: nowrap;
-}
 .title,
 .description,
 .client,
@@ -270,7 +267,6 @@ a:active {
     background-color: var(--background);
     border: 1px solid var(--color);
     color: var(--color);
-    padding: 0.5em;
 }
 .sort.asc::after {
     content: "\0025B4";
