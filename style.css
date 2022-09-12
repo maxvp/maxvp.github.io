@@ -304,6 +304,10 @@ a:active {
     .date {
         justify-content: flex-start;
         border-top: 1px solid var(--color);
+        margin-bottom: 1em;
+    }
+    .client {
+        margin-bottom: 1em;
     }
     .grid-item a:link,
     .archive-heading a:link {
