@@ -6,6 +6,7 @@
     --accent: #06f;
     --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
         brightness(94%) contrast(87%);
+    --image-light-dark: light;
 }
 
 /* If user prefers dark mode */
@@ -18,6 +19,7 @@
         --accent: #06f;
         --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
             brightness(111%) contrast(105%);
+        --image-light-dark: dark;
     }
 }
 
