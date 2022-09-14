@@ -115,11 +115,13 @@ a:visited {
     color: var(--color);
 }
 .archive-heading a:link,
-.title a:link {
+.title a:link,
+.client a:link {
     text-decoration: none;
 }
 .archive-heading a:hover,
-.title a:hover {
+.title a:hover,
+.client a:hover {
     text-decoration: underline;
 }
 a:active {
