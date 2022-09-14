@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-    --background: #fffff8;
-    --color: #111111;
+    --background: #fdfdfd;
+    --color: #222;
     --link: rgba(0, 0, 0, 0.1);
     --accent: #06f;
     --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
@@ -13,10 +13,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #111111;
-        --color: #fffff8;
-        --link: rgba(0, 0, 0, 0.1);
-        --accent: #06f;
+        --background: #090909;
+        --color: #f0f0f0;
         --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
             brightness(111%) contrast(105%);
         --image-light-dark: dark;
