@@ -159,6 +159,10 @@ a:active {
     font-weight: 400;
     text-align: left;
 }
+.name-header {
+    font-size: 8vw;
+    line-height: 0.9em;
+}
 .archive-heading {
     font-size: 1.17em;
 }
