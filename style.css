@@ -217,12 +217,19 @@ a:active {
 }
 .credit {
     font-family: "Courier New", Courier, monospace;
-    font-size: 0.7em;
+    font-size: 0.8em;
+
+    opacity: 0.5;
 
     list-style-type: none;
     margin: 0;
     margin-top: 2em;
     padding: 0;
+
+    transition: opacity 1s;
+}
+.credit:hover {
+    opacity: 1;
 }
 
 /* Heading section */
