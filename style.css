@@ -134,6 +134,13 @@ a:active {
 .archive-heading-container,
 .archive-item {
     display: grid;
+}
+
+.grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.archive-heading-container,
+.archive-item {
     grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .archive-heading-container {
@@ -151,8 +158,10 @@ a:active {
 }
 /* Font styling */
 .grid-item {
-    grid-area: auto / 2 / auto / 7;
-    margin-bottom: 0.5rem;
+    padding: 4em;
+}
+.grid-item p {
+    margin-bottom: 0.5em;
 }
 .name-header,
 .archive-heading {
