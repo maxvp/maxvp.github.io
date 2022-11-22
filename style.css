@@ -159,6 +159,7 @@ a:active {
 /* Font styling */
 .grid-item {
     padding: 4em;
+    padding-inline: 10em;
 }
 .grid-item p {
     margin-bottom: 0.5em;
