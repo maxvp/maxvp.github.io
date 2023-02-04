@@ -129,15 +129,44 @@ a:active {
     color: var(--accent);
 }
 
+/*** Main page ***/
+/* Layout */
+.grid-container {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}
+#name-title {
+    grid-area: 1 / 1 / 4 / 2;
+
+    justify-content: center;
+    align-items: center;
+}
+#info {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+/* Text styling */
+.name-header {
+    text-transform: uppercase;
+    writing-mode: sideways-lr;
+
+    font-weight: 600;
+    font-size: 4vw;
+    max-height: 100%;
+}
+
+/*** Archive ***/
 /* Grid container */
-.grid-container,
 .archive-heading-container,
 .archive-item {
     display: grid;
-}
-
-.grid-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .archive-heading-container,
 .archive-item {
@@ -152,41 +181,6 @@ a:active {
     margin-bottom: 7em;
 }
 
-/*** Main page ***/
-#main {
-    padding-top: 1em;
-}
-/* Font styling */
-.grid-item {
-    padding: 4em;
-    padding-inline: 10em;
-}
-.grid-item p {
-    margin-bottom: 0.5em;
-}
-.name-header,
-.archive-heading {
-    font-weight: 400;
-    text-align: left;
-}
-.name-header {
-    font-size: 5vw;
-    line-height: 0.9em;
-}
-.archive-heading {
-    font-size: 1.17em;
-}
-/* Headshot image */
-.headshot {
-    grid-area: auto / 2 / auto / 7;
-    padding: 1em;
-    padding-inline: 0;
-}
-.title {
-    line-height: 1em;
-}
-
-/*** Archive ***/
 /* Grid item sections */
 #archive {
     padding-top: 1em;
@@ -202,6 +196,18 @@ a:active {
 .client,
 .credit {
     grid-area: auto / 4 / auto / 9;
+}
+
+/* Font styling */
+.archive-heading {
+    font-weight: 400;
+    text-align: left;
+}
+.archive-heading {
+    font-size: 1.17em;
+}
+.title {
+    line-height: 1em;
 }
 
 /* Archive item */
