@@ -159,7 +159,8 @@ a:active {
 /* Text styling */
 .name-header {
     text-transform: uppercase;
-    writing-mode: sideways-lr;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
 
     font-weight: 700;
     font-size: 3vw;
