@@ -161,7 +161,7 @@ a:active {
     text-transform: uppercase;
     writing-mode: sideways-lr;
 
-    font-weight: 600;
+    font-weight: 700;
     font-size: 3vw;
     max-height: 100%;
 }
@@ -331,7 +331,31 @@ a:active {
     body {
         padding: 1em;
     }
-    .grid-container,
+
+    /* Main page */
+    .grid-container {
+        height: 70vh;
+
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+    }
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        row-gap: 0.7em;
+        line-height: 1.25em;
+    }
+    #name-title {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    #info {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .name-header {
+        font-size: 4vh;
+    }
+
+    /* Archive */
     .archive-heading-container,
     .archive-item {
         display: flex;
@@ -342,9 +366,6 @@ a:active {
     }
     .sort {
         width: 100%;
-    }
-    .grid-item {
-        padding-inline: 2em;
     }
     .date {
         justify-content: flex-start;
