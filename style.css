@@ -338,6 +338,8 @@ a:active {
     .grid-container {
         height: 70vh;
 
+        overflow-y: hidden;
+
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
     }
