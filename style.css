@@ -1,4 +1,6 @@
 /* Variables */
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
 :root {
     --background: #fdfdfd;
     --color: #222;
@@ -162,7 +164,7 @@ a:active {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
 
-    font-weight: 700;
+    font-weight: 400;
     font-size: 3vw;
     line-height: 1em;
     max-height: 100%;
@@ -208,6 +210,7 @@ a:active {
 .archive-heading {
     font-weight: 400;
     text-align: left;
+    text-transform: uppercase;
 }
 .archive-heading {
     font-size: 1.17em;
