@@ -343,6 +343,9 @@ a:active {
 
     /* Main page */
     .grid-container {
+        display: flex;
+        flex-direction: column;
+
         height: 70vh;
 
         overflow-y: hidden;
