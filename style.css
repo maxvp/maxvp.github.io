@@ -1,5 +1,5 @@
 /* Variables */
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Inter&display=swap");
 
 :root {
     --background: #fdfdfd;
@@ -108,7 +108,7 @@ html {
 }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Inter", Helvetica, Arial, sans-serif;
     color: var(--color);
 }
 
@@ -160,9 +160,8 @@ a:active {
 
 /* Text styling */
 .name-header {
+    font-family: "DM Mono";
     text-transform: uppercase;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
 
     font-weight: 400;
     font-size: 3vw;
@@ -241,8 +240,9 @@ a:active {
     align-items: flex-start;
 }
 .credit {
-    font-family: "Courier Prime", "Courier New", Courier, monospace;
+    font-family: "DM Mono", "Courier New", Courier, monospace;
     font-size: 0.8em;
+    font-weight: 300;
 
     opacity: 0.5;
 
