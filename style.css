@@ -167,6 +167,9 @@ a:active {
     font-size: 3vw;
     line-height: 1em;
     max-height: 100%;
+    padding-inline: 0.1em;
+
+    border: 0.075em solid var(--color);
 }
 
 /*** Archive ***/
@@ -238,6 +241,7 @@ a:active {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    text-align: right;
 }
 .credit {
     font-family: "DM Mono", "Courier New", Courier, monospace;
