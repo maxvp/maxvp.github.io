@@ -156,6 +156,9 @@ a:active {
 }
 #info {
     grid-area: 3 / 3 / 4 / 4;
+
+    display: flex;
+    justify-content: center;
 }
 
 /* Text styling */
