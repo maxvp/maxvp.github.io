@@ -188,6 +188,7 @@ a:active {
 .archive-heading-container {
     margin-bottom: 5em;
     column-gap: 1em;
+    justify-items: left;
 }
 .archive-item {
     column-gap: 5em;
@@ -213,12 +214,16 @@ a:active {
 
 /* Font styling */
 .archive-heading {
+    font-family: "DM Mono", "Courier New", Courier, monospace;
+    font-size: 1.5em;
     font-weight: 400;
     text-align: left;
     text-transform: uppercase;
-}
-.archive-heading {
-    font-size: 1.17em;
+
+    padding-inline: 0.2em;
+    line-height: 1em;
+
+    border: 0.1em solid var(--color);
 }
 .title {
     line-height: 1em;
@@ -380,6 +385,8 @@ a:active {
     }
     .archive-heading-container {
         row-gap: 1em;
+        display: flex;
+        align-items: center;
     }
     .sort {
         width: 100%;
@@ -395,8 +402,7 @@ a:active {
     .description {
         padding: 0;
     }
-    .grid-item a:link,
-    .archive-heading a:link {
+    .grid-item a:link {
         text-decoration: underline;
     }
     .title a:link::after {
