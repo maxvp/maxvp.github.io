@@ -220,7 +220,7 @@ a:active {
     text-align: left;
     text-transform: uppercase;
 
-    padding-inline: 0.2em;
+    padding-inline: 0.1em;
     line-height: 1em;
 
     border: 0.1em solid var(--color);
