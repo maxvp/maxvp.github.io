@@ -1,108 +1,31 @@
-/* Variables */
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Inter&display=swap");
-
+/*** Variables ***/
+/*
 :root {
-    --background: #fdfdfd;
-    --color: #222;
-    --link: rgba(0, 0, 0, 0.1);
-    --accent: #0049b8;
-    --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
-        brightness(94%) contrast(87%);
-    --image-light-dark: light;
+  --background: #fff;
+  --color: #222;
+  --link: rgba(0, 0, 0, 0.1);
+  --accent: #0049b8;
+  --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
+    brightness(94%) contrast(87%);
+  --image-light-dark: light;
 }
-
+*/
 /* If user prefers dark mode */
-
+/*
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #090909;
-        --color: #f0f0f0;
-        --accent: #66a3ff;
-        --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
-            brightness(111%) contrast(105%);
-        --image-light-dark: dark;
-    }
+  :root {
+    --background: #000;
+    --color: #f0f0f0;
+    --accent: #66a3ff;
+    --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
+      brightness(111%) contrast(105%);
+    --image-light-dark: dark;
+  }
 }
+*/
+/*** Old stuff ***/
 
-/*** Andy Bell Modern CSS Reset ***/
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-    list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-    scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-    max-width: 100%;
-    display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/*** My stuff ***/
-
-/* Global HTML attributes */
+/* Global HTML attributes
 html {
     background-color: var(--background);
 }
@@ -111,8 +34,8 @@ body {
     font-family: "Inter", Helvetica, Arial, sans-serif;
     color: var(--color);
 }
-
-/* Links */
+*/
+/* Links
 a:link,
 a:visited {
     color: var(--color);
@@ -130,9 +53,9 @@ a:visited {
 a:active {
     color: var(--accent);
 }
-
+*/
 /*** Main page ***/
-/* Layout */
+/* Layout
 .grid-container {
     display: grid;
     height: 100vh;
@@ -160,8 +83,8 @@ a:active {
     display: flex;
     justify-content: center;
 }
-
-/* Text styling */
+*/
+/* Text styling
 .name-header {
     font-family: "DM Mono";
     text-transform: uppercase;
@@ -174,9 +97,9 @@ a:active {
 
     border: 0.075em solid var(--color);
 }
-
+*/
 /*** Archive ***/
-/* Grid container */
+/* Grid container
 .archive-heading-container,
 .archive-item {
     display: grid;
@@ -194,8 +117,8 @@ a:active {
     column-gap: 5em;
     margin-bottom: 7em;
 }
-
-/* Grid item sections */
+*/
+/* Grid item sections
 #archive {
     padding-top: 1em;
 }
@@ -211,8 +134,8 @@ a:active {
 .credit {
     grid-area: auto / 4 / auto / 9;
 }
-
-/* Font styling */
+*/
+/* Font styling
 .archive-heading {
     font-family: "DM Mono", "Courier New", Courier, monospace;
     font-size: 1.5em;
@@ -237,13 +160,13 @@ a:active {
 }
 */
 
-/* Text styling */
+/* Text styling
 .title {
     font-weight: 400;
 }
 .description {
     padding-top: 1em;
-    /*font-family: "Times New Roman", Times, serif;*/
+    /*font-family: "Times New Roman", Times, serif;
 }
 .date {
     display: flex;
@@ -268,8 +191,9 @@ a:active {
 .credit:hover {
     opacity: 1;
 }
+*/
 
-/* Heading section */
+/* Heading section
 .sort-buttons {
     grid-area: auto / 4 / auto / 9;
 
@@ -279,8 +203,8 @@ a:active {
 .search {
     grid-area: auto / 9 / auto / 12;
 }
-
-/* Content containers */
+*/
+/* Content containers
 .content {
     grid-area: auto / 9 / span 4 / 12;
 
@@ -293,8 +217,8 @@ a:active {
 .horizontal {
     flex-direction: row;
 }
-
-/* Icons */
+*/
+/* Icons
 .student::after {
     position: absolute;
     opacity: 0;
@@ -321,7 +245,7 @@ a:active {
     content: "★";
 }*/
 
-/* Sort buttons */
+/* Sort buttons
 .sort {
     background-color: var(--color);
     color: var(--background);
@@ -342,14 +266,15 @@ a:active {
     content: "\0025BE";
     padding-left: 3px;
 }
-
+*/
 /*** Mobile responsive design ***/
+/*
 @media only screen and (max-width: 768px) {
     body {
         padding: 1em;
     }
-
-    /* Main page */
+*/
+/* Main page
     .grid-container {
         display: flex;
         flex-direction: column;
@@ -376,8 +301,8 @@ a:active {
     .name-header {
         font-size: 4vh;
     }
-
-    /* Archive */
+*/
+/* Archive
     .archive-heading-container,
     .archive-item {
         display: flex;
@@ -412,3 +337,4 @@ a:active {
         margin-bottom: 0.5em;
     }
 }
+*/
