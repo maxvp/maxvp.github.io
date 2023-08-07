@@ -94,7 +94,16 @@ h6 {
 /* index.html */
 .body-text {
   /* Font styling */
+  --minFontSize: 32px;
+  --maxFontSize: 200px;
+  --scaler: 5vw;
   font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  line-height: 1.25em;
+}
+
+#name-reveal {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*** Old stuff ***/
