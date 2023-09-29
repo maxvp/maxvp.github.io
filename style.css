@@ -360,10 +360,12 @@ a:active {
 
 @media only screen and (max-width: 768px) {
   body {
-    padding: 1em;
+    padding: 5em 1em;
+    hyphens: auto;
   }
 
   /* Main page  */
+  /*
   .grid-container {
     display: flex;
     flex-direction: column;
@@ -390,6 +392,7 @@ a:active {
   .name-header {
     font-size: 4vh;
   }
+  */
 
   /* Archive */
   .archive-heading-container,
