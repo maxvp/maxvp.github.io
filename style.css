@@ -1,6 +1,6 @@
 /*** Variables ***/
 @import url("https://fonts.googleapis.com/css2?family=Cousine&family=EB+Garamond:ital@0;1&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
-/*
+
 :root {
   --background: #fff;
   --color: #222;
@@ -10,9 +10,9 @@
     brightness(94%) contrast(87%);
   --image-light-dark: light;
 }
-*/
+
 /* If user prefers dark mode */
-/*
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000;
@@ -23,7 +23,6 @@
     --image-light-dark: dark;
   }
 }
-*/
 
 /*** Josh W Comeau's CSS reset ***/
 /*
