@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cousine&family=EB+Garamond:ital@0;1&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
 
 :root {
-  --background: #fff;
-  --color: #222;
+  --background-color: #fff;
+  --text-color: #000;
   --link: rgba(0, 0, 0, 0.1);
   --accent: #0049b8;
   --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
@@ -15,9 +15,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000;
-    --color: #f0f0f0;
-    --accent: #66a3ff;
+    --background-color: #000;
+    --text-color: #fff;
     --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
       brightness(111%) contrast(105%);
     --image-light-dark: dark;
@@ -93,6 +92,9 @@ h6 {
 /* index.html */
 body {
   padding: 5em;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .body-text {
