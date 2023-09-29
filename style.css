@@ -1,108 +1,133 @@
-/* Variables */
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Inter&display=swap");
-
+/*** Variables ***/
+@import url("https://fonts.googleapis.com/css2?family=Cousine&family=EB+Garamond:ital@0;1&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+/*
 :root {
-    --background: #fdfdfd;
-    --color: #222;
-    --link: rgba(0, 0, 0, 0.1);
-    --accent: #0049b8;
-    --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
-        brightness(94%) contrast(87%);
-    --image-light-dark: light;
+  --background: #fff;
+  --color: #222;
+  --link: rgba(0, 0, 0, 0.1);
+  --accent: #0049b8;
+  --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
+    brightness(94%) contrast(87%);
+  --image-light-dark: light;
 }
-
+*/
 /* If user prefers dark mode */
-
+/*
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background: #090909;
-        --color: #f0f0f0;
-        --accent: #66a3ff;
-        --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
-            brightness(111%) contrast(105%);
-        --image-light-dark: dark;
-    }
+  :root {
+    --background: #000;
+    --color: #f0f0f0;
+    --accent: #66a3ff;
+    --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
+      brightness(111%) contrast(105%);
+    --image-light-dark: dark;
+  }
 }
+*/
 
-/*** Andy Bell Modern CSS Reset ***/
-/* Box sizing rules */
+/*** Josh W Comeau's CSS reset ***/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-    margin: 0;
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
 }
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-    list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-    scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
 body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
+/*
+  5. Improve media defaults
+*/
 img,
-picture {
-    max-width: 100%;
-    display: block;
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
-
-/* Inherit fonts for inputs and buttons */
+/*
+  6. Remove built-in form typography styles
+*/
 input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
 
 /*** My stuff ***/
 
-/* Global HTML attributes */
+/* index.html */
+body {
+  padding: 5em;
+}
+
+.body-text {
+  /* Font styling */
+  --minFontSize: 32px;
+  --maxFontSize: 200px;
+  --scaler: 5vw;
+  font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
+  line-height: 1.25em;
+}
+
+/* Links */
+a:link,
+a:visited {
+  color: inherit;
+}
+a:hover {
+  color: red;
+}
+a:focus {
+  background-color: yellow;
+}
+a:active {
+  color: inherit;
+}
+
+::selection {
+  background-color: yellow;
+}
+
+/*** Old stuff ***/
+
+/* Global HTML attributes
 html {
     background-color: var(--background);
 }
@@ -111,8 +136,8 @@ body {
     font-family: "Inter", Helvetica, Arial, sans-serif;
     color: var(--color);
 }
-
-/* Links */
+*/
+/* Links
 a:link,
 a:visited {
     color: var(--color);
@@ -130,9 +155,9 @@ a:visited {
 a:active {
     color: var(--accent);
 }
-
+*/
 /*** Main page ***/
-/* Layout */
+/* Layout
 .grid-container {
     display: grid;
     height: 100vh;
@@ -160,8 +185,8 @@ a:active {
     display: flex;
     justify-content: center;
 }
-
-/* Text styling */
+*/
+/* Text styling
 .name-header {
     font-family: "DM Mono";
     text-transform: uppercase;
@@ -174,144 +199,132 @@ a:active {
 
     border: 0.075em solid var(--color);
 }
-
+*/
 /*** Archive ***/
 /* Grid container */
-.archive-heading-container,
 .archive-item {
-    display: grid;
-}
-.archive-heading-container,
-.archive-item {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 5em;
 }
 .archive-heading-container {
-    margin-bottom: 5em;
-    column-gap: 1em;
-    justify-items: left;
+  top: 1em;
+  margin-bottom: 5em;
+  justify-items: left;
+  position: sticky;
 }
-.archive-item {
-    column-gap: 5em;
-    margin-bottom: 7em;
-}
-
-/* Grid item sections */
+/* Grid item sections  */
 #archive {
-    padding-top: 1em;
+  padding-top: 1em;
 }
 .date {
-    grid-area: auto / 2 / span 2 / 4;
-}
-.archive-heading {
-    grid-area: auto / 2 / span 2 / 4;
+  grid-area: auto / 2 / span 2 / 4;
 }
 .title,
 .description,
 .client,
 .credit {
-    grid-area: auto / 4 / auto / 9;
+  grid-area: auto / 4 / auto / 9;
 }
 
-/* Font styling */
+/*** Font styling  ***/
 .archive-heading {
-    font-family: "DM Mono", "Courier New", Courier, monospace;
-    font-size: 1.5em;
-    font-weight: 400;
-    text-align: left;
-    text-transform: uppercase;
+  font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
 
-    padding-inline: 0.1em;
-    line-height: 1em;
-
-    border: 0.1em solid var(--color);
+  padding-inline: 0.1em;
+  line-height: 1em;
 }
 .title {
-    line-height: 1em;
+  line-height: 1em;
+}
+.list {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Archive item */
-/*
-.archive-item {
-    border: 1px solid var(--color);
-    padding: 1em;
-}
-*/
 
-/* Text styling */
+.archive-item {
+  padding: 7em 1em;
+  transition: background-color 0.5s;
+}
+.archive-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Text styling  */
 .title {
-    font-weight: 400;
+  font-weight: 400;
 }
 .description {
-    padding-top: 1em;
-    /*font-family: "Times New Roman", Times, serif;*/
+  padding-top: 1em;
 }
 .date {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: right;
+  font-style: italic;
 }
 .credit {
-    font-family: "DM Mono", "Courier New", Courier, monospace;
-    font-size: 0.8em;
-    font-weight: 300;
+  font-family: "DM Mono", "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  font-weight: 300;
 
-    opacity: 0.5;
+  opacity: 0.5;
 
-    list-style-type: none;
-    margin: 0;
-    margin-top: 2em;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 2em;
+  padding: 0;
 
-    transition: opacity 1s;
+  transition: opacity 1s;
 }
 .credit:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* Heading section */
+/* Heading section  */
 .sort-buttons {
-    grid-area: auto / 4 / auto / 9;
+  grid-area: auto / 4 / auto / 9;
 
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 .search {
-    grid-area: auto / 9 / auto / 12;
+  grid-area: auto / 9 / auto / 12;
 }
 
-/* Content containers */
+/* Content containers  */
 .content {
-    grid-area: auto / 9 / span 4 / 12;
+  grid-area: auto / 9 / span 4 / 12;
 
-    display: flex;
-    gap: 0.5em;
+  display: flex;
+  gap: 0.5em;
 }
 .vertical {
-    flex-direction: column;
+  flex-direction: column;
 }
 .horizontal {
-    flex-direction: row;
+  flex-direction: row;
 }
 
-/* Icons */
+/* Icons  */
 .student::after {
-    position: absolute;
-    opacity: 0;
-    content: url("data:image/svg+xml,%3Csvg title='University of Pittsburgh' height='20' viewBox='0 0 157.50667 198.33333' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(.13333333 0 0 -.13333333 0 198.33333)'%3E%3Cpath d='m886.781 931.203c-48.051 0-87.152 39.098-87.152 87.147 0 48 39.101 87.1 87.152 87.1 48.047 0 87.117-39.1 87.117-87.1 0-48.049-39.07-87.147-87.117-87.147zm-591.605 0c-48.047 0-87.145 39.098-87.145 87.147 0 48 39.098 87.1 87.145 87.1 48.051 0 87.148-39.1 87.148-87.1 0-48.049-39.097-87.147-87.148-87.147zm341.043 233.457v67.65c0 25.24-20.457 45.7-45.699 45.7-25.235 0-45.692-20.46-45.692-45.7v-67.65h-488.0702v-291.762h1067.7822v291.762zm-44.754-966.801c-48.055 0-87.149 39-87.149 87.051s39.094 87.149 87.149 87.149c48.051 0 87.121-39.098 87.121-87.149s-39.07-87.051-87.121-87.051zm-440.332 232.5c43.754-82.109 102.551-155.32 175.066-217.828 116.008-100.011 233.723-143.1794 264.457-153.3201 30.739 10.1211 148.449 53.2191 264.449 153.1871 72.559 62.532 131.379 135.793 175.145 217.961z' fill='%23fff'/%3E%3Cpath d='m1040.33 449.91c55.88 112.863 84.21 242.508 84.21 385.348v37.64h-1067.7822v-37.64c0-142.762 28.3281-272.363 84.2112-385.207 3.285-6.621 6.691-13.172 10.164-19.692h879.117c3.44 6.469 6.82 12.973 10.08 19.551' fill='%23f9b00f'/%3E%3Cpath d='m886.781 1105.45c-48.051 0-87.152-39.1-87.152-87.1 0-48.049 39.101-87.147 87.152-87.147 48.047 0 87.117 39.098 87.117 87.147 0 48-39.07 87.1-87.117 87.1zm-591.605 0c-48.047 0-87.145-39.1-87.145-87.1 0-48.049 39.098-87.147 87.145-87.147 48.051 0 87.148 39.098 87.148 87.147 0 48-39.097 87.1-87.148 87.1zm296.285-733.391c-48.051 0-87.145-39.098-87.145-87.149s39.094-87.051 87.145-87.051c48.055 0 87.125 39 87.125 87.051s-39.07 87.149-87.125 87.149zm-58.445 453.89h-116.176v-116.179h116.176zm-.36-232.422h-116.179v-116.207h116.179zm232.758 0h-116.148v-116.207h116.148zm116.25 116.243h-116.25v-116.243h116.25zm-232.398 0h-116.25v-116.243h116.25zm116.148 116.179h-116.148v-116.179h116.148zm232.465 0h-116.215v-116.179h116.215zm0-232.422h-116.215v-116.207h116.215zm-697.617 232.422h-116.211v-116.179h116.211zm116.215-116.179h-116.215v-116.243h116.215zm-116.215-116.243h-116.211v-116.207h116.211zm729.988-163.168c3.44 6.469 6.82 12.973 10.08 19.551 55.88 112.863 84.21 242.508 84.21 385.348v37.64 291.762h-488.321v67.65c0 25.24-20.457 45.7-45.699 45.7-25.235 0-45.692-20.46-45.692-45.7v-67.65h-488.0702v-291.762-37.64c0-142.762 28.3281-272.363 84.2112-385.207 3.285-6.621 6.691-13.172 10.164-19.692 43.754-82.109 102.551-155.32 175.066-217.839 116.008-100.008 233.723-143.1684 264.457-153.3091 30.739 10.1211 148.449 53.2191 264.449 153.1871 72.555 62.532 131.379 135.793 175.145 217.961zm151.05 789.931v-385.032c0-152.258-30.56-290.871-90.83-411.977-48.34-97.133-115.704-183.09-200.22-255.5-143.68-123.1013-285.949-163.94897-291.941-165.63256l-7.664-2.14844-7.672 2.16016c-5.989 1.67968-148.254 42.60934-291.926 165.73784-84.516 72.43-151.879 158.411-200.2189 255.532-60.2695 121.086-90.8281 259.644-90.8281 411.828v385.032h259.402v7.26c0 29 22.875 42.34 25.118 56.65h133.734c2.519-13.94 25.328-26.53 25.328-56.65 0-2.8 0-5.17 0-7.26h27.91v7.44c0 45.8-27.918 52.09-27.918 81.1v28.91h39.012v-22.54h25.055v22.54h39.136v-22.54h24.278v22.54h19.465 19.472v-22.54h24.278v22.54h39.136v-22.54h25.051v22.54h39.012v-28.91c0-29.01-27.914-35.3-27.914-81.1v-7.44h28.164v7.26c0 29 22.871 42.34 25.113 56.65h133.734c2.52-13.94 25.332-26.53 25.332-56.65v-7.26zm-284.734 137.81c0 17.04 25.332 24.19 25.332 54.3v22.14h-38.945v-22.14h-33.676v22.14h-38.941v-22.14h-33.676v22.14h-38.941s0-5.89 0-22.14c0-28.99 25.113-37.26 25.113-54.3zm-133.734-52.56h133.734v32.2h-133.734zm-344.578 52.56c0 17.04 25.328 24.19 25.328 54.3v22.14h-38.941v-22.14h-33.676v22.14h-38.942v-22.14h-33.675v22.14h-38.946s0-5.89 0-22.14c0-28.99 25.118-37.26 25.118-54.3zm-133.734-52.56h133.734v32.2h-133.734zm374.355 105.54c0 17.03 25.117 24.19 25.117 54.3v22.13h-38.945v-22.13h-33.672v22.13h-38.945v-22.13h-33.672v22.13h-38.945s0-5.88 0-22.13c0-29 25.113-37.27 25.113-54.3zm-133.949-20.77h134.074v-32.21h-134.074z' fill='%23204ba0'/%3E%3C/g%3E%3C/svg%3E");
-    transform: translate(-2px, 1px);
-    transition: opacity 500ms;
+  position: absolute;
+  content: url("data:image/svg+xml,%3Csvg title='University of Pittsburgh' height='20' viewBox='0 0 157.50667 198.33333' width='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='matrix(.13333333 0 0 -.13333333 0 198.33333)'%3E%3Cpath d='m886.781 931.203c-48.051 0-87.152 39.098-87.152 87.147 0 48 39.101 87.1 87.152 87.1 48.047 0 87.117-39.1 87.117-87.1 0-48.049-39.07-87.147-87.117-87.147zm-591.605 0c-48.047 0-87.145 39.098-87.145 87.147 0 48 39.098 87.1 87.145 87.1 48.051 0 87.148-39.1 87.148-87.1 0-48.049-39.097-87.147-87.148-87.147zm341.043 233.457v67.65c0 25.24-20.457 45.7-45.699 45.7-25.235 0-45.692-20.46-45.692-45.7v-67.65h-488.0702v-291.762h1067.7822v291.762zm-44.754-966.801c-48.055 0-87.149 39-87.149 87.051s39.094 87.149 87.149 87.149c48.051 0 87.121-39.098 87.121-87.149s-39.07-87.051-87.121-87.051zm-440.332 232.5c43.754-82.109 102.551-155.32 175.066-217.828 116.008-100.011 233.723-143.1794 264.457-153.3201 30.739 10.1211 148.449 53.2191 264.449 153.1871 72.559 62.532 131.379 135.793 175.145 217.961z' fill='%23fff'/%3E%3Cpath d='m1040.33 449.91c55.88 112.863 84.21 242.508 84.21 385.348v37.64h-1067.7822v-37.64c0-142.762 28.3281-272.363 84.2112-385.207 3.285-6.621 6.691-13.172 10.164-19.692h879.117c3.44 6.469 6.82 12.973 10.08 19.551' fill='%23f9b00f'/%3E%3Cpath d='m886.781 1105.45c-48.051 0-87.152-39.1-87.152-87.1 0-48.049 39.101-87.147 87.152-87.147 48.047 0 87.117 39.098 87.117 87.147 0 48-39.07 87.1-87.117 87.1zm-591.605 0c-48.047 0-87.145-39.1-87.145-87.1 0-48.049 39.098-87.147 87.145-87.147 48.051 0 87.148 39.098 87.148 87.147 0 48-39.097 87.1-87.148 87.1zm296.285-733.391c-48.051 0-87.145-39.098-87.145-87.149s39.094-87.051 87.145-87.051c48.055 0 87.125 39 87.125 87.051s-39.07 87.149-87.125 87.149zm-58.445 453.89h-116.176v-116.179h116.176zm-.36-232.422h-116.179v-116.207h116.179zm232.758 0h-116.148v-116.207h116.148zm116.25 116.243h-116.25v-116.243h116.25zm-232.398 0h-116.25v-116.243h116.25zm116.148 116.179h-116.148v-116.179h116.148zm232.465 0h-116.215v-116.179h116.215zm0-232.422h-116.215v-116.207h116.215zm-697.617 232.422h-116.211v-116.179h116.211zm116.215-116.179h-116.215v-116.243h116.215zm-116.215-116.243h-116.211v-116.207h116.211zm729.988-163.168c3.44 6.469 6.82 12.973 10.08 19.551 55.88 112.863 84.21 242.508 84.21 385.348v37.64 291.762h-488.321v67.65c0 25.24-20.457 45.7-45.699 45.7-25.235 0-45.692-20.46-45.692-45.7v-67.65h-488.0702v-291.762-37.64c0-142.762 28.3281-272.363 84.2112-385.207 3.285-6.621 6.691-13.172 10.164-19.692 43.754-82.109 102.551-155.32 175.066-217.839 116.008-100.008 233.723-143.1684 264.457-153.3091 30.739 10.1211 148.449 53.2191 264.449 153.1871 72.555 62.532 131.379 135.793 175.145 217.961zm151.05 789.931v-385.032c0-152.258-30.56-290.871-90.83-411.977-48.34-97.133-115.704-183.09-200.22-255.5-143.68-123.1013-285.949-163.94897-291.941-165.63256l-7.664-2.14844-7.672 2.16016c-5.989 1.67968-148.254 42.60934-291.926 165.73784-84.516 72.43-151.879 158.411-200.2189 255.532-60.2695 121.086-90.8281 259.644-90.8281 411.828v385.032h259.402v7.26c0 29 22.875 42.34 25.118 56.65h133.734c2.519-13.94 25.328-26.53 25.328-56.65 0-2.8 0-5.17 0-7.26h27.91v7.44c0 45.8-27.918 52.09-27.918 81.1v28.91h39.012v-22.54h25.055v22.54h39.136v-22.54h24.278v22.54h19.465 19.472v-22.54h24.278v22.54h39.136v-22.54h25.051v22.54h39.012v-28.91c0-29.01-27.914-35.3-27.914-81.1v-7.44h28.164v7.26c0 29 22.871 42.34 25.113 56.65h133.734c2.52-13.94 25.332-26.53 25.332-56.65v-7.26zm-284.734 137.81c0 17.04 25.332 24.19 25.332 54.3v22.14h-38.945v-22.14h-33.676v22.14h-38.941v-22.14h-33.676v22.14h-38.941s0-5.89 0-22.14c0-28.99 25.113-37.26 25.113-54.3zm-133.734-52.56h133.734v32.2h-133.734zm-344.578 52.56c0 17.04 25.328 24.19 25.328 54.3v22.14h-38.941v-22.14h-33.676v22.14h-38.942v-22.14h-33.675v22.14h-38.946s0-5.89 0-22.14c0-28.99 25.118-37.26 25.118-54.3zm-133.734-52.56h133.734v32.2h-133.734zm374.355 105.54c0 17.03 25.117 24.19 25.117 54.3v22.13h-38.945v-22.13h-33.672v22.13h-38.945v-22.13h-33.672v22.13h-38.945s0-5.88 0-22.13c0-29 25.113-37.27 25.113-54.3zm-133.949-20.77h134.074v-32.21h-134.074z' fill='%23204ba0'/%3E%3C/g%3E%3C/svg%3E");
+  transform: translate(-2px, 3px);
 }
 .cloudflare::after {
-    position: absolute;
-    opacity: 0;
-    content: url("data:image/svg+xml,%3Csvg height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m8.16 23h21.177v-5.86l-4.023-2.307-.694-.3-16.46.113z' fill='%23fff'/%3E%3Cpath d='m22.012 22.222c.197-.675.122-1.294-.206-1.754-.3-.422-.807-.666-1.416-.694l-11.545-.15c-.075 0-.14-.038-.178-.094s-.047-.13-.028-.206c.038-.113.15-.197.272-.206l11.648-.15c1.38-.066 2.88-1.182 3.404-2.55l.666-1.735a.38.38 0 0 0 .02-.225c-.75-3.395-3.78-5.927-7.4-5.927-3.34 0-6.17 2.157-7.184 5.15-.657-.488-1.5-.75-2.392-.666-1.604.16-2.9 1.444-3.048 3.048a3.58 3.58 0 0 0 .084 1.191 4.84 4.84 0 0 0 -4.709 4.846c0 .234.02.47.047.703.02.113.113.197.225.197h21.308a.29.29 0 0 0 .272-.206z' fill='%23f38020'/%3E%3Cpath d='m25.688 14.803-.32.01c-.075 0-.14.056-.17.13l-.45 1.566c-.197.675-.122 1.294.206 1.754.3.422.807.666 1.416.694l2.457.15c.075 0 .14.038.178.094s.047.14.028.206c-.038.113-.15.197-.272.206l-2.56.15c-1.388.066-2.88 1.182-3.404 2.55l-.188.478c-.038.094.028.188.13.188h8.797a.23.23 0 0 0 .225-.169 6.41 6.41 0 0 0 .239-1.704 6.32 6.32 0 0 0 -6.312-6.302' fill='%23faae40'/%3E%3C/svg%3E");
-    transform: translateX(6px);
-    transition: opacity 500ms;
+  position: absolute;
+  content: url("data:image/svg+xml,%3Csvg title='Cloudflare' height='24' viewBox='0 0 32 32' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m8.16 23h21.177v-5.86l-4.023-2.307-.694-.3-16.46.113z' fill='%23fff'/%3E%3Cpath d='m22.012 22.222c.197-.675.122-1.294-.206-1.754-.3-.422-.807-.666-1.416-.694l-11.545-.15c-.075 0-.14-.038-.178-.094s-.047-.13-.028-.206c.038-.113.15-.197.272-.206l11.648-.15c1.38-.066 2.88-1.182 3.404-2.55l.666-1.735a.38.38 0 0 0 .02-.225c-.75-3.395-3.78-5.927-7.4-5.927-3.34 0-6.17 2.157-7.184 5.15-.657-.488-1.5-.75-2.392-.666-1.604.16-2.9 1.444-3.048 3.048a3.58 3.58 0 0 0 .084 1.191 4.84 4.84 0 0 0 -4.709 4.846c0 .234.02.47.047.703.02.113.113.197.225.197h21.308a.29.29 0 0 0 .272-.206z' fill='%23f38020'/%3E%3Cpath d='m25.688 14.803-.32.01c-.075 0-.14.056-.17.13l-.45 1.566c-.197.675-.122 1.294.206 1.754.3.422.807.666 1.416.694l2.457.15c.075 0 .14.038.178.094s.047.14.028.206c-.038.113-.15.197-.272.206l-2.56.15c-1.388.066-2.88 1.182-3.404 2.55l-.188.478c-.038.094.028.188.13.188h8.797a.23.23 0 0 0 .225-.169 6.41 6.41 0 0 0 .239-1.704 6.32 6.32 0 0 0 -6.312-6.302' fill='%23faae40'/%3E%3C/svg%3E");
+  transform: translateX(6px);
 }
 .student:hover:after,
 .cloudflare:hover:after {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Featured works */
@@ -321,7 +334,7 @@ a:active {
     content: "★";
 }*/
 
-/* Sort buttons */
+/* Sort buttons
 .sort {
     background-color: var(--color);
     color: var(--background);
@@ -342,73 +355,77 @@ a:active {
     content: "\0025BE";
     padding-left: 3px;
 }
-
+*/
 /*** Mobile responsive design ***/
+
 @media only screen and (max-width: 768px) {
-    body {
-        padding: 1em;
-    }
+  body {
+    padding: 5em 1em;
+    hyphens: auto;
+  }
 
-    /* Main page */
-    .grid-container {
-        display: flex;
-        flex-direction: column;
+  /* Main page  */
+  /*
+  .grid-container {
+    display: flex;
+    flex-direction: column;
 
-        height: 70vh;
+    height: 70vh;
 
-        overflow-y: hidden;
+    overflow-y: hidden;
 
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr;
-    }
-    .grid-item {
-        display: flex;
-        justify-content: center;
-        row-gap: 0.7em;
-        line-height: 1.25em;
-    }
-    #name-title {
-        grid-area: 1 / 1 / 2 / 2;
-    }
-    #info {
-        grid-area: 1 / 2 / 2 / 3;
-    }
-    .name-header {
-        font-size: 4vh;
-    }
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    row-gap: 0.7em;
+    line-height: 1.25em;
+  }
+  #name-title {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  #info {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .name-header {
+    font-size: 4vh;
+  }
+  */
 
-    /* Archive */
-    .archive-heading-container,
-    .archive-item {
-        display: flex;
-        flex-direction: column;
-    }
-    .archive-heading-container {
-        row-gap: 1em;
-        display: flex;
-        align-items: center;
-    }
-    .sort {
-        width: 100%;
-    }
-    .date {
-        justify-content: flex-start;
-        border-top: 1px solid var(--color);
-        margin-bottom: 1em;
-    }
-    .client {
-        margin-bottom: 0.5em;
-    }
-    .description {
-        padding: 0;
-    }
-    .grid-item a:link {
-        text-decoration: underline;
-    }
-    .title a:link::after {
-        content: " →";
-    }
-    .content {
-        margin-bottom: 0.5em;
-    }
+  /* Archive */
+  .archive-heading-container,
+  .archive-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .archive-heading-container {
+    row-gap: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .sort {
+    width: 100%;
+  }
+  .date {
+    justify-content: flex-start;
+    border-top: solid;
+    margin-bottom: 1em;
+  }
+  .client {
+    margin-bottom: 0.5em;
+  }
+  .description {
+    padding: 0;
+  }
+  .grid-item a:link {
+    text-decoration: underline;
+  }
+  .title a:link::after {
+    content: " →";
+  }
+  .content {
+    margin-bottom: 0.5em;
+  }
 }
