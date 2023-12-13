@@ -119,7 +119,7 @@ body {
   /* Font styling */
   --minFontSize: 32px;
   --maxFontSize: 200px;
-  --scaler: 5vw;
+  --scaler: 4vw;
   font-family: var(--font-family-serif);
   font-weight: 400;
   font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
