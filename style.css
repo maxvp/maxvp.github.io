@@ -25,9 +25,9 @@
   :root {
     --background-color: #151515;
     --text-color: #f0f0f0;
-    --text-hover-color: #9ce37d;
+    --text-hover-color: #87b37a;
 
-    --highlight-color: #87b37a;
+    --highlight-color: #9ce37d;
 
     --archive-item-hover-color: rgba(255, 255, 255, 0.03);
 
@@ -106,35 +106,26 @@ h6 {
 /* index.html */
 body {
   padding: 5em;
-
   background-color: var(--background-color);
-  color: var(--text-color);
-}
 
-.img-headshot {
-  max-width: 50%;
-}
-
-.body-text {
   /* Font styling */
-  --minFontSize: 32px;
-  --maxFontSize: 200px;
-  --scaler: 4vw;
-  font-family: var(--font-family-serif);
+  color: var(--text-color);
+  font-family: var(--font-family-sans-serif);
   font-weight: 400;
-  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
-  line-height: 1.25em;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-weight: 400;
 }
 
 /* Links */
 a:link,
 a:visited {
   color: inherit;
-  transition: color 0.5s;
 }
 a:hover {
-  color: var(--text-hover-color);
-  transition: color 0s;
+  background-color: var(--text-hover-color);
 }
 a:active {
   color: inherit;
