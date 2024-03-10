@@ -112,7 +112,7 @@ body {
   color: var(--text-color);
   font-family: var(--font-family-sans-serif);
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h1 {
@@ -126,6 +126,7 @@ a:visited {
 }
 a:hover {
   background-color: var(--text-hover-color);
+  transition: background-color 0.5s ease-out;
 }
 a:active {
   color: inherit;
