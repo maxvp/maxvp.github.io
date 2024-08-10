@@ -16,7 +16,8 @@
   /* Fonts */
   --font-family-serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L",
     P052, serif;
-  --font-family-sans-serif: system-ui, sans-serif;
+  --font-family-sans-serif: Arial, Inter, Roboto, "Helvetica Neue", "Arial Nova",
+    "Nimbus Sans", sans-serif;
   --font-family-monospace: "Nimbus Mono PS", "Courier New", monospace;
 }
 
@@ -105,7 +106,7 @@ h6 {
 
 /* index.html */
 body {
-  padding: 5em;
+  padding: 2em;
   background-color: var(--background-color);
 
   /* Font styling */
