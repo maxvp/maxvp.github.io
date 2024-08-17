@@ -2,9 +2,9 @@
   /* Light mode */
   --background-color: #f0f0f0;
   --text-color: #151515;
-  --text-hover-color: #87b37a;
+  --text-hover-color: #8db5ab;
 
-  --highlight-color: #5f3f5d;
+  --highlight-color: #36544e;
 
   --archive-item-hover-color: rgba(0, 0, 0, 0.03);
 
@@ -26,9 +26,9 @@
   :root {
     --background-color: #151515;
     --text-color: #f0f0f0;
-    --text-hover-color: #87b37a;
+    --text-hover-color: #36544e;
 
-    --highlight-color: #9ce37d;
+    --highlight-color: #8db5ab;
 
     --archive-item-hover-color: rgba(255, 255, 255, 0.03);
 
