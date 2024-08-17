@@ -121,6 +121,13 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+#headshot {
+  max-width: 25%;
+  border: 2px solid var(--text-color);
+
+  margin-bottom: 1.5em;
+}
+
 /* Links */
 a:link,
 a:visited {
@@ -318,7 +325,12 @@ a:has(img):hover {
   }
   header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+  #headshot {
+    max-width: 50%;
   }
   /*
   .grid-container {
