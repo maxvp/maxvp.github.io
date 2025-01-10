@@ -18,7 +18,7 @@
     /* Fonts */
     --font-family-serif: "Iowan Old Style", "Palatino Linotype",
         "URW Palladio L", P052, serif;
-    --font-family-sans-serif: Inter, Arial, Roboto, "Helvetica Neue",
+    --font-family-sans-serif: Inter, "Helvetica Neue", Arial, Roboto,
         "Arial Nova", "Nimbus Sans", sans-serif;
     --font-family-monospace: "Nimbus Mono PS", "Courier New", monospace;
 }
