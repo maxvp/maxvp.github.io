@@ -4,8 +4,22 @@
   "description": "My personal portofolio website, found at [maxvphillips.com](https://www.maxvphillips.com/).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxvp/maxvp.github.io.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maxvp/maxvp.github.io/issues"
+  },
+  "homepage": "https://github.com/maxvp/maxvp.github.io#readme",
+  "devDependencies": {
+    "vite": "^7.2.4"
+  }
 }
