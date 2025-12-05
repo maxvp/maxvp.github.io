@@ -14,7 +14,7 @@
     "url": "git+https://github.com/maxvp/maxvp.github.io.git"
   },
   "keywords": [],
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/maxvp/maxvp.github.io/issues"
   },
