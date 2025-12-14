@@ -1,0 +1,38 @@
+/*** Mobile responsive design ***/
+
+@media only screen and (max-width: 768px) {
+  /* Portfolio */
+  .portfolio-heading-container,
+  .portfolio-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio-heading-container {
+    row-gap: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .sort {
+    width: 100%;
+  }
+  .date {
+    justify-content: flex-start;
+    border-top: solid;
+    margin-bottom: 1em;
+  }
+  .client {
+    margin-bottom: 0.5em;
+  }
+  .description {
+    padding: 0;
+  }
+  .portfolio-item a:link {
+    text-decoration: underline;
+  }
+  .title a:link::after {
+    content: " →";
+  }
+  .content {
+    margin-bottom: 0.5em;
+  }
+}

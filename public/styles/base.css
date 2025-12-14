@@ -1,0 +1,48 @@
+/*** My stuff ***/
+
+/* index.html */
+body {
+  padding: 2em;
+  background-color: var(--background-color);
+
+  /* Font styling */
+  color: var(--text-color);
+  font-family: var(--font-family-sans-serif);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+#headshot {
+  max-width: 25%;
+  border: 2px solid var(--text-color);
+
+  margin-bottom: 1.5em;
+}
+
+/* Links */
+a:link,
+a:visited {
+  color: inherit;
+  transition: background-color 0.5s;
+}
+a:hover {
+  background-color: var(--text-hover-color);
+  transition: background-color 0s;
+}
+a:active {
+  background-color: var(--highlight-color);
+  transition: background-color 0.25s;
+}
+
+::selection {
+  background-color: var(--highlight-color);
+}
+
+/* Pizazz */
+
+/* TODO: Clean this up */

@@ -1,0 +1,50 @@
+/*** Mobile responsive design ***/
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 5em 1em;
+    hyphens: auto;
+  }
+
+  /* Main page  */
+  h1 {
+    font-size: 1.5em;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #headshot {
+    max-width: 50%;
+  }
+  /*
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 70vh;
+
+    overflow-y: hidden;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    row-gap: 0.7em;
+    line-height: 1.25em;
+  }
+  #name-title {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  #info {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .name-header {
+    font-size: 4vh;
+  }
+  */
+}

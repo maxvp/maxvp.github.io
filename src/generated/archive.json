@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "2022-08-docs-overview",
+    "title": "Docs Overview page redesign",
+    "date": "2022-08",
+    "client": "Cloudflare",
+    "clientUrl": "https://developers.cloudflare.com/",
+    "url": "https://developers.cloudflare.com/argo-smart-routing/",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Implemented HTML components for Cloudflare Docs landing pages. More context at <a href=\"https://developers.cloudflare.com/\">Cloudflare Developers</a>.</p>"
+  }
+]
