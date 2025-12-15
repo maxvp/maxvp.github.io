@@ -3,7 +3,7 @@ title: "Argo Smart Routing docs"
 date: 2022-07
 client: "Cloudflare"
 clientUrl: "https://developers.cloudflare.com/"
-clientClass: ""
+clientClass: "cloudflare"
 url: "https://developers.cloudflare.com/argo-smart-routing/"
 image: ""
 imageAlt: ""

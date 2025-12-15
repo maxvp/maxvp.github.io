@@ -158,6 +158,11 @@ async function main() {
     const raw = await fs.readFile(fullPath, "utf8");
     const { data, body } = parseFrontmatter(raw);
 
+    const client = data.client || "";
+    const clientClass = data.clientClass || "";
+    const effectiveClientClass =
+      clientClass || (client && client !== "Cloudflare" ? "student" : "");
+
     const relPath = path
       .relative(contentDir, fullPath)
       .split(path.sep)
@@ -168,9 +173,9 @@ async function main() {
       slug,
       title: data.title || slug,
       date: data.date || "",
-      client: data.client || "",
+      client,
       clientUrl: data.clientUrl || "",
-      clientClass: data.clientClass || "",
+      clientClass: effectiveClientClass,
       url: data.url || "",
       image: data.image || "",
       imageAlt: data.imageAlt || "",
