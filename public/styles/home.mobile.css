@@ -1,23 +1,60 @@
 /*** Mobile responsive design ***/
 
 @media only screen and (max-width: 768px) {
+  :root {
+    --page-padding-x: 1rem;
+    --page-padding-y: 1.25rem;
+  }
+
   body {
-    padding: 5em 1em;
+    padding: var(--page-padding-y) var(--page-padding-x);
     hyphens: auto;
   }
 
-  /* Main page  */
-  h1 {
-    font-size: 1.5em;
+  body.home {
+    height: auto;
+    overflow: auto;
   }
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+  .home-marquee {
+    margin-bottom: 1rem;
   }
-  #headshot {
-    max-width: 50%;
+
+  .home-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 0;
+  }
+
+  .home-photo {
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    max-height: 45vh;
+  }
+
+  .home-panel {
+    grid-column: 1;
+    padding: 0;
+  }
+
+  .home-about {
+    grid-row: 2;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-contact {
+    grid-row: 3;
+  }
+
+  .home-panel h1 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
   }
   /*
   .grid-container {

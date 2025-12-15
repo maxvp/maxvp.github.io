@@ -7,6 +7,9 @@
   --text-hover-color: rgba(0, 0, 0, 0.06);
   --link-visited-color: rgba(0, 0, 0, 0.6);
 
+  --page-padding-x: clamp(1.25rem, 4vw, 3rem);
+  --page-padding-y: clamp(1.25rem, 4vw, 3rem);
+
   --highlight-color: var(--accent-color);
 
   --archive-item-hover-color: rgba(0, 0, 0, 0.03);

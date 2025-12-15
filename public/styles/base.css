@@ -3,13 +3,114 @@
 /* index.html */
 body {
   margin: 0;
-  padding: clamp(1.25rem, 4vw, 3rem);
+  padding: var(--page-padding-y) var(--page-padding-x);
   background-color: var(--background-color);
 
   color: var(--text-color);
   font-family: var(--font-family-sans-serif);
   font-weight: 500;
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.home {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-marquee {
+  overflow: hidden;
+  border-bottom: 2px solid var(--border-color);
+  padding: 0.35rem 0;
+  margin: calc(var(--page-padding-y) * -1) calc(var(--page-padding-x) * -1) 0;
+}
+
+.home-marquee-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+  animation: home-marquee 70s linear infinite;
+}
+
+.home-marquee:hover .home-marquee-track {
+  animation-play-state: paused;
+}
+
+.home-marquee-track span {
+  font-family: var(--font-family-monospace);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  flex: 0 0 auto;
+}
+
+@keyframes home-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 0;
+  row-gap: 0;
+
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.home-photo {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  border-right: 2px solid var(--border-color);
+  overflow: hidden;
+}
+
+.home-panel {
+  grid-column: 2;
+  padding: clamp(1rem, 2vw, 2rem);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.home-about {
+  grid-row: 1;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.home-contact {
+  grid-row: 2;
+}
+
+.home-panel h1 {
+  font-family: var(--font-family-sans-serif);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.home-panel p {
+  max-width: 60ch;
+  margin: 0.9rem 0;
+  font-family: var(--font-family-serif);
+  font-size: clamp(1.4rem, 2vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.home-panel li {
+  font-family: var(--font-family-serif);
+  font-size: clamp(1.4rem, 2vw, 2.25rem);
+  line-height: 1.15;
 }
 
 h1 {
@@ -37,6 +138,15 @@ li::marker {
   border: 4px solid var(--border-color);
 
   margin-bottom: 1.5em;
+}
+
+.home-photo #headshot {
+  border: 0;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
 }
 
 /* Links */
@@ -132,5 +242,10 @@ a:focus-visible {
   a:hover {
     background-color: var(--text-hover-color);
     color: var(--accent-color);
+  }
+
+  .home-marquee-track {
+    animation: none !important;
+    transform: none !important;
   }
 }
