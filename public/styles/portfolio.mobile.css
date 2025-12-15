@@ -2,37 +2,40 @@
 
 @media only screen and (max-width: 768px) {
   /* Portfolio */
-  .portfolio-heading-container,
-  .portfolio-item {
-    display: flex;
-    flex-direction: column;
-  }
   .portfolio-heading-container {
     row-gap: 1em;
     display: flex;
     align-items: center;
+    padding: 1rem 0;
+    border-bottom: 4px solid var(--border-color);
   }
   .sort {
     width: 100%;
   }
-  .date {
-    justify-content: flex-start;
-    border-top: solid;
-    margin-bottom: 1em;
+
+  .archive-row {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
   }
-  .client {
-    margin-bottom: 0.5em;
+
+  .archive-title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
   }
-  .description {
-    padding: 0;
+
+  .archive-thumb {
+    position: static;
+    transform: none;
   }
-  .portfolio-item a:link {
-    text-decoration: underline;
+
+  .archive-thumb img {
+    width: 52px;
+    height: 52px;
+    margin: 0;
   }
-  .title a:link::after {
-    content: " →";
-  }
-  .content {
-    margin-bottom: 0.5em;
+
+  .archive-year {
+    margin-left: 0;
+    width: 100%;
+    opacity: 0.8;
   }
 }

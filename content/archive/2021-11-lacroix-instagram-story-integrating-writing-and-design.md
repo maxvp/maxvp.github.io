@@ -1,5 +1,5 @@
 ---
-title: "LaCroix Instagram story Integrating Writing and Design"
+title: "LaCroix Instagram story"
 date: 2021-11
 client: "Integrating Writing and Design"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726
@@ -8,6 +8,7 @@ url: design/integrating/instagram/instagram.pdf
 image: /archive/design/integrating/instagram/lacroix_mockup.png
 imageAlt: ""
 ---
+
 Instagram story mockup advertising LaCroix sparkling water in the style of '70s/'80s print ads (with a modern twist).
 
 - Can images from [lacroixwater.com](https://www.lacroixwater.com/).

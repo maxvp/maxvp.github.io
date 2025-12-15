@@ -1,10 +1,13 @@
 :root {
   /* Light mode */
-  --background-color: #f0f0f0;
-  --text-color: #151515;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #000000;
+  --border-color: #000000;
   --text-hover-color: rgba(0, 0, 0, 0.06);
+  --link-visited-color: rgba(0, 0, 0, 0.6);
 
-  --highlight-color: #36544e;
+  --highlight-color: var(--accent-color);
 
   --archive-item-hover-color: rgba(0, 0, 0, 0.03);
 
@@ -14,10 +17,10 @@
   --image-light-dark: light;
 
   /* Fonts */
-  --font-family-serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L",
-    P052, serif;
-  --font-family-sans-serif: Inter, "Helvetica Neue", Arial, Roboto, "Arial Nova",
-    "Nimbus Sans", sans-serif;
+  --font-family-serif: ui-serif, Iowan Old Style, "Palatino Linotype", Palatino,
+    Georgia, serif;
+  --font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
   --font-family-monospace: "Nimbus Mono PS", "Courier New", monospace;
 }
 
