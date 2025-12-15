@@ -1,0 +1,14 @@
+---
+title: "Inclusive Design class poster Integrating Writing and Design"
+date: 2021-10
+client: "Integrating Writing and Design"
+clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726
+clientClass: ""
+url: design/integrating/inclusive/inclusive.pdf
+image: /archive/design/integrating/inclusive/inclusive.jpg
+imageAlt: ""
+---
+Poster advertising upcoming class offerings with focus on accessible design.
+
+- Clock and face icons by [Font Awesome](https://fontawesome.com/).
+- Accessibility icon by Alfonso Melolonta Urbán for The Noun Project.

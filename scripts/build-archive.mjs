@@ -4,6 +4,31 @@ import path from "path";
 const contentDir = path.resolve("content/archive");
 const outFile = path.resolve("src/generated/archive.json");
 
+async function collectMarkdownFiles(dir) {
+  const results = [];
+
+  async function walk(currentDir) {
+    let dirents = [];
+    try {
+      dirents = await fs.readdir(currentDir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+
+    for (const dirent of dirents) {
+      const fullPath = path.join(currentDir, dirent.name);
+      if (dirent.isDirectory()) {
+        await walk(fullPath);
+      } else if (dirent.isFile() && dirent.name.endsWith(".md")) {
+        results.push(fullPath);
+      }
+    }
+  }
+
+  await walk(dir);
+  return results;
+}
+
 function parseFrontmatter(source) {
   const trimmed = source.replace(/^\uFEFF/, "");
   if (!trimmed.startsWith("---\n")) {
@@ -61,23 +86,64 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function inlineTextToHtml(text) {
+  let html = escapeHtml(text);
+
+  html = html.replace(
+    /(^|[^\w])\*\*([^*]+?)\*\*([^\w]|$)/g,
+    "$1<strong>$2</strong>$3"
+  );
+  html = html.replace(
+    /(^|[^\w])__([^_]+?)__([^\w]|$)/g,
+    "$1<strong>$2</strong>$3"
+  );
+  html = html.replace(/(^|[^\w])\*([^*]+?)\*([^\w]|$)/g, "$1<em>$2</em>$3");
+  html = html.replace(/(^|[^\w])_([^_]+?)_([^\w]|$)/g, "$1<em>$2</em>$3");
+
+  return html;
+}
+
+function inlineMarkdownToHtml(text) {
+  const raw = String(text ?? "");
+  const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+  const parts = [];
+  let lastIndex = 0;
+  for (const m of raw.matchAll(linkRe)) {
+    const index = m.index ?? 0;
+    parts.push(inlineTextToHtml(raw.slice(lastIndex, index)));
+
+    const label = m[1] ?? "";
+    const href = m[2] ?? "";
+    parts.push(`<a href="${escapeHtml(href)}">${inlineTextToHtml(label)}<\/a>`);
+
+    lastIndex = index + m[0].length;
+  }
+  parts.push(inlineTextToHtml(raw.slice(lastIndex)));
+
+  return parts.join("");
+}
+
 function markdownToHtml(markdown) {
   const normalized = markdown.replace(/\r\n/g, "\n").trim();
   if (!normalized) return "";
 
-  const paragraphs = normalized.split(/\n\s*\n/g);
+  const blocks = normalized.split(/\n\s*\n/g);
 
-  return paragraphs
-    .map((p) => {
-      let html = escapeHtml(p);
+  return blocks
+    .map((block) => {
+      const lines = block.split("\n");
+      const isList = lines.every((l) => l.trim().startsWith("- "));
 
-      html = html.replace(
-        /\[([^\]]+)\]\(([^)]+)\)/g,
-        (_m, text, href) =>
-          `<a href=\"${escapeHtml(href)}\">${escapeHtml(text)}<\/a>`
-      );
+      if (isList) {
+        const items = lines
+          .map((l) => l.trim().slice(2))
+          .map((item) => `<li>${inlineMarkdownToHtml(item)}</li>`)
+          .join("\n");
+        return `<ul>\n${items}\n</ul>`;
+      }
 
-      html = html.replace(/\n/g, "<br />\n");
+      const html = inlineMarkdownToHtml(block).replace(/\n/g, "<br />\n");
       return `<p>${html}</p>`;
     })
     .join("\n");
@@ -86,21 +152,17 @@ function markdownToHtml(markdown) {
 async function main() {
   const entries = [];
 
-  let files = [];
-  try {
-    files = await fs.readdir(contentDir);
-  } catch {
-    files = [];
-  }
+  const files = await collectMarkdownFiles(contentDir);
 
-  for (const file of files) {
-    if (!file.endsWith(".md")) continue;
-
-    const fullPath = path.join(contentDir, file);
+  for (const fullPath of files) {
     const raw = await fs.readFile(fullPath, "utf8");
     const { data, body } = parseFrontmatter(raw);
 
-    const slug = file.replace(/\.md$/, "");
+    const relPath = path
+      .relative(contentDir, fullPath)
+      .split(path.sep)
+      .join("/");
+    const slug = relPath.replace(/\.md$/, "");
 
     entries.push({
       slug,
@@ -108,6 +170,7 @@ async function main() {
       date: data.date || "",
       client: data.client || "",
       clientUrl: data.clientUrl || "",
+      clientClass: data.clientClass || "",
       url: data.url || "",
       image: data.image || "",
       imageAlt: data.imageAlt || "",

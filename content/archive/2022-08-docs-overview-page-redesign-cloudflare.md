@@ -1,0 +1,11 @@
+---
+title: "Docs Overview page redesign Cloudflare"
+date: 2022-08
+client: "Cloudflare"
+clientUrl: https://developers.cloudflare.com/
+clientClass: ""
+url: https://developers.cloudflare.com/argo-smart-routing/
+image: /archive/2022/docs-feature-grid-dark.png
+imageAlt: ""
+---
+Implemented HTML components for site builder (Hugo) to organize all product landing pages. We designed this template to serve as a "nutrition label" for each Cloudflare product. I programmed the components to be flexible and extensible without cluttering Markdown code.

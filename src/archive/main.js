@@ -9,12 +9,40 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function formatYearMonth(dateStr) {
+  const raw = String(dateStr || "").trim();
+  const m = raw.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
+  if (!m) return raw;
+
+  const year = Number(m[1]);
+  const month = Number(m[2]);
+  if (!year || month < 1 || month > 12) return raw;
+
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  return `${monthNames[month - 1]} ${year}`;
+}
+
 function renderEntry(entry) {
   const title = entry.title ? escapeHtml(entry.title) : "";
   const url = entry.url ? String(entry.url) : "";
-  const date = entry.date ? escapeHtml(entry.date) : "";
+  const displayDate = entry.date ? escapeHtml(formatYearMonth(entry.date)) : "";
   const client = entry.client ? escapeHtml(entry.client) : "";
   const clientUrl = entry.clientUrl ? String(entry.clientUrl) : "";
+  const clientClass = entry.clientClass ? escapeHtml(entry.clientClass) : "";
   const image = entry.image ? String(entry.image) : "";
   const imageAlt = entry.imageAlt ? escapeHtml(entry.imageAlt) : "";
   const descriptionHtml = entry.descriptionHtml
@@ -24,7 +52,9 @@ function renderEntry(entry) {
   const titleHtml = url ? `<a href="${escapeHtml(url)}">${title}</a>` : title;
 
   const clientHtml = clientUrl
-    ? `<a href="${escapeHtml(clientUrl)}">${client}</a>`
+    ? `<a href="${escapeHtml(clientUrl)}"${
+        clientClass ? ` class="${clientClass}"` : ""
+      }>${client}</a>`
     : client;
 
   const imageHtml = image
@@ -35,7 +65,7 @@ function renderEntry(entry) {
 
   return `
     <div class="portfolio-item">
-      ${date ? `<p class="date">${date}</p>` : ""}
+      ${displayDate ? `<p class="date">${displayDate}</p>` : ""}
       ${title ? `<h3 class="title">${titleHtml}</h3>` : ""}
       ${client ? `<p class="client">${clientHtml}</p>` : ""}
       ${imageHtml}

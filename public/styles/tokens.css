@@ -22,6 +22,7 @@
 }
 
 /* If user prefers dark mode */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #151515;
@@ -37,3 +38,4 @@
     --image-light-dark: dark;
   }
 }
+*/
