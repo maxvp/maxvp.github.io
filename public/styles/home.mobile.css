@@ -27,6 +27,10 @@
     padding: 0;
   }
 
+  .home-right {
+    display: contents;
+  }
+
   .home-photo {
     grid-column: 1;
     grid-row: 1;
