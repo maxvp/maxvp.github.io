@@ -1,8 +1,10 @@
 import { promises as fs } from "fs";
+import { execSync } from "child_process";
 import path from "path";
 
 const contentDir = path.resolve("content/archive");
 const outFile = path.resolve("src/generated/archive.json");
+const siteMetaFile = path.resolve("src/generated/site-meta.json");
 
 async function collectMarkdownFiles(dir) {
   const results = [];
@@ -188,6 +190,46 @@ async function main() {
 
   await fs.mkdir(path.dirname(outFile), { recursive: true });
   await fs.writeFile(outFile, JSON.stringify(entries, null, 2) + "\n", "utf8");
+
+  let commitHash =
+    process.env.CF_PAGES_COMMIT_SHA ||
+    process.env.GITHUB_SHA ||
+    process.env.VERCEL_GIT_COMMIT_SHA ||
+    "";
+  let commitDateIso =
+    process.env.CF_PAGES_COMMIT_TIMESTAMP ||
+    process.env.VERCEL_GIT_COMMIT_DATE ||
+    "";
+
+  if (!commitHash || !commitDateIso) {
+    try {
+      const raw = execSync("git log -1 --format=%H|%cI", {
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }).trim();
+      const [h, d] = raw.split("|");
+      if (!commitHash && h) commitHash = h;
+      if (!commitDateIso && d) commitDateIso = d;
+    } catch {
+      // ignore
+    }
+  }
+
+  if (!commitDateIso) commitDateIso = new Date().toISOString();
+
+  await fs.mkdir(path.dirname(siteMetaFile), { recursive: true });
+  await fs.writeFile(
+    siteMetaFile,
+    JSON.stringify(
+      {
+        commitHash,
+        commitDateIso,
+      },
+      null,
+      2
+    ) + "\n",
+    "utf8"
+  );
 }
 
 await main();

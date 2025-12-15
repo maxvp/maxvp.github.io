@@ -2,8 +2,8 @@
 
 @media only screen and (max-width: 768px) {
   :root {
-    --page-padding-x: 1rem;
-    --page-padding-y: 1.25rem;
+    --page-padding-x: 0px;
+    --page-padding-y: 0px;
   }
 
   body {

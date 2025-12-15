@@ -47,6 +47,24 @@ body.home {
   flex: 0 0 auto;
 }
 
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--border-color);
+  padding: 0.35rem 0;
+  background-color: var(--background-color);
+  flex: 0 0 auto;
+}
+
+.status-left,
+.status-right {
+  font-family: var(--font-family-monospace);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 @keyframes home-marquee {
   0% {
     transform: translateX(0);
