@@ -2,6 +2,10 @@
 
 @media only screen and (max-width: 768px) {
   /* Portfolio */
+  #portfolio {
+    padding: 0 1rem 1.5rem;
+  }
+
   .portfolio-heading-container {
     row-gap: 1em;
     display: flex;

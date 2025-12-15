@@ -17,6 +17,7 @@
 /* Grid item sections  */
 #portfolio {
   padding-top: 1em;
+  padding-bottom: 1.5rem;
 }
 .date {
   grid-area: auto / 2 / span 2 / 4;
