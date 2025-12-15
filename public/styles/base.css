@@ -21,6 +21,11 @@ body.home {
   overflow: hidden;
 }
 
+body.home .home-marquee {
+  display: flex;
+  align-items: center;
+}
+
 .home-marquee {
   overflow: hidden;
   border-bottom: 2px solid var(--border-color);
@@ -138,6 +143,7 @@ body.home {
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  line-height: 1;
 }
 
 @keyframes home-marquee {
