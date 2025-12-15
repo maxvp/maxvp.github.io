@@ -2,7 +2,7 @@
   /* Light mode */
   --background-color: #f0f0f0;
   --text-color: #151515;
-  --text-hover-color: #8db5ab;
+  --text-hover-color: rgba(0, 0, 0, 0.06);
 
   --highlight-color: #36544e;
 

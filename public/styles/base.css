@@ -28,15 +28,15 @@ h1 {
 a:link,
 a:visited {
   color: inherit;
-  transition: background-color 0.5s;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.12em;
 }
 a:hover {
   background-color: var(--text-hover-color);
-  transition: background-color 0s;
 }
 a:active {
   background-color: var(--highlight-color);
-  transition: background-color 0.25s;
 }
 
 ::selection {
