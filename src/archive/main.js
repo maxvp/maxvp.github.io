@@ -42,10 +42,15 @@ function renderEntry(entry) {
   const title = entry.title ? escapeHtml(entry.title) : "";
   const url = entry.url ? String(entry.url) : "";
   const dateLabel = entry.date ? escapeHtml(formatMonthYear(entry.date)) : "";
+  const client = entry.client ? escapeHtml(entry.client) : "";
   const image = entry.image ? String(entry.image) : "";
   const imageAlt = entry.imageAlt ? escapeHtml(entry.imageAlt) : "";
   const descriptionHtml = entry.descriptionHtml
     ? String(entry.descriptionHtml)
+    : "";
+
+  const clientHtml = client
+    ? `<span class="archive-client">${client}</span>`
     : "";
 
   const titleHtml = url
@@ -68,7 +73,9 @@ function renderEntry(entry) {
       </div>
       ${
         descriptionHtml
-          ? `<div class="archive-desc">${descriptionHtml}</div>`
+          ? `<div class="archive-desc">${
+              clientHtml ? `<div class="archive-meta">${clientHtml}</div>` : ""
+            }${descriptionHtml}</div>`
           : ""
       }
     </div>

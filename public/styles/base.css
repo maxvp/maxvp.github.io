@@ -24,16 +24,65 @@ body.home {
 .home-marquee {
   overflow: hidden;
   border-bottom: 2px solid var(--border-color);
-  padding: 0.35rem 0;
+  padding: 0.55rem 0;
   margin: calc(var(--page-padding-y) * -1) calc(var(--page-padding-x) * -1) 0;
+  position: relative;
 }
 
 .home-marquee-track {
   display: flex;
+  align-items: center;
   width: max-content;
   white-space: nowrap;
   will-change: transform;
   animation: home-marquee 70s linear infinite;
+}
+
+.archive-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--background-color);
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.archive-back {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75rem;
+  border-right: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--background-color);
+  font-family: var(--font-family-monospace);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.archive-back:link,
+.archive-back:visited {
+  text-decoration: none;
+}
+
+.archive-marquee {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.archive-back:hover,
+.archive-back:focus-visible {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.archive-marquee .home-marquee-track {
+  padding-left: 3rem;
 }
 
 .home-marquee:hover .home-marquee-track {
@@ -45,6 +94,32 @@ body.home {
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   flex: 0 0 auto;
+  line-height: 1;
+}
+
+.archive-back:hover + .archive-marquee .home-marquee-track {
+  animation-play-state: running;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-color);
+  padding: 0.35rem 0.75rem;
+  background-color: var(--background-color);
+}
+
+.title-bar-left,
+.title-bar-right {
+  font-family: var(--font-family-monospace);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.title-bar-left {
+  text-decoration: none;
 }
 
 .status-bar {
