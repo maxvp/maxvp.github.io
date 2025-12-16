@@ -20,11 +20,12 @@
   --image-light-dark: light;
 
   /* Fonts */
-  --font-family-serif: ui-serif, Iowan Old Style, "Palatino Linotype", Palatino,
-    Georgia, serif;
-  --font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Arial, sans-serif;
-  --font-family-monospace: "Nimbus Mono PS", "Courier New", monospace;
+  --font-family-serif: "EB Garamond", ui-serif, Iowan Old Style,
+    "Palatino Linotype", Palatino, Georgia, serif;
+  --font-family-sans-serif: "Inter", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-family-monospace: "Inconsolata", "Nimbus Mono PS", "Courier New",
+    monospace;
 }
 
 /* If user prefers dark mode */

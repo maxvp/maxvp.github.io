@@ -10,6 +10,7 @@ body {
   font-family: var(--font-family-sans-serif);
   font-weight: 500;
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  letter-spacing: -0.01em;
 
   min-height: 100vh;
   display: flex;
@@ -64,6 +65,7 @@ body.home .home-marquee {
   border-bottom: 2px solid var(--border-color);
   background-color: var(--background-color);
   font-family: var(--font-family-monospace);
+  font-weight: 300;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -96,6 +98,7 @@ body.home .home-marquee {
 
 .home-marquee-track span {
   font-family: var(--font-family-monospace);
+  font-weight: 300;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   flex: 0 0 auto;
@@ -118,6 +121,7 @@ body.home .home-marquee {
 .title-bar-left,
 .title-bar-right {
   font-family: var(--font-family-monospace);
+  font-weight: 300;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
@@ -140,6 +144,7 @@ body.home .home-marquee {
 .status-left,
 .status-right {
   font-family: var(--font-family-monospace);
+  font-weight: 300;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
@@ -218,12 +223,16 @@ body.home .home-marquee {
   max-width: 60ch;
   margin: 0.9rem 0;
   font-family: var(--font-family-serif);
+  font-weight: 400;
+  letter-spacing: normal;
   font-size: clamp(1.4rem, 2vw, 2.25rem);
   line-height: 1.15;
 }
 
 .home-panel li {
   font-family: var(--font-family-serif);
+  font-weight: 400;
+  letter-spacing: normal;
   font-size: clamp(1.4rem, 2vw, 2.25rem);
   line-height: 1.15;
 }
@@ -324,6 +333,7 @@ a:focus-visible {
   a[href^="http"]::after {
     content: " (" attr(href) ")";
     font-family: var(--font-family-monospace);
+    font-weight: 300;
     font-size: 0.9em;
   }
 
