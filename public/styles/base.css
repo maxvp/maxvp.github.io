@@ -186,35 +186,38 @@ body.home .home-marquee {
 .home-right {
   grid-column: 2;
   grid-row: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows:
+    minmax(min-content, 1fr)
+    minmax(min-content, 1fr)
+    minmax(min-content, 1fr);
   min-height: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .home-panel {
   padding: clamp(1rem, 2vw, 2rem);
   min-height: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .home-about {
   border-bottom: 2px solid var(--border-color);
-  flex: 7 1 0;
-  min-height: 0;
-  overflow: auto;
+}
+
+.home-work {
+  border-bottom: 2px solid var(--border-color);
 }
 
 .home-contact {
-  flex: 3 4 0;
-  min-height: min-content;
+  border-bottom: 0;
 }
 
 .home-panel h1 {
   font-family: var(--font-family-sans-serif);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   margin-bottom: 1rem;
   font-size: 0.85rem;
 }
