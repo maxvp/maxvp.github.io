@@ -24,5 +24,16 @@ if (left) {
 
 if (right) {
   const formatted = formatDate(meta?.commitDateIso);
-  right.textContent = formatted ? `Last updated: ${formatted}` : "";
+  right.textContent = "";
+  if (formatted) {
+    right.appendChild(document.createTextNode("Last updated "));
+
+    const a = document.createElement("a");
+    a.href = "https://github.com/maxvp/maxvp.github.io";
+    a.textContent = formatted;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+
+    right.appendChild(a);
+  }
 }

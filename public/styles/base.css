@@ -146,6 +146,11 @@ body.home .home-marquee {
   line-height: 1;
 }
 
+.status-bar a:link,
+.status-bar a:visited {
+  text-decoration-style: dotted;
+}
+
 @keyframes home-marquee {
   0% {
     transform: translateX(0);
