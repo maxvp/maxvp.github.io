@@ -10,7 +10,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Assisted Content Engineering team in migrating the Cloudflare Docs site from the Hugo static site generator to Starlight, a modern documentation framework for Astro. This work involved making decisions about the site&#039;s information architecture, updating the styling, and porting Hugo Go components to JSX.</p>"
+    "descriptionHtml": "<p>Assisted Content Engineering team in migrating the Cloudflare Docs site from the Hugo static site generator to Starlight, a modern documentation framework for Astro. This work involved making decisions about the site&#039;s information architecture, updating the styling, and porting Hugo components to JSX.</p>"
   },
   {
     "slug": "2024-06-clue-index",
@@ -24,6 +24,58 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Implemented HTML, CSS, and JavaScript for front-end of internal tool based on designs from UX Content Strategy team. The PCX CLUE (Content Legibility for User Ease) Index is an internal tool used to help stakeholders evaluate their contributions to docs, UI, API, and email content based on best practices and our internal style guide.</p>"
+  },
+  {
+    "slug": "2024-01-unique-certs",
+    "title": "Unique certificates change management",
+    "date": "2024-01",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/user-side-certificates/",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Following the expiration of the global Cloudflare root certificate, the Gateway team implemented a new process that requires every Zero Trust user to generate and deploy a certificate unique to their account. I was responsible for change management in the docs, writing docs to describe the new process and clearly communicating to Enterprise users the changes that would occur upon certificate expiration.</p>"
+  },
+  {
+    "slug": "2023-04-cert-instructions",
+    "title": "WARP client certificate instructions",
+    "date": "2023-04",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/user-side-certificates/manual-deployment/",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>I maintain the docs page for installing the Cloudflare certificate required by the WARP client to intercept and filter traffic. This work involves testing and documenting how to install certificates to various operating systems, desktop programs, and SaaS apps.</p>"
+  },
+  {
+    "slug": "2023-03-dlp",
+    "title": "Data Loss Prevention (DLP) docs restructure",
+    "date": "2023-03",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/data-loss-prevention/",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>I maintain the documentation for Cloudflare Data Loss Prevention (DLP). When we released predefined entries for DLP profiles (which adds the ability to detect known patterns in your Zero Trust organization&#039;s traffic, such as SSNs and credit card numbers), I restructured the DLP docs to follow a more logical workflow.</p>"
+  },
+  {
+    "slug": "2023-03-zt-core-dash-merge",
+    "title": "Zero Trust-core dashboard merge",
+    "date": "2023-03",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://github.com/cloudflare/cloudflare-docs/pull/8093",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>To consolidate the Cloudflare user experience, we merged the &quot;core&quot; dashboard (<em>dash.cloudflare.com</em>) and Zero Trust dashboard (<em>dash.teams.cloudflare.com</em>). I led the effort to update all of our Zero Trust docs instructions to reflect the new user flow.</p>"
   },
   {
     "slug": "2022-12-studyfinder-human-centered-systems",

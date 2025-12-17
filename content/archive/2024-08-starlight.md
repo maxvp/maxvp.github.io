@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-Assisted Content Engineering team in migrating the Cloudflare Docs site from the Hugo static site generator to Starlight, a modern documentation framework for Astro. This work involved making decisions about the site's information architecture, updating the styling, and porting Hugo Go components to JSX.
+Assisted Content Engineering team in migrating the Cloudflare Docs site from the Hugo static site generator to Starlight, a modern documentation framework for Astro. This work involved making decisions about the site's information architecture, updating the styling, and porting Hugo components to JSX.
