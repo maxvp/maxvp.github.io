@@ -1,5 +1,5 @@
 ---
-title: "WARP client certificate instructions"
+title: "WARP client certificate installation"
 date: 2023-04
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
