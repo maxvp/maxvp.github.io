@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2024-06-clue-index",
+    "title": "CLUE Index front-end",
+    "date": "2024-06",
+    "client": "Cloudflare",
+    "clientUrl": "https://www.cloudflare.com/",
+    "clientClass": "",
+    "url": "",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Implemented HTML, CSS, and JavaScript for front-end of internal tool based on designs from UX Content Strategy team. The PCX CLUE (Content Legibility for User Ease) Index is an internal tool used to help stakeholders evaluate their contributions to docs, UI, API, and email content based on best practices and our internal style guide.</p>"
+  },
+  {
     "slug": "2022-12-studyfinder-human-centered-systems",
     "title": "Studyfinder",
     "date": "2022-12",
