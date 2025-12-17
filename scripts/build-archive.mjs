@@ -88,6 +88,24 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function normalizeUrl(raw) {
+  const value = String(raw ?? "").trim();
+  if (!value) return "";
+
+  try {
+    const u = new URL(value);
+    const parts = u.hostname.split(".");
+    if (parts.length > 3 && parts[0].toLowerCase() === "www") {
+      u.hostname = parts.slice(1).join(".");
+      return u.toString();
+    }
+  } catch {
+    return value;
+  }
+
+  return value;
+}
+
 function inlineTextToHtml(text) {
   let html = escapeHtml(text);
 
@@ -176,9 +194,9 @@ async function main() {
       title: data.title || slug,
       date: data.date || "",
       client,
-      clientUrl: data.clientUrl || "",
+      clientUrl: normalizeUrl(data.clientUrl || ""),
       clientClass: effectiveClientClass,
-      url: data.url || "",
+      url: normalizeUrl(data.url || ""),
       image: data.image || "",
       imageAlt: data.imageAlt || "",
       tags: Array.isArray(data.tags) ? data.tags : [],
