@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-To consolidate the Cloudflare user experience, we merged the "core" dashboard (_dash.cloudflare.com_) and Zero Trust dashboard (_dash.teams.cloudflare.com_). I led the effort to update all of our Zero Trust docs instructions to reflect the new user flow.
+To consolidate the Cloudflare user experience, we merged the "core" (_dash.cloudflare.com_) and Zero Trust (_dash.teams.cloudflare.com_) dashboard experiences to link between each other more seamlessly. I led the effort to update all of our Zero Trust docs instructions to reflect the new user flow.

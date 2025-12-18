@@ -10,7 +10,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I vibe coded a Python script that uses a docs-as-code approach to updating my résumé. The script parses a .yaml file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews.</p>"
+    "descriptionHtml": "<p>I vibe coded a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
   },
   {
     "slug": "2025-08-ai-week-integrations-24681",
@@ -195,8 +195,8 @@
     "descriptionHtml": "<p>Placeholder entry for [ZT] Gateway precedence diagram (#10419).</p>"
   },
   {
-    "slug": "2023-05-make-casb-integrations-consistent-8805",
-    "title": "Make CASB integrations consistent",
+    "slug": "2023-05-casb-8805",
+    "title": "Cloud Access Security Broker (CASB) docs revamp",
     "date": "2023-05",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
@@ -222,7 +222,7 @@
   },
   {
     "slug": "2023-03-dlp",
-    "title": "Data Loss Prevention (DLP) docs restructure",
+    "title": "Data Loss Prevention (DLP) docs revamp",
     "date": "2023-03",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
