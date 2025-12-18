@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2025-12-python",
+    "title": "Python résumé generator",
+    "date": "2025-12",
+    "client": "Personal project",
+    "clientUrl": "",
+    "clientClass": "student",
+    "url": "https://github.com/maxvp/resume-python",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>I vibe coded a Python script that uses a docs-as-code approach to updating my résumé. The script parses a .yaml file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews.</p>"
+  },
+  {
     "slug": "2024-08-starlight",
     "title": "Hugo to Starlight migration",
     "date": "2024-08",
