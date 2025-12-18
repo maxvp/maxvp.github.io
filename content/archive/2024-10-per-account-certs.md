@@ -1,6 +1,6 @@
 ---
-title: "Unique certificates change management"
-date: 2024-01
+title: "Per-account certificates change management"
+date: 2024-10
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
 clientClass: ""
