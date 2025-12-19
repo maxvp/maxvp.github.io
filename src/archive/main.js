@@ -38,6 +38,13 @@ function formatMonthYear(dateStr) {
   return `${monthNames[month - 1]} ${year}`;
 }
 
+function extractYear(dateStr) {
+  const raw = String(dateStr || "").trim();
+  const m = raw.match(/^(\d{4})/);
+  if (!m) return null;
+  return Number(m[1]);
+}
+
 function renderEntry(entry) {
   const title = entry.title ? escapeHtml(entry.title) : "";
   const url = entry.url ? String(entry.url) : "";
@@ -158,6 +165,21 @@ function initArchiveTooltips(root) {
 
 const mount = document.getElementById("portfolio-app");
 if (mount) {
-  mount.innerHTML = entries.map(renderEntry).join("\n");
+  const THRESHOLD_YEAR = 2023;
+  let dividerInserted = false;
+  const htmlParts = [];
+
+  for (const entry of entries) {
+    const entryYear = extractYear(entry.date);
+    if (!dividerInserted && entryYear !== null && entryYear < THRESHOLD_YEAR) {
+      htmlParts.push(
+        '<div class="archive-era-divider" role="separator" aria-label="Projects prior to 2023"><span>Earlier work</span></div>'
+      );
+      dividerInserted = true;
+    }
+    htmlParts.push(renderEntry(entry));
+  }
+
+  mount.innerHTML = htmlParts.join("\n");
   initArchiveTooltips(mount);
 }

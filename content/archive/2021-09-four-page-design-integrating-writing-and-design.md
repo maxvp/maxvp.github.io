@@ -1,9 +1,10 @@
 ---
 title: "Four Page Design"
 date: 2021-09
-client: "Integrating Writing and Design"
+client: "University of Pittsburgh"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726
-clientClass: ""
+clientClass: "student"
+course: "Integrating Writing and Design"
 url: design/integrating/four_page/four_page.pdf
 image: /archive/design/integrating/four_page/4page_mockup1.png
 imageAlt: ""

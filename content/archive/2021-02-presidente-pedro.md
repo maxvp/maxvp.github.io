@@ -1,9 +1,10 @@
 ---
 title: "¡Presidente Pedro!"
 date: 2021-02
-client: "Digital Narrative and Interactive Design"
+client: "University of Pittsburgh"
 clientUrl: https://courses.sci.pitt.edu/courses/view/CMPINF-1201
-clientClass: ""
+clientClass: "student"
+course: "Digital Narrative and Interactive Design"
 url: https://github.com/maxvp/presidente-pedro/
 image: /archive/data/pedro.png
 imageAlt: ""

@@ -1,7 +1,8 @@
 ---
 title: "Hacker's Delight: Redefining Music Technology"
 date: 2021-12
-client: "Digital Humanity"
+client: "University of Pittsburgh"
+course: "Digital Humanity"
 clientUrl: "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1095051&catoid=210"
 clientClass: "student"
 url: "https://soundcloud.com/maxvphillips/hackers-delight-deluxe"

@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-Placeholder entry for [CASB] CDS UI updates + AWS CDE (#18162).
+Providing customers with a way to scan content stored in AWS S3 buckets for sensitive data matches via Cloud Data Extraction (CDE).

@@ -9,4 +9,10 @@ image: ""
 imageAlt: ""
 ---
 
-Placeholder entry for [CASB] Expand FedRAMP integrations (#21232).
+On the CASB integrations page (https://developers.cloudflare.com/cloudflare-one/applications/scan-apps/casb-integrations/), we list available CASB integrations.
+
+For Gartner MQ survey, we expanded the set of supported integrations documented by adding FedRAMP variants for:
+
+- ServiceNow
+- Google Workspace (and subpages)
+- Microsoft 365 (and subpages)

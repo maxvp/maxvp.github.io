@@ -1,9 +1,10 @@
 ---
 title: "Pittsburgh Food Deserts"
 date: 2021-03
-client: "Digital Narrative and Interactive Design"
+client: "University of Pittsburgh"
 clientUrl: https://courses.sci.pitt.edu/courses/view/CMPINF-1201
-clientClass: ""
+clientClass: "student"
+course: "Digital Narrative and Interactive Design"
 url: https://github.com/maxvp/PGH-food-deserts
 image: /archive/data/map.png
 imageAlt: ""

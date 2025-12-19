@@ -1,9 +1,10 @@
 ---
 title: "Burghquest"
 date: 2021-03
-client: "Digital Narrative and Interactive Design"
+client: "University of Pittsburgh"
 clientUrl: "https://courses.sci.pitt.edu/courses/view/CMPINF-1201"
-clientClass: ""
+clientClass: "student"
+course: "Digital Narrative and Interactive Design"
 url: https://youtu.be/DOGXo5Eu62U
 image: ""
 imageAlt: ""

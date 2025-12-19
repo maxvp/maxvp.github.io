@@ -1,7 +1,8 @@
 ---
 title: "Ubuntu UX Strategy report"
 date: 2022-02
-client: "Usability Testing in Technical Writing"
+client: "University of Pittsburgh"
+course: "Usability Testing in Technical Writing"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1101312&catoid=210
 clientClass: "student"
 url: https://docs.google.com/document/d/1udprhPv9uow_YCt7v-hZWGq13iRZsnF6rRorrD1Va0E/edit?usp=sharing

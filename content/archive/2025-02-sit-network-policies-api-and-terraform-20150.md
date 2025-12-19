@@ -9,4 +9,6 @@ image: ""
 imageAlt: ""
 ---
 
-Placeholder entry for [Gateway] Secure Internet Traffic network policies API + TF (#20150).
+[tcerqueira] is in the process of adding API examples to the Secure your Internet Traffic learning path to reach parity with the UI examples.
+
+PR: https://github.com/cloudflare/cloudflare-docs/pull/18388

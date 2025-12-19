@@ -1,9 +1,10 @@
 ---
 title: "Max's Journey"
 date: 2021-04
-client: "Digital Narrative and Interactive Design"
+client: "University of Pittsburgh"
 clientUrl: "https://courses.sci.pitt.edu/courses/view/CMPINF-1201"
-clientClass: ""
+clientClass: "student"
+course: "Digital Narrative and Interactive Design"
 url: https://youtu.be/OUJijGtilJw
 image: ""
 imageAlt: ""

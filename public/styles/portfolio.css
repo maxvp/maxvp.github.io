@@ -150,6 +150,27 @@ a:has(img):hover {
   margin-bottom: -24px;
 }
 
+.archive-era-divider {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-family: var(--font-family-monospace);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.7;
+  text-align: left;
+}
+
+.archive-era-divider span {
+  display: inline-block;
+  background: var(--background-color);
+  padding: 0 0.75rem 0 0;
+  position: relative;
+  top: -0.45rem;
+}
+
 .archive-year {
   flex: 0 0 8.5ch;
   text-align: right;

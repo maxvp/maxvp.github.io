@@ -1,9 +1,10 @@
 ---
 title: "LaCroix Instagram story"
 date: 2021-11
-client: "Integrating Writing and Design"
+client: "University of Pittsburgh"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726
-clientClass: ""
+clientClass: "student"
+course: "Integrating Writing and Design"
 url: design/integrating/instagram/instagram.pdf
 image: /archive/design/integrating/instagram/lacroix_mockup.png
 imageAlt: ""

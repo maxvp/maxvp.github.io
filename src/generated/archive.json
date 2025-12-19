@@ -13,6 +13,19 @@
     "descriptionHtml": "<p>I vibe coded a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
   },
   {
+    "slug": "2025-11-cf1-ia-restructure",
+    "title": "Cloudflare One docs IA restructure",
+    "date": "2025-11",
+    "client": "Cloudflare",
+    "clientUrl": "cloudflare.com",
+    "clientClass": "cloudflare",
+    "url": "https://github.com/maxvp/resume-python",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>I vibe coded a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
+  },
+  {
     "slug": "2025-08-ai-week-integrations-24681",
     "title": "AI Week integrations",
     "date": "2025-08",
@@ -23,7 +36,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [CASB] AI Week integrations (#24681).</p>"
+    "descriptionHtml": "<p>Added new integrations for ChatGPT, Anthropic Claude, and Gemini.</p>"
   },
   {
     "slug": "2025-08-update-selector-descriptions-24374",
@@ -36,7 +49,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [Gateway] Update selector descriptions (#24374).</p>"
+    "descriptionHtml": "<p>Improved selector descriptions in policy builder docs to better differentiate use cases (for example, when to use URL vs Domain).</p>\n<ul>\n<li>https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/</li>\n<li>https://developers.cloudflare.com/cloudflare-one/policies/gateway/network-policies/</li>\n<li>https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/</li>\n</ul>"
   },
   {
     "slug": "2025-03-expand-fedramp-integrations-21232",
@@ -49,7 +62,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [CASB] Expand FedRAMP integrations (#21232).</p>"
+    "descriptionHtml": "<p>On the CASB integrations page (https://developers.cloudflare.com/cloudflare-one/applications/scan-apps/casb-integrations/), we list available CASB integrations.</p>\n<p>For Gartner MQ survey, we expanded the set of supported integrations documented by adding FedRAMP variants for:</p>\n<ul>\n<li>ServiceNow</li>\n<li>Google Workspace (and subpages)</li>\n<li>Microsoft 365 (and subpages)</li>\n</ul>"
   },
   {
     "slug": "2025-02-sit-network-policies-api-and-terraform-20150",
@@ -62,7 +75,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [Gateway] Secure Internet Traffic network policies API + TF (#20150).</p>"
+    "descriptionHtml": "<p>[tcerqueira] is in the process of adding API examples to the Secure your Internet Traffic learning path to reach parity with the UI examples.</p>\n<p>PR: https://github.com/cloudflare/cloudflare-docs/pull/18388</p>"
   },
   {
     "slug": "2024-11-cds-ui-updates-aws-cde-18162",
@@ -75,7 +88,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [CASB] CDS UI updates + AWS CDE (#18162).</p>"
+    "descriptionHtml": "<p>Providing customers with a way to scan content stored in AWS S3 buckets for sensitive data matches via Cloud Data Extraction (CDE).</p>"
   },
   {
     "slug": "2024-10-per-account-certs",
@@ -114,7 +127,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [Gateway] Rework tenant control policy (#15396).</p>"
+    "descriptionHtml": "<p>Customer reported that the example in the public docs was not working:</p>\n<p>https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/tenant-control/#add-custom-headers-for-a-saas-application</p>\n<p>We found an internal document that explained how this should work, and the customer confirmed it worked after implementing it:</p>\n<p>https://wiki.cfdata.org/pages/viewpage.action?pageId=730367397</p>\n<p>Updated the public documentation to show the additional rule needed to make this work.</p>"
   },
   {
     "slug": "2024-06-clue-index",
@@ -140,20 +153,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [ZT] Secure your Internet traffic and SaaS apps (#12460).</p>"
-  },
-  {
-    "slug": "2023-12-microsoft-365-dedicated-egress-ip-tutorial-11815",
-    "title": "Microsoft 365 dedicated egress IP tutorial",
-    "date": "2023-12",
-    "client": "Cloudflare",
-    "clientUrl": "https://cloudflare.com",
-    "clientClass": "",
-    "url": "",
-    "image": "",
-    "imageAlt": "",
-    "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [Gateway] Microsoft 365 dedicated egress IP tutorial (#11815).</p>"
+    "descriptionHtml": "<p>Created a learning path for the second module of the Zero Trust Implementation Guide plan.</p>\n<p>PR: https://github.com/cloudflare/cloudflare-docs/pull/12460/</p>"
   },
   {
     "slug": "2023-12-style-guide-ui-elements-12152",
@@ -166,7 +166,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [Style Guide] UI elements (#12152).</p>"
+    "descriptionHtml": "<p>Moved the internal wiki page describing our UI elements into the public-facing style guide.</p>\n<p>Adapted the existing <a href=\"https://developers.cloudflare.com/style-guide/formatting/symbols-in-ui-element-names/\">Symbols in UI element names</a> page by moving each header down a level and creating a new section to accommodate general UI element concerns.</p>"
   },
   {
     "slug": "2023-10-risk-scoring-10937",
@@ -179,7 +179,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [ZT] Risk Scoring (#10937).</p>"
+    "descriptionHtml": "<p><a href=\"https://docs.google.com/document/d/1G_eF_4X92RT861JS7IZgyr7CeBZYtlGxIEoz_eJoOWc/edit\">Drafting docs here.</a></p>"
   },
   {
     "slug": "2023-08-gateway-precedence-diagram-10419",
@@ -188,11 +188,11 @@
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
-    "url": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/order-of-enforcement/",
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [ZT] Gateway precedence diagram (#10419).</p>"
+    "descriptionHtml": "<p>Added a Mermaid diagram to the developer docs to illustrate how traffic is intercepted, proxied, and filtered from onboarding to egressing to the Internet.</p>"
   },
   {
     "slug": "2023-05-casb-8805",
@@ -201,11 +201,11 @@
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
-    "url": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/cloud-and-saas-findings/",
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Placeholder entry for [ZT] Make CASB integrations consistent (#8805).</p>"
+    "descriptionHtml": "<p>I unified 20+ pages for our Cloud Access Security Broker (CASB)&#039;s third-party SaaS integrations to follow a consistent information architecture. Previously, these pages were inconsistent in presenting how CASB scans for misconfigurations and security issues. This issue was especially critical for our Enterprise customers, who must implement CASB to meet compliance requirements. This docs update increased our ratings in independent consultant reviews and directly helped close a contract with a Fortune 500 customer.</p>"
   },
   {
     "slug": "2023-04-cert-instructions",
@@ -231,7 +231,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I maintain the documentation for Cloudflare Data Loss Prevention (DLP). When we released predefined entries for DLP profiles (which adds the ability to detect known patterns in your Zero Trust organization&#039;s traffic, such as SSNs and credit card numbers), I restructured the DLP docs to follow a more logical workflow.</p>"
+    "descriptionHtml": "<p>I maintain the documentation for Cloudflare Data Loss Prevention (DLP). When we released predefined entries for DLP profiles (which adds the ability to detect known patterns in your Zero Trust organization&#039;s traffic, such as SSNs and credit card numbers), I restructured the DLP docs to guide users through a more logical workflow.</p>"
   },
   {
     "slug": "2023-03-zt-core-dash-merge",
@@ -244,13 +244,13 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>To consolidate the Cloudflare user experience, we merged the &quot;core&quot; dashboard (<em>dash.cloudflare.com</em>) and Zero Trust dashboard (<em>dash.teams.cloudflare.com</em>). I led the effort to update all of our Zero Trust docs instructions to reflect the new user flow.</p>"
+    "descriptionHtml": "<p>To consolidate the Cloudflare user experience, we merged the &quot;core&quot; (<em>dash.cloudflare.com</em>) and Zero Trust (<em>dash.teams.cloudflare.com</em>) dashboard experiences to link between each other more seamlessly. I led the effort to update all of our Zero Trust docs instructions to reflect the new user flow and improve feature discoverability.</p>"
   },
   {
     "slug": "2022-12-studyfinder-human-centered-systems",
     "title": "Studyfinder",
     "date": "2022-12",
-    "client": "Human-Centered Systems",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=1022127",
     "clientClass": "student",
     "url": "https://www.figma.com/file/PtiWXMbfY4iEFFS9pvnGiZ/Untitled?node-id=0%3A1&t=MfwA7eDXLlGjVXBI-1",
@@ -289,7 +289,7 @@
     "slug": "2022-04-drops",
     "title": "Drops",
     "date": "2022-04",
-    "client": "Advanced Research in Literature",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course.php?catoid=5&coid=4014",
     "clientClass": "student",
     "url": "https://drops.maxvphillips.com",
@@ -302,7 +302,7 @@
     "slug": "2022-04-pitt-ed-ux-report",
     "title": "Pitt School of Education Heuristic UX Evaluation report",
     "date": "2022-04",
-    "client": "Usability Testing in Technical Writing",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1101312&catoid=210",
     "clientClass": "student",
     "url": "https://docs.google.com/document/d/1yY2PGuP8zrlUO448U-can-Ti0K6kIfZDNBXzhVc9lk8/edit?usp=sharing",
@@ -315,7 +315,7 @@
     "slug": "2022-03-rate-your-music-heuristic-ux-evaluation-report-usability-testing-in-technical-wr",
     "title": "Rate Your Music Heuristic UX Evaluation report",
     "date": "2022-03",
-    "client": "Usability Testing in Technical Writing",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1101312&catoid=210",
     "clientClass": "student",
     "url": "https://docs.google.com/document/d/1IVoFkgSIVHPiuTxGolC7UF_lzEB8N5hRnRXsZ7SwFmI/edit?usp=sharing",
@@ -328,7 +328,7 @@
     "slug": "2022-02-ubuntu-ux-strategy-report-usability-testing-in-technical-writing-collaborative-p",
     "title": "Ubuntu UX Strategy report",
     "date": "2022-02",
-    "client": "Usability Testing in Technical Writing",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1101312&catoid=210",
     "clientClass": "student",
     "url": "https://docs.google.com/document/d/1udprhPv9uow_YCt7v-hZWGq13iRZsnF6rRorrD1Va0E/edit?usp=sharing",
@@ -341,7 +341,7 @@
     "slug": "2021-12-all-s-fair-in-robot-war",
     "title": "All's Fair in Robot War",
     "date": "2021-12",
-    "client": "Digital Humanity",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=1022127",
     "clientClass": "student",
     "url": "writing/robot.pdf",
@@ -354,7 +354,7 @@
     "slug": "2021-12-hackers-delight",
     "title": "Hacker's Delight: Redefining Music Technology",
     "date": "2021-12",
-    "client": "Digital Humanity",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1095051&catoid=210",
     "clientClass": "student",
     "url": "https://soundcloud.com/maxvphillips/hackers-delight-deluxe",
@@ -367,7 +367,7 @@
     "slug": "2021-11-lacroix-instagram-story-integrating-writing-and-design",
     "title": "LaCroix Instagram story",
     "date": "2021-11",
-    "client": "Integrating Writing and Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726",
     "clientClass": "student",
     "url": "design/integrating/instagram/instagram.pdf",
@@ -380,7 +380,7 @@
     "slug": "2021-11-panoptic",
     "title": "Mistrust in the Age of Panoptic Power",
     "date": "2021-11",
-    "client": "Digital Humanity",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1095051&catoid=210",
     "clientClass": "student",
     "url": "writing/mistrust.pdf",
@@ -393,7 +393,7 @@
     "slug": "2021-10-dignity",
     "title": "Simulated Management and Labor Dignity",
     "date": "2021-10",
-    "client": "Digital Humanity",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1095051&catoid=210",
     "clientClass": "student",
     "url": "writing/labor.pdf",
@@ -406,7 +406,7 @@
     "slug": "2021-10-inclusive-design-class-poster-integrating-writing-and-design",
     "title": "Inclusive Design class poster",
     "date": "2021-10",
-    "client": "Integrating Writing and Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726",
     "clientClass": "student",
     "url": "design/integrating/inclusive/inclusive.pdf",
@@ -419,7 +419,7 @@
     "slug": "2021-10-quote-poster",
     "title": "Quote poster",
     "date": "2021-10",
-    "client": "Integrating Writing and Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726",
     "clientClass": "student",
     "url": "design/integrating/quote/quote.pdf",
@@ -432,7 +432,7 @@
     "slug": "2021-10-rushmore-horror-edit",
     "title": "Rushmore Horror edit",
     "date": "2021-10",
-    "client": "Visual Literacy Trailer for Wes Anderson's Rushmore",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991769",
     "clientClass": "student",
     "url": "https://youtu.be/BOkxbVqXIes",
@@ -445,7 +445,7 @@
     "slug": "2021-09-event-poster",
     "title": "Event poster",
     "date": "2021-09",
-    "client": "Integrating Writing and Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726",
     "clientClass": "student",
     "url": "design/integrating/event/event.pdf",
@@ -458,7 +458,7 @@
     "slug": "2021-09-four-page-design-integrating-writing-and-design",
     "title": "Four Page Design",
     "date": "2021-09",
-    "client": "Integrating Writing and Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726",
     "clientClass": "student",
     "url": "design/integrating/four_page/four_page.pdf",
@@ -471,7 +471,7 @@
     "slug": "2021-09-redesign",
     "title": "GE ad redesign",
     "date": "2021-09",
-    "client": "Integrating Writing and Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726",
     "clientClass": "student",
     "url": "design/integrating/redesign/redesign.pdf",
@@ -484,7 +484,7 @@
     "slug": "2021-04-max-s-journey",
     "title": "Max's Journey",
     "date": "2021-04",
-    "client": "Digital Narrative and Interactive Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://courses.sci.pitt.edu/courses/view/CMPINF-1201",
     "clientClass": "student",
     "url": "https://youtu.be/OUJijGtilJw",
@@ -497,7 +497,7 @@
     "slug": "2021-04-pitt-campus-corner",
     "title": "Pitt Campus Corner",
     "date": "2021-04",
-    "client": "Introduction to Technical Writing",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid=887599",
     "clientClass": "student",
     "url": "/pitt-campus-corner/",
@@ -510,7 +510,7 @@
     "slug": "2021-03-burghquest",
     "title": "Burghquest",
     "date": "2021-03",
-    "client": "Digital Narrative and Interactive Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://courses.sci.pitt.edu/courses/view/CMPINF-1201",
     "clientClass": "student",
     "url": "https://youtu.be/DOGXo5Eu62U",
@@ -523,7 +523,7 @@
     "slug": "2021-03-computer-vision-syndrome-poster-introduction-to-technical-writing",
     "title": "Computer Vision Syndrome poster",
     "date": "2021-03",
-    "client": "Introduction to Technical Writing",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid=887599",
     "clientClass": "student",
     "url": "design/techcomm/infographic.pdf",
@@ -536,7 +536,7 @@
     "slug": "2021-03-frozen-safety-poster",
     "title": "Frozen Safety poster",
     "date": "2021-03",
-    "client": "Introduction to Technical Writing",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid=887599",
     "clientClass": "student",
     "url": "design/techcomm/safety.pdf",
@@ -549,7 +549,7 @@
     "slug": "2021-03-pittsburgh-food-deserts-digital-narrative-and-interactive-design",
     "title": "Pittsburgh Food Deserts",
     "date": "2021-03",
-    "client": "Digital Narrative and Interactive Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://courses.sci.pitt.edu/courses/view/CMPINF-1201",
     "clientClass": "student",
     "url": "https://github.com/maxvp/PGH-food-deserts",
@@ -562,7 +562,7 @@
     "slug": "2021-02-presidente-pedro",
     "title": "¡Presidente Pedro!",
     "date": "2021-02",
-    "client": "Digital Narrative and Interactive Design",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://courses.sci.pitt.edu/courses/view/CMPINF-1201",
     "clientClass": "student",
     "url": "https://github.com/maxvp/presidente-pedro/",
@@ -575,7 +575,7 @@
     "slug": "2020-11-queering-the-gaze-with-some-fava-beans-and-a-nice-chianti",
     "title": "Queering the Gaze with Some Fava Beans and a Nice Chianti",
     "date": "2020-11",
-    "client": "Introduction to Film",
+    "client": "University of Pittsburgh",
     "clientUrl": "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=210&coid=1095052",
     "clientClass": "student",
     "url": "writing/chianti.pdf",

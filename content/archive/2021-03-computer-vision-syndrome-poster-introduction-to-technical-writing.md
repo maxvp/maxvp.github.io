@@ -1,9 +1,10 @@
 ---
 title: "Computer Vision Syndrome poster"
 date: 2021-03
-client: "Introduction to Technical Writing"
+client: "University of Pittsburgh"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid=887599
-clientClass: ""
+clientClass: "student"
+course: "Introduction to Technical Writing"
 url: design/techcomm/infographic.pdf
 image: /archive/design/techcomm/infographic.jpg
 imageAlt: ""

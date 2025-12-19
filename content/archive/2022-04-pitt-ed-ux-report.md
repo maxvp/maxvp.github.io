@@ -1,7 +1,8 @@
 ---
 title: "Pitt School of Education Heuristic UX Evaluation report"
 date: 2022-04
-client: "Usability Testing in Technical Writing"
+client: "University of Pittsburgh"
+course: "Usability Testing in Technical Writing"
 clientUrl: "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1101312&catoid=210"
 clientClass: "student"
 url: "https://docs.google.com/document/d/1yY2PGuP8zrlUO448U-can-Ti0K6kIfZDNBXzhVc9lk8/edit?usp=sharing"

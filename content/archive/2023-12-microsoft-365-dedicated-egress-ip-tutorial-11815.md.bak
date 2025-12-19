@@ -1,0 +1,16 @@
+---
+title: "Microsoft 365 dedicated egress IP tutorial"
+date: 2023-12
+client: "Cloudflare"
+clientUrl: "https://cloudflare.com"
+clientClass: ""
+url: ""
+image: ""
+imageAlt: ""
+---
+
+Publish tutorial for protecting Microsoft 365 applications using Gateway with dedicated egress IPs.
+
+PRs
+
+- Microsoft 365: https://github.com/cloudflare/cloudflare-docs/pull/11815

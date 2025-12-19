@@ -1,9 +1,10 @@
 ---
 title: "Studyfinder"
 date: 2022-12
-client: "Human-Centered Systems"
+client: "University of Pittsburgh"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=1022127
-clientClass: ""
+clientClass: "student"
+course: "Human-Centered Systems"
 url: https://www.figma.com/file/PtiWXMbfY4iEFFS9pvnGiZ/Untitled?node-id=0%3A1&t=MfwA7eDXLlGjVXBI-1
 image: /archive/2022/studyfinder.jpg
 imageAlt: ""

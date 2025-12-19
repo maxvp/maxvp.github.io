@@ -9,4 +9,6 @@ image: ""
 imageAlt: ""
 ---
 
-Placeholder entry for [ZT] Secure your Internet traffic and SaaS apps (#12460).
+Created a learning path for the second module of the Zero Trust Implementation Guide plan.
+
+PR: https://github.com/cloudflare/cloudflare-docs/pull/12460/

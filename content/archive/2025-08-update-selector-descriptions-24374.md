@@ -9,4 +9,8 @@ image: ""
 imageAlt: ""
 ---
 
-Placeholder entry for [Gateway] Update selector descriptions (#24374).
+Improved selector descriptions in policy builder docs to better differentiate use cases (for example, when to use URL vs Domain).
+
+- https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/
+- https://developers.cloudflare.com/cloudflare-one/policies/gateway/network-policies/
+- https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/
