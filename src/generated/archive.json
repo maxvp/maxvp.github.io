@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2025-12-frameflow",
+    "title": "Frameflow AI screenshot tool",
+    "date": "2025-12",
+    "client": "Cloudflare",
+    "clientUrl": "",
+    "clientClass": "",
+    "url": "",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Using Cloudflare products including Workers AI and Browser Rendering, I created an AI tool that detects updates to the Cloudflare dashboard. When changes are detected, Frameflow automatically takes screenshots of the updated pages, analyzes them with an AI model, and submits a PR to GitHub to update the screenshot in the docs.</p>"
+  },
+  {
     "slug": "2025-12-python",
     "title": "Python résumé generator",
     "date": "2025-12",
@@ -11,19 +24,6 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>I created a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
-  },
-  {
-    "slug": "2026-01-frameflow",
-    "title": "Frameflow AI screenshot tool",
-    "date": "2025-12",
-    "client": "Cloudflare",
-    "clientUrl": "",
-    "clientClass": "",
-    "url": "",
-    "image": "",
-    "imageAlt": "",
-    "tags": [],
-    "descriptionHtml": "<p>Using Cloudflare products including Workers AI and Browser Rendering, I created an AI tool that detects updates to the Cloudflare dashboard. When changes are detected, Frameflow automatically takes screenshots of the updated pages, analyzes them with an AI model, and submits a PR to GitHub to update the screenshot in the docs.</p>"
   },
   {
     "slug": "2025-11-cf1-ia-restructure",
@@ -52,56 +52,43 @@
     "descriptionHtml": "<p>For our inaugural AI Week, the Cloudflare One team released a number of features to support AI in our products. I authored documentation to guide users through integrating CASB into ChatGPT, Claude, and Gemini to protect their organizations from misconfigurations and security issues. In addition, I created a large documentation section to explain how users can use DLP to detect data and sentiment shared in AI prompts and responses.</p>"
   },
   {
-    "slug": "2025-03-expand-fedramp-integrations-21232 copy",
-    "title": "Expand FedRAMP integrations",
-    "date": "2025-03",
-    "client": "Cloudflare",
-    "clientUrl": "https://cloudflare.com",
-    "clientClass": "",
-    "url": "",
-    "image": "",
-    "imageAlt": "",
-    "tags": [],
-    "descriptionHtml": "<p>On the CASB integrations page (https://developers.cloudflare.com/cloudflare-one/applications/scan-apps/casb-integrations/), we list available CASB integrations.</p>\n<p>For Gartner MQ survey, we expanded the set of supported integrations documented by adding FedRAMP variants for:</p>\n<ul>\n<li>ServiceNow</li>\n<li>Google Workspace (and subpages)</li>\n<li>Microsoft 365 (and subpages)</li>\n</ul>"
-  },
-  {
     "slug": "2025-07-app-library-21232",
     "title": "Application Library docs",
+    "date": "2025-07",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/app-library/",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Cloudflare One dashboard users frequently complained that there was no centralized location to find information about all of the applications integrated with Zero Trust. To address this, the Cloudflare One Experiences team created the Application Library to provide a single point of reference for all of an organization&#039;s applications and their approval statuses. To provide guidance for integrating the Application Library into users&#039; workflows, I led the documentation efforts for the Experiences team.</p>"
+  },
+  {
+    "slug": "2025-03-expand-fedramp-integrations-21232 copy",
+    "title": "CASB FedRAMP integration expansion",
     "date": "2025-03",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
-    "url": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/integrations/cloud-and-saas/",
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>On the CASB integrations page (https://developers.cloudflare.com/cloudflare-one/applications/scan-apps/casb-integrations/), we list available CASB integrations.</p>\n<p>For Gartner MQ survey, we expanded the set of supported integrations documented by adding FedRAMP variants for:</p>\n<ul>\n<li>ServiceNow</li>\n<li>Google Workspace (and subpages)</li>\n<li>Microsoft 365 (and subpages)</li>\n</ul>"
+    "descriptionHtml": "<p>CASB expanded its integrations to support FedRAMP variants for ServiceNow, Google Workspace, and Microsoft 365. To support this effort, I created documentation for these more secure variants according to the FedRAMP requirements. These changes directly correlated with an increase in performance ratings in the Gartner Magic Quadrant (MQ) survey.</p>"
   },
   {
     "slug": "2025-02-sit-network-policies-api-and-terraform-20150",
-    "title": "Secure Internet Traffic network policies API and Terraform",
+    "title": "API and Terraform policy overhaul",
     "date": "2025-02",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
-    "url": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/",
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>[tcerqueira] is in the process of adding API examples to the Secure your Internet Traffic learning path to reach parity with the UI examples.</p>\n<p>PR: https://github.com/cloudflare/cloudflare-docs/pull/18388</p>"
-  },
-  {
-    "slug": "2024-11-cds-ui-updates-aws-cde-18162",
-    "title": "CDS UI updates and AWS CDE",
-    "date": "2024-11",
-    "client": "Cloudflare",
-    "clientUrl": "https://cloudflare.com",
-    "clientClass": "",
-    "url": "",
-    "image": "",
-    "imageAlt": "",
-    "tags": [],
-    "descriptionHtml": "<p>Providing customers with a way to scan content stored in AWS S3 buckets for sensitive data matches via Cloud Data Extraction (CDE).</p>"
+    "descriptionHtml": "<p>Previously in the Gateway docs, we only provided UI examples for creating traffic policies. To fix this, I created a specification for representing API and Terraform policies in the docs, then led an effort to update our policy examples with API and Terraform options. This effort was especially important for our large Enterprise users, who need to automate policy creation and management.</p>"
   },
   {
     "slug": "2024-10-per-account-certs",
@@ -128,19 +115,6 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Assisted Content Engineering team in migrating the Cloudflare Docs site from the Hugo static site generator to Starlight, a modern documentation framework for Astro. This work involved making decisions about the site&#039;s information architecture, updating the styling, and porting Hugo components to JSX.</p>"
-  },
-  {
-    "slug": "2024-07-rework-tenant-control-policy-15396",
-    "title": "Rework tenant control policy",
-    "date": "2024-07",
-    "client": "Cloudflare",
-    "clientUrl": "https://cloudflare.com",
-    "clientClass": "",
-    "url": "",
-    "image": "",
-    "imageAlt": "",
-    "tags": [],
-    "descriptionHtml": "<p>Customer reported that the example in the public docs was not working:</p>\n<p>https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/tenant-control/#add-custom-headers-for-a-saas-application</p>\n<p>We found an internal document that explained how this should work, and the customer confirmed it worked after implementing it:</p>\n<p>Updated the public documentation to show the additional rule needed to make this work.</p>"
   },
   {
     "slug": "2024-06-clue-index",
@@ -175,11 +149,11 @@
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
-    "url": "",
+    "url": "https://developers.cloudflare.com/learning-paths/secure-internet-traffic/concepts/",
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Created a learning path for the second module of the Zero Trust Implementation Guide plan.</p>\n<p>PR: https://github.com/cloudflare/cloudflare-docs/pull/12460/</p>"
+    "descriptionHtml": "<p>Cloudflare One&#039;s implementation guides are a series of step-by-step modules that guide users through the process of implementing a Cloudflare Zero Trust security organization. I worked with product managers and solutions engineers to create a learning path for both new and experienced users to implement a baseline security posture to protect their organization&#039;s traffic and SaaS applications.</p>"
   },
   {
     "slug": "2023-12-style-guide-ui-elements-12152",
@@ -188,28 +162,15 @@
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
-    "url": "",
+    "url": "https://developers.cloudflare.com/style-guide/",
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Moved the internal wiki page describing our UI elements into the public-facing style guide.</p>\n<p>Adapted the existing <a href=\"https://developers.cloudflare.com/style-guide/formatting/symbols-in-ui-element-names/\">Symbols in UI element names</a> page by moving each header down a level and creating a new section to accommodate general UI element concerns.</p>"
-  },
-  {
-    "slug": "2023-10-risk-scoring-10937",
-    "title": "Risk scoring",
-    "date": "2023-10",
-    "client": "Cloudflare",
-    "clientUrl": "https://cloudflare.com",
-    "clientClass": "",
-    "url": "",
-    "image": "",
-    "imageAlt": "",
-    "tags": [],
-    "descriptionHtml": "<p><a href=\"https://docs.google.com/document/d/1G_eF_4X92RT861JS7IZgyr7CeBZYtlGxIEoz_eJoOWc/edit\">Drafting docs here.</a></p>"
+    "descriptionHtml": "<p>I adapted our internal guidelines describing Cloudflare UI elements for the public-facing style guide, making contributions to our open-source docs more accessible to stakeholders and external contributors.</p>"
   },
   {
     "slug": "2023-08-gateway-precedence-diagram-10419",
-    "title": "Gateway precedence diagram",
+    "title": "Gateway precedence flowchart",
     "date": "2023-08",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
@@ -218,7 +179,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Added a Mermaid diagram to the developer docs to illustrate how traffic is intercepted, proxied, and filtered from onboarding to egressing to the Internet.</p>"
+    "descriptionHtml": "<p>Added a Mermaid diagram to the developer docs to visually illustrate how Gateway intercepts, proxies, and filters traffic from onboarding to egressing to the Internet.</p>"
   },
   {
     "slug": "2023-07-bsides-pgh-23",
@@ -244,7 +205,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I unified 20+ pages for our Cloud Access Security Broker (CASB)&#039;s third-party SaaS integrations to follow a consistent information architecture. Previously, these pages were inconsistent in presenting how CASB scans for misconfigurations and security issues. This issue was especially critical for our Enterprise customers, who must implement CASB to meet compliance requirements. This docs update increased our ratings in independent consultant reviews and directly helped close a contract with a Fortune 500 customer.</p>"
+    "descriptionHtml": "<p>I unified 20+ pages for our Cloud Access Security Broker (CASB)&#039;s third-party SaaS integrations to follow a consistent information architecture. Previously, these pages were inconsistent in presenting how CASB scans for misconfigurations and security issues. This issue was especially critical for our Enterprise customers, who must implement CASB to meet compliance requirements. This docs update increased our ratings in Gartner and Forrester reviews and helped close a contract with a Fortune 500 customer.</p>"
   },
   {
     "slug": "2023-04-cert-instructions",

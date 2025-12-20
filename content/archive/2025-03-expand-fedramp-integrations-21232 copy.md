@@ -1,18 +1,12 @@
 ---
-title: "Expand FedRAMP integrations"
+title: "CASB FedRAMP integration expansion"
 date: 2025-03
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
 clientClass: ""
-url: ""
+url: "https://developers.cloudflare.com/cloudflare-one/integrations/cloud-and-saas/"
 image: ""
 imageAlt: ""
 ---
 
-On the CASB integrations page (https://developers.cloudflare.com/cloudflare-one/applications/scan-apps/casb-integrations/), we list available CASB integrations.
-
-For Gartner MQ survey, we expanded the set of supported integrations documented by adding FedRAMP variants for:
-
-- ServiceNow
-- Google Workspace (and subpages)
-- Microsoft 365 (and subpages)
+CASB expanded its integrations to support FedRAMP variants for ServiceNow, Google Workspace, and Microsoft 365. To support this effort, I created documentation for these more secure variants according to the FedRAMP requirements. These changes directly correlated with an increase in performance ratings in the Gartner Magic Quadrant (MQ) survey.

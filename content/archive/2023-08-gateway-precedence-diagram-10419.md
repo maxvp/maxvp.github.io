@@ -1,5 +1,5 @@
 ---
-title: "Gateway precedence diagram"
+title: "Gateway precedence flowchart"
 date: 2023-08
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-Added a Mermaid diagram to the developer docs to illustrate how traffic is intercepted, proxied, and filtered from onboarding to egressing to the Internet.
+Added a Mermaid diagram to the developer docs to visually illustrate how Gateway intercepts, proxies, and filters traffic from onboarding to egressing to the Internet.
