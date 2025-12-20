@@ -15,6 +15,4 @@ https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/
 
 We found an internal document that explained how this should work, and the customer confirmed it worked after implementing it:
 
-https://wiki.cfdata.org/pages/viewpage.action?pageId=730367397
-
 Updated the public documentation to show the additional rule needed to make this work.

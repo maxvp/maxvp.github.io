@@ -1,5 +1,5 @@
 ---
-title: "Secure your Internet traffic and SaaS apps"
+title: "Secure your Internet traffic and SaaS apps implementation guide"
 date: 2024-04
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"

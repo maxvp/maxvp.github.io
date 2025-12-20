@@ -10,7 +10,20 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I vibe coded a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
+    "descriptionHtml": "<p>I created a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
+  },
+  {
+    "slug": "2026-01-frameflow",
+    "title": "Frameflow AI screenshot tool",
+    "date": "2025-12",
+    "client": "Cloudflare",
+    "clientUrl": "",
+    "clientClass": "",
+    "url": "",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Using Cloudflare products including Workers AI and Browser Rendering, I created an AI tool that detects updates to the Cloudflare dashboard. When changes are detected, Frameflow automatically takes screenshots of the updated pages, analyzes them with an AI model, and submits a PR to GitHub to update the screenshot in the docs.</p>"
   },
   {
     "slug": "2025-11-cf1-ia-restructure",
@@ -19,41 +32,41 @@
     "client": "Cloudflare",
     "clientUrl": "cloudflare.com",
     "clientClass": "cloudflare",
-    "url": "https://github.com/maxvp/resume-python",
+    "url": "https://developers.cloudflare.com/cloudflare-one/",
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I vibe coded a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
+    "descriptionHtml": "<p>I led the effort to unify enterprise Zero Trust docs and product user experience. I implemented a data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions. This work improves the user experience by unifying the information architecture of our docs and our Cloudflare One products.</p>"
   },
   {
     "slug": "2025-08-ai-week-integrations-24681",
-    "title": "AI Week integrations",
+    "title": "AI Week 2025 support",
     "date": "2025-08",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
-    "url": "",
-    "image": "",
+    "url": "https://blog.cloudflare.com/ai-week-2025-wrapup/",
+    "image": "/archive/2025/ai-week.jpg",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Added new integrations for ChatGPT, Anthropic Claude, and Gemini.</p>"
+    "descriptionHtml": "<p>For our inaugural AI Week, the Cloudflare One team released a number of features to support AI in our products. I authored documentation to guide users through integrating CASB into ChatGPT, Claude, and Gemini to protect their organizations from misconfigurations and security issues. In addition, I created a large documentation section to explain how users can use DLP to detect data and sentiment shared in AI prompts and responses.</p>"
   },
   {
-    "slug": "2025-08-update-selector-descriptions-24374",
-    "title": "Update selector descriptions",
-    "date": "2025-08",
-    "client": "Cloudflare",
-    "clientUrl": "https://cloudflare.com",
-    "clientClass": "",
-    "url": "",
-    "image": "",
-    "imageAlt": "",
-    "tags": [],
-    "descriptionHtml": "<p>Improved selector descriptions in policy builder docs to better differentiate use cases (for example, when to use URL vs Domain).</p>\n<ul>\n<li>https://developers.cloudflare.com/cloudflare-one/policies/gateway/dns-policies/</li>\n<li>https://developers.cloudflare.com/cloudflare-one/policies/gateway/network-policies/</li>\n<li>https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/</li>\n</ul>"
-  },
-  {
-    "slug": "2025-03-expand-fedramp-integrations-21232",
+    "slug": "2025-03-expand-fedramp-integrations-21232 copy",
     "title": "Expand FedRAMP integrations",
+    "date": "2025-03",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>On the CASB integrations page (https://developers.cloudflare.com/cloudflare-one/applications/scan-apps/casb-integrations/), we list available CASB integrations.</p>\n<p>For Gartner MQ survey, we expanded the set of supported integrations documented by adding FedRAMP variants for:</p>\n<ul>\n<li>ServiceNow</li>\n<li>Google Workspace (and subpages)</li>\n<li>Microsoft 365 (and subpages)</li>\n</ul>"
+  },
+  {
+    "slug": "2025-07-app-library-21232",
+    "title": "Application Library docs",
     "date": "2025-03",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
@@ -127,7 +140,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Customer reported that the example in the public docs was not working:</p>\n<p>https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/tenant-control/#add-custom-headers-for-a-saas-application</p>\n<p>We found an internal document that explained how this should work, and the customer confirmed it worked after implementing it:</p>\n<p>https://wiki.cfdata.org/pages/viewpage.action?pageId=730367397</p>\n<p>Updated the public documentation to show the additional rule needed to make this work.</p>"
+    "descriptionHtml": "<p>Customer reported that the example in the public docs was not working:</p>\n<p>https://developers.cloudflare.com/cloudflare-one/policies/gateway/http-policies/tenant-control/#add-custom-headers-for-a-saas-application</p>\n<p>We found an internal document that explained how this should work, and the customer confirmed it worked after implementing it:</p>\n<p>Updated the public documentation to show the additional rule needed to make this work.</p>"
   },
   {
     "slug": "2024-06-clue-index",
@@ -143,8 +156,21 @@
     "descriptionHtml": "<p>Implemented HTML, CSS, and JavaScript for front-end of internal tool based on designs from UX Content Strategy team. The PCX CLUE (Content Legibility for User Ease) Index is an internal tool used to help stakeholders evaluate their contributions to docs, UI, API, and email content based on best practices and our internal style guide.</p>"
   },
   {
+    "slug": "2024-05-pycon-2024",
+    "title": "PyCon US 2024",
+    "date": "2024-05",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://us.pycon.org/2024/",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>I represented Cloudflare at the 2024 PyCon US conference in Pittsburgh, PA. Cloudflare sponsored the event and provided a booth for attendees to learn about our support for Python in Cloudflare Workers. While there, I collected feedback from attendees to inform our content development.</p>"
+  },
+  {
     "slug": "2024-04-secure-your-internet-traffic-and-saas-apps-12460",
-    "title": "Secure your Internet traffic and SaaS apps",
+    "title": "Secure your Internet traffic and SaaS apps implementation guide",
     "date": "2024-04",
     "client": "Cloudflare",
     "clientUrl": "https://cloudflare.com",
@@ -193,6 +219,19 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Added a Mermaid diagram to the developer docs to illustrate how traffic is intercepted, proxied, and filtered from onboarding to egressing to the Internet.</p>"
+  },
+  {
+    "slug": "2023-07-bsides-pgh-23",
+    "title": "BSidesPGH 2023",
+    "date": "2023-07",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://www.bsidespgh.com/2023/",
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>I represented Cloudflare at the 2023 BSidesPGH information security conference in Pittsburgh, PA. Cloudflare sponsored the event and provided a booth for attendees to learn about our Zero Trust security products. While there, we conducted user experience surveys and collected information for potential participants in user research studies.</p>"
   },
   {
     "slug": "2023-05-casb-8805",
