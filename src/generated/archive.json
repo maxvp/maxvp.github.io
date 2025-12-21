@@ -10,7 +10,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Using Cloudflare products including Workers AI and Browser Rendering, I created an AI tool that detects updates to the Cloudflare dashboard. When changes are detected, Frameflow automatically takes screenshots of the updated pages, analyzes them with an AI model, and submits a PR to GitHub to update the screenshot in the docs.</p>"
+    "descriptionHtml": "<p>Developed an automated screenshot maintenance tool using Cloudflare Workers AI, Browser Rendering, and Playwright. The tool identifies dashboard UI changes, captures updated screenshots and videos with an AI-driven detection model, and automatically submits GitHub pull requests to update documentation assets. This process drastically reduces manual content maintenance overhead.</p>"
   },
   {
     "slug": "2025-12-python",
@@ -23,7 +23,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I created a Python script to implement a docs-as-code approach to updating my résumé. The script parses a YAML file and renders it into HTML and PDF formats. It also includes a watcher script for live render previews in a browser.</p>"
+    "descriptionHtml": "<p>Created a custom resume engine that treats career data as source code. Built a Python-based pipeline that parses YAML source files into HTML and PDF formats. This tool also uses a watcher script for real-time browser rendering.</p>"
   },
   {
     "slug": "2025-11-cf1-ia-restructure",
@@ -36,7 +36,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I led the effort to unify enterprise Zero Trust docs and product user experience. I implemented a data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions. This work improves the user experience by unifying the information architecture of our docs and our Cloudflare One products.</p>"
+    "descriptionHtml": "<p>Led initiative to unify the Cloudflare One (Cloudflare&#039;s Zero Trust solution) documentation with the dashboard product experience. Orchestrated a seven-person writing team to execute a data-driven IA strategy, migrating 600+ pages and clarifying 1,000+ UI instructions. This overhaul eliminated fragmented user journeys and aligned the information architectures.</p>"
   },
   {
     "slug": "2025-08-ai-week-integrations-24681",
@@ -49,7 +49,7 @@
     "image": "/archive/2025/ai-week.jpg",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>For our inaugural AI Week, the Cloudflare One team released a number of features to support AI in our products. I authored documentation to guide users through integrating CASB into ChatGPT, Claude, and Gemini to protect their organizations from misconfigurations and security issues. In addition, I created a large documentation section to explain how users can use DLP to detect data and sentiment shared in AI prompts and responses.</p>"
+    "descriptionHtml": "<p>Led the Cloudflare One data security documentation for Cloudflare’s inaugural AI Week. Developed technical guides for CASB and Data Loss Prevention (DLP) integrations with LLMs (ChatGPT, Claude, Gemini), focusing on preventing misconfigurations and sentiment-based data leaks for enterprise organizations.</p>"
   },
   {
     "slug": "2025-07-app-library-21232",
@@ -62,7 +62,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Cloudflare One dashboard users frequently complained that there was no centralized location to find information about all of the applications integrated with Zero Trust. To address this, the Cloudflare One Experiences team created the Application Library to provide a single point of reference for all of an organization&#039;s applications and their approval statuses. To provide guidance for integrating the Application Library into users&#039; workflows, I led the documentation efforts for the Experiences team.</p>"
+    "descriptionHtml": "<p>Served as the primary content stakeholder for the Cloudflare One Experiences team to resolve persistent user confusion regarding Zero Trust SaaS app integrations. Used user feedback to create a centralized <em>Application Library</em> documentation strategy, providing a single source of truth for IT approval and integration workflows.</p>"
   },
   {
     "slug": "2025-03-expand-fedramp-integrations-21232 copy",
@@ -88,7 +88,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Previously in the Gateway docs, we only provided UI examples for creating traffic policies. To fix this, I created a specification for representing API and Terraform policies in the docs, then led an effort to update our policy examples with API and Terraform options. This effort was especially important for our large Enterprise users, who need to automate policy creation and management.</p>"
+    "descriptionHtml": "<p>Identified a significant documentation gap for enterprise users that require deploying policies at scale. Designed and implemented a technical specification for representing API and Terraform policies alongside UI examples. Led the rollout of these standards across all Gateway documentation, enabling infrastrucutre-as-code users to use baseline policies.</p>"
   },
   {
     "slug": "2024-10-per-account-certs",
@@ -101,7 +101,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Following the expiration of the global Cloudflare root certificate, the Gateway team implemented a new process that requires every Zero Trust user to generate and deploy a certificate unique to their account. I was responsible for change management in the docs, writing docs to describe the new process and clearly communicating to Enterprise users the changes that would occur upon certificate expiration.</p>"
+    "descriptionHtml": "<p>Led the change management strategy for a critical security migration following the global Cloudflare root certificate expiration. Managed stakeholder communication and technical documentation to guide enterprise users through transition to unique account-based certificates, Successfully mitigated major service disruptions.</p>"
   },
   {
     "slug": "2024-08-starlight",
@@ -114,7 +114,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Assisted Content Engineering team in migrating the Cloudflare Docs site from the Hugo static site generator to Starlight, a modern documentation framework for Astro. This work involved making decisions about the site&#039;s information architecture, updating the styling, and porting Hugo components to JSX.</p>"
+    "descriptionHtml": "<p>Acted as a technical lead in migrating the Cloudflare Developer Docs from legacy Hugo site framework to a modern Starlight (Astro) framework. Made foundational IA decisions, updated global styling, and ported Hugo components to JSX to improve site performance and contributor experience.</p>"
   },
   {
     "slug": "2024-06-clue-index",
@@ -140,7 +140,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I represented Cloudflare at the 2024 PyCon US conference in Pittsburgh, PA. Cloudflare sponsored the event and provided a booth for attendees to learn about our support for Python in Cloudflare Workers. While there, I collected feedback from attendees to inform our content development.</p>"
+    "descriptionHtml": "<p>Represented Cloudflare as a technical Subject Matter Expert (SME) at 2024 PyCon US industry conference in Pittsburgh, PA. Used direct developer interactions and UX surveys to identify documentation pain points.</p>"
   },
   {
     "slug": "2024-04-secure-your-internet-traffic-and-saas-apps-12460",
@@ -153,7 +153,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Cloudflare One&#039;s implementation guides are a series of step-by-step modules that guide users through the process of implementing a Cloudflare Zero Trust security organization. I worked with product managers and solutions engineers to create a learning path for both new and experienced users to implement a baseline security posture to protect their organization&#039;s traffic and SaaS applications.</p>"
+    "descriptionHtml": "<p>Partnered with Product Managers and Solutions Engineers to create the <em>Secure your Internet Traffic and SaaS apps</em> implementation guide, a from-zero guide for getting started with Cloudflare One. Transformed fragmented technical documentation into a cohesive onboarding funnel, creating an in-depth learning path for both new and advanced Zero Trust security users.</p>"
   },
   {
     "slug": "2023-12-style-guide-ui-elements-12152",
@@ -166,7 +166,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I adapted our internal guidelines describing Cloudflare UI elements for the public-facing style guide, making contributions to our open-source docs more accessible to stakeholders and external contributors.</p>"
+    "descriptionHtml": "<p>Adapted internal Cloudflare UI design guidelines for the public-facing Cloudflare style guide. By externalizing these guidelines, I made contributions easier for the community and ensured UI consistency across our global open-source docs.</p>"
   },
   {
     "slug": "2023-08-gateway-precedence-diagram-10419",
@@ -192,7 +192,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I represented Cloudflare at the 2023 BSidesPGH information security conference in Pittsburgh, PA. Cloudflare sponsored the event and provided a booth for attendees to learn about our Zero Trust security products. While there, we conducted user experience surveys and collected information for potential participants in user research studies.</p>"
+    "descriptionHtml": "<p>Represented Cloudflare as a technical Subject Matter Expert (SME) at 2023 BSidesPGH industry conference in Pittsburgh, PA. Used direct developer interactions and UX surveys to identify documentation pain points.</p>"
   },
   {
     "slug": "2023-05-casb-8805",
@@ -205,7 +205,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>I unified 20+ pages for our Cloud Access Security Broker (CASB)&#039;s third-party SaaS integrations to follow a consistent information architecture. Previously, these pages were inconsistent in presenting how CASB scans for misconfigurations and security issues. This issue was especially critical for our Enterprise customers, who must implement CASB to meet compliance requirements. This docs update increased our ratings in Gartner and Forrester reviews and helped close a contract with a Fortune 500 customer.</p>"
+    "descriptionHtml": "<p>Standardized the information architecture for 20+ Cloud Access Security Broker (CASB) third-party SaaS integrations to provide a consistent security scanning workflow. This strategic realignment was a key factor in improving Gartner and Forrester market ratings and in securing a major Fortune 500 contract.</p>"
   },
   {
     "slug": "2023-04-cert-instructions",
@@ -244,7 +244,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>To consolidate the Cloudflare user experience, we merged the &quot;core&quot; (<em>dash.cloudflare.com</em>) and Zero Trust (<em>dash.teams.cloudflare.com</em>) dashboard experiences to link between each other more seamlessly. I led the effort to update all of our Zero Trust docs instructions to reflect the new user flow and improve feature discoverability.</p>"
+    "descriptionHtml": "<p>Led the documentation response for the strategic merge of the Cloudflare &quot;core&quot; and Zero Trust dashboards. Updated the documentation to reflect new feature discoverability paths and ensure a seamless transition for all Cloudflare users.</p>"
   },
   {
     "slug": "2022-12-studyfinder-human-centered-systems",

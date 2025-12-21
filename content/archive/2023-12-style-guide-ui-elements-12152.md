@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-I adapted our internal guidelines describing Cloudflare UI elements for the public-facing style guide, making contributions to our open-source docs more accessible to stakeholders and external contributors.
+Adapted internal Cloudflare UI design guidelines for the public-facing Cloudflare style guide. By externalizing these guidelines, I made contributions easier for the community and ensured UI consistency across our global open-source docs.

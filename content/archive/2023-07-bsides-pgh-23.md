@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-I represented Cloudflare at the 2023 BSidesPGH information security conference in Pittsburgh, PA. Cloudflare sponsored the event and provided a booth for attendees to learn about our Zero Trust security products. While there, we conducted user experience surveys and collected information for potential participants in user research studies.
+Represented Cloudflare as a technical Subject Matter Expert (SME) at 2023 BSidesPGH industry conference in Pittsburgh, PA. Used direct developer interactions and UX surveys to identify documentation pain points.

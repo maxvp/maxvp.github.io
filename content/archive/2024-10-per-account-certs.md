@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-Following the expiration of the global Cloudflare root certificate, the Gateway team implemented a new process that requires every Zero Trust user to generate and deploy a certificate unique to their account. I was responsible for change management in the docs, writing docs to describe the new process and clearly communicating to Enterprise users the changes that would occur upon certificate expiration.
+Led the change management strategy for a critical security migration following the global Cloudflare root certificate expiration. Managed stakeholder communication and technical documentation to guide enterprise users through transition to unique account-based certificates, Successfully mitigated major service disruptions.

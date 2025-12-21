@@ -9,4 +9,4 @@ image: ""
 imageAlt: ""
 ---
 
-Cloudflare One's implementation guides are a series of step-by-step modules that guide users through the process of implementing a Cloudflare Zero Trust security organization. I worked with product managers and solutions engineers to create a learning path for both new and experienced users to implement a baseline security posture to protect their organization's traffic and SaaS applications.
+Partnered with Product Managers and Solutions Engineers to create the _Secure your Internet Traffic and SaaS apps_ implementation guide, a from-zero guide for getting started with Cloudflare One. Transformed fragmented technical documentation into a cohesive onboarding funnel, creating an in-depth learning path for both new and advanced Zero Trust security users.
