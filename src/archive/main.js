@@ -66,25 +66,24 @@ function renderEntry(entry) {
 
   const thumbHtml = image
     ? `<a class="archive-thumb" href="${escapeHtml(
-        url || image
-      )}"><img src="${escapeHtml(
-        image
-      )}" alt="${imageAlt}" loading="lazy" decoding="async" /></a>`
+      url || image
+    )}"><img src="${escapeHtml(
+      image
+    )}" alt="${imageAlt}" loading="lazy" decoding="async" /></a>`
     : "";
 
   return `
     <div class="portfolio-item">
-      <div class="archive-row">
-        ${dateLabel ? `<span class="archive-year">${dateLabel}</span>` : ""}
-        <span class="archive-main">${titleHtml}${thumbHtml}</span>
+      ${dateLabel ? `<div class="archive-date-row"><span class="archive-year">${dateLabel}</span></div>` : ""}
+      <div class="archive-main-row">
+        <span class="archive-main">${titleHtml}</span>
+        ${thumbHtml}
       </div>
-      ${
-        descriptionHtml
-          ? `<div class="archive-desc">${
-              clientHtml ? `<div class="archive-meta">${clientHtml}</div>` : ""
-            }${descriptionHtml}</div>`
-          : ""
-      }
+      ${descriptionHtml
+      ? `<div class="archive-desc">${clientHtml ? `<div class="archive-meta">${clientHtml}</div>` : ""
+      }${descriptionHtml}</div>`
+      : ""
+    }
     </div>
   `;
 }
@@ -170,16 +169,9 @@ if (mount) {
   const htmlParts = [];
 
   for (const entry of entries) {
-    const entryYear = extractYear(entry.date);
-    if (!dividerInserted && entryYear !== null && entryYear < THRESHOLD_YEAR) {
-      htmlParts.push(
-        '<div class="archive-era-divider" role="separator" aria-label="Projects prior to 2023"><span>Earlier work</span></div>'
-      );
-      dividerInserted = true;
-    }
     htmlParts.push(renderEntry(entry));
   }
 
   mount.innerHTML = htmlParts.join("\n");
-  initArchiveTooltips(mount);
+  // initArchiveTooltips(mount);
 }
