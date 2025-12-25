@@ -76,12 +76,14 @@ function renderEntry(entry) {
     <div class="portfolio-item">
       ${dateLabel ? `<div class="archive-date-row"><span class="archive-year">${dateLabel}</span></div>` : ""}
       <div class="archive-main-row">
-        <span class="archive-main">${titleHtml}</span>
+        <div class="archive-main">
+          ${titleHtml}
+          ${clientHtml ? `<div class="archive-client-subtitle">${clientHtml}</div>` : ""}
+        </div>
         ${thumbHtml}
       </div>
       ${descriptionHtml
-      ? `<div class="archive-desc">${clientHtml ? `<div class="archive-meta">${clientHtml}</div>` : ""
-      }${descriptionHtml}</div>`
+      ? `<div class="archive-desc">${descriptionHtml}</div>`
       : ""
     }
     </div>

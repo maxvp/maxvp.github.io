@@ -18,7 +18,7 @@
 
 /* Grid item sections  */
 #portfolio {
-  padding: 1.5rem 0.75rem 1.5rem;
+  padding: 1.5rem 0 1.5rem;
 }
 
 .archive-grid {
@@ -26,7 +26,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
   border-top: 2px solid var(--border-color);
-  border-left: 2px solid var(--border-color);
 }
 
 .date {
@@ -78,6 +77,10 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
+}
+
+.portfolio-item:nth-child(3n) {
+  border-right: 0;
 }
 
 .credit a {
@@ -196,8 +199,13 @@ a:has(img):hover {
   display: none !important;
 }
 
-.archive-meta {
-  margin: 0 0 0.25rem;
+.archive-client-subtitle {
+  display: block;
+  font-family: var(--font-family-monospace);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+  text-transform: uppercase;
 }
 
 .archive-client {

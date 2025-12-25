@@ -1,6 +1,7 @@
 /*** Mobile responsive design ***/
 
 @media only screen and (max-width: 768px) {
+
   /* Portfolio */
   #portfolio {
     padding: 1.5rem 1rem 1.5rem;
@@ -13,44 +14,42 @@
     padding: 1rem 0;
     border-bottom: 4px solid var(--border-color);
   }
+
   .sort {
     width: 100%;
   }
 
-  .archive-row {
-    flex-wrap: wrap;
-    row-gap: 0.25rem;
-  }
-
-  .portfolio-item {
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 0.85rem 0;
-    margin: 0;
-  }
-
-  .portfolio-item:first-child {
+  /* Archive Grid Mobile Override */
+  .archive-grid {
+    grid-template-columns: 1fr;
+    border-left: 0;
     border-top: 0;
-    padding-top: 0;
   }
 
-  .archive-title {
-    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  /* Adjust items for single column stack */
+  /* Adjust items for single column stack with full width separators */
+  .portfolio-item {
+    border: 0;
+    border-bottom: 2px solid var(--border-color);
+    padding: 2rem 1rem;
+    margin: 0 -1rem;
   }
 
-  .archive-thumb {
-    position: static;
-    transform: none;
+  .archive-grid {
+    border: 0;
+    /* Remove the desktop container borders */
   }
 
+  /* Restore image size/pos if needed or keep new layout */
   .archive-thumb img {
-    width: 52px;
-    height: 52px;
+    width: 64px;
+    /* Keep same size */
+    height: 64px;
     margin: 0;
   }
 
   .archive-year {
-    margin-left: 0;
-    width: 100%;
-    opacity: 0.8;
+    opacity: 0.6;
+    margin-bottom: 0.25rem;
   }
 }
