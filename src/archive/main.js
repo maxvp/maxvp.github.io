@@ -168,16 +168,40 @@ function initArchiveTooltips(root) {
   }
 }
 
-const mount = document.getElementById("portfolio-app");
-if (mount) {
-  const THRESHOLD_YEAR = 2023;
-  let dividerInserted = false;
+function renderArchive(showAll) {
+  const mount = document.getElementById("portfolio-app");
+  if (!mount) return;
+
   const htmlParts = [];
 
   for (const entry of entries) {
+    if (!showAll && !entry.featured) continue;
     htmlParts.push(renderEntry(entry));
   }
 
   mount.innerHTML = htmlParts.join("\n");
-  // initArchiveTooltips(mount);
+}
+
+const btnFeatured = document.getElementById("toggle-featured");
+const btnAll = document.getElementById("toggle-all");
+
+if (btnFeatured && btnAll) {
+  btnFeatured.addEventListener("click", () => {
+    btnFeatured.classList.add("active");
+    btnFeatured.setAttribute("aria-pressed", "true");
+    btnAll.classList.remove("active");
+    btnAll.setAttribute("aria-pressed", "false");
+    renderArchive(false);
+  });
+
+  btnAll.addEventListener("click", () => {
+    btnAll.classList.add("active");
+    btnAll.setAttribute("aria-pressed", "true");
+    btnFeatured.classList.remove("active");
+    btnFeatured.setAttribute("aria-pressed", "false");
+    renderArchive(true);
+  });
+
+  // Initial render: show featured by default
+  renderArchive(false);
 }
