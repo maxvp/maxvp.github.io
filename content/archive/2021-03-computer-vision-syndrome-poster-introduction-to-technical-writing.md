@@ -8,6 +8,7 @@ course: "Introduction to Technical Writing"
 url: design/techcomm/infographic.pdf
 image: /archive/design/techcomm/infographic.jpg
 imageAlt: ""
+featured: false
 ---
 
 Infographic warning of the dangers of computer vision syndrome. Part of series designed to showcase UX design thinking in a technical writing environment.

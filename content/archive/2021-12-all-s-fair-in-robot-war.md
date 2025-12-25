@@ -8,6 +8,7 @@ clientClass: "student"
 url: writing/robot.pdf
 image: ""
 imageAlt: ""
+featured: false
 ---
 
 Analysis of anthropomorphism of artificial intelligence and its relationship to the use of AI in warfare.

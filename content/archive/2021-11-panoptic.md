@@ -8,6 +8,7 @@ clientClass: "student"
 url: "writing/mistrust.pdf"
 image: ""
 imageAlt: ""
+featured: false
 ---
 
 Application of Michel Foucault's Panopticon to modern ideas of surveillance.

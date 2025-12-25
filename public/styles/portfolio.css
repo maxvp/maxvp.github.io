@@ -149,6 +149,11 @@ a:has(img):hover {
   background: var(--text-hover-color);
 }
 
+.archive-featured {
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
 .archive-title:focus-visible {
   outline: 2px solid var(--border-color);
   outline-offset: 4px;

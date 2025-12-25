@@ -8,6 +8,7 @@ clientClass: "student"
 url: writing/chianti.pdf
 image: ""
 imageAlt: ""
+featured: false
 ---
 
 Analysis of Buffalo Bill and Hannibal Lecter's subversion of Hollywood's heteronormative movie killer tropes in _Silence of the Lambs_.

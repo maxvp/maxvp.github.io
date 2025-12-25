@@ -8,6 +8,7 @@ course: "Integrating Writing and Design"
 url: design/integrating/instagram/instagram.pdf
 image: /archive/design/integrating/instagram/lacroix_mockup.png
 imageAlt: ""
+featured: false
 ---
 
 Instagram story mockup advertising LaCroix sparkling water in the style of '70s/'80s print ads (with a modern twist).

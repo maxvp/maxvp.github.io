@@ -8,6 +8,7 @@ course: "Digital Narrative and Interactive Design"
 url: https://github.com/maxvp/presidente-pedro/
 image: /archive/data/pedro.png
 imageAlt: ""
+featured: false
 ---
 
 Generative narrative study analyzing Midwestern Bush-era attitudes towards race and class in _Napoleon Dynamite_.

@@ -8,6 +8,7 @@ clientClass: "student"
 url: "writing/labor.pdf"
 image: ""
 imageAlt: ""
+featured: false
 ---
 
 Reflection on Simon Head's [Mindless](https://www.basicbooks.com/titles/simon-head/mindless/9780465018444/) and simulacra in the workforce.

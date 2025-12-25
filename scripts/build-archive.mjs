@@ -66,9 +66,9 @@ function parseFrontmatter(source) {
       const inner = value.slice(1, -1).trim();
       data[key] = inner
         ? inner
-            .split(",")
-            .map((v) => v.trim())
-            .filter(Boolean)
+          .split(",")
+          .map((v) => v.trim())
+          .filter(Boolean)
         : [];
       continue;
     }
@@ -197,6 +197,7 @@ async function main() {
       clientUrl: normalizeUrl(data.clientUrl || ""),
       clientClass: effectiveClientClass,
       url: normalizeUrl(data.url || ""),
+      featured: data.featured === "true",
       image: data.image || "",
       imageAlt: data.imageAlt || "",
       tags: Array.isArray(data.tags) ? data.tags : [],

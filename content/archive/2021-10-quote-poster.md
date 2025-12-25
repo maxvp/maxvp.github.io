@@ -8,6 +8,7 @@ course: "Integrating Writing and Design"
 url: design/integrating/quote/quote.pdf
 image: /archive/design/integrating/quote/quote_mockup.png
 imageAlt: ""
+featured: false
 ---
 
 Quote poster modeled after American public school minutia: motivational class posters and math textbook covers.

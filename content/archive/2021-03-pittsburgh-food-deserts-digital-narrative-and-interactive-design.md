@@ -8,6 +8,7 @@ course: "Digital Narrative and Interactive Design"
 url: https://github.com/maxvp/PGH-food-deserts
 image: /archive/data/map.png
 imageAlt: ""
+featured: false
 ---
 
 Geographic data visualization identifying food deserts within Pittsburgh city limits.

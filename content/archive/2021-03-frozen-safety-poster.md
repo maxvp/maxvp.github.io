@@ -8,6 +8,7 @@ course: "Introduction to Technical Writing"
 url: design/techcomm/safety.pdf
 image: /archive/design/techcomm/safety.jpg
 imageAlt: ""
+featured: false
 ---
 
 Print poster promoting safety in the ShopRite frozen foods department. Part of series designed to showcase UX design thinking in a technical writing environment.

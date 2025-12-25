@@ -8,6 +8,7 @@ course: "Integrating Writing and Design"
 url: design/integrating/four_page/four_page.pdf
 image: /archive/design/integrating/four_page/4page_mockup1.png
 imageAlt: ""
+featured: false
 ---
 
 Music magazine article mockup celebrating the work of Steve Reich. The repeating title recalls Reich's repetitious compositions, which fall out of step to harmonically resonate.

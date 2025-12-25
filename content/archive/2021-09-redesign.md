@@ -8,6 +8,7 @@ course: "Integrating Writing and Design"
 url: design/integrating/redesign/redesign.pdf
 image: /archive/design/integrating/redesign/redesign.png
 imageAlt: ""
+featured: false
 ---
 
 One-to-one recreation of classic General Electric print ad.

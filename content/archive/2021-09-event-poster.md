@@ -8,6 +8,7 @@ course: "Integrating Writing and Design"
 url: design/integrating/event/event.pdf
 image: /archive/design/integrating/event/poster_mockup.png
 imageAlt: ""
+featured: false
 ---
 
 Poster mock-up for Protomartyr show. This design emulates the band's album cover style. The piece incorporates Andrew Carnegie, a symbol of Pittsburgh's industrial labor history, a salient theme in the band's lyrics.

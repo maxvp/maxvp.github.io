@@ -8,6 +8,7 @@ course: "Human-Centered Systems"
 url: https://www.figma.com/file/PtiWXMbfY4iEFFS9pvnGiZ/Untitled?node-id=0%3A1&t=MfwA7eDXLlGjVXBI-1
 image: /archive/2022/studyfinder.jpg
 imageAlt: ""
+featured: false
 ---
 
 Worked in a team of 5 to conceptualize and prototype an app to help students find and rate study spaces on campus. Watch our [problem space video](https://youtu.be/r5vFkn88s6k).

@@ -8,6 +8,7 @@ course: "Integrating Writing and Design"
 url: design/integrating/inclusive/inclusive.pdf
 image: /archive/design/integrating/inclusive/inclusive.jpg
 imageAlt: ""
+featured: false
 ---
 
 Poster advertising upcoming class offerings with focus on accessible design.

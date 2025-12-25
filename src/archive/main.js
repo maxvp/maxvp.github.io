@@ -60,9 +60,13 @@ function renderEntry(entry) {
     ? `<span class="archive-client">${client}</span>`
     : "";
 
+  const featuredHtml = entry.featured
+    ? `<span class="archive-featured" aria-hidden="true">★ </span>`
+    : "";
+
   const titleHtml = url
-    ? `<a class="archive-title" href="${escapeHtml(url)}">${title}</a>`
-    : `<span class="archive-title">${title}</span>`;
+    ? `<a class="archive-title" href="${escapeHtml(url)}">${featuredHtml}${title}</a>`
+    : `<span class="archive-title">${featuredHtml}${title}</span>`;
 
   const thumbHtml = image
     ? `<a class="archive-thumb" href="${escapeHtml(

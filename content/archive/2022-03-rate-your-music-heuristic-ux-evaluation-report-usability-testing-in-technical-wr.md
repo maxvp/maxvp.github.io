@@ -8,6 +8,7 @@ clientClass: "student"
 url: https://docs.google.com/document/d/1IVoFkgSIVHPiuTxGolC7UF_lzEB8N5hRnRXsZ7SwFmI/edit?usp=sharing
 image: ""
 imageAlt: ""
+featured: false
 ---
 
 Heuristic usability and accessibility evaluation of [Rate Your Music](https://rateyourmusic.com/).

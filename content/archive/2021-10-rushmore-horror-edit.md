@@ -8,6 +8,7 @@ course: "Visual Literacy"
 url: https://youtu.be/BOkxbVqXIes
 image: ""
 imageAlt: ""
+featured: false
 ---
 
 Trailer for Wes Anderson's [Rushmore](https://www.imdb.com/title/tt0128445/), recut to fit within genre conventions of psychological horror/thriller films.
