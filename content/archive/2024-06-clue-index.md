@@ -7,7 +7,7 @@ clientClass: ""
 url: ""
 image: /archive/2024/cluey.jpg
 imageAlt: "CLUE Index front-end mascot Cluey"
-featured: true
+featured: false
 ---
 
 Implemented HTML, CSS, and JavaScript for front-end of internal tool based on designs from UX Content Strategy team. The PCX CLUE (Content Legibility for User Ease) Index is an internal tool used to help stakeholders evaluate their contributions to docs, UI, API, and email content based on best practices and our internal style guide.
