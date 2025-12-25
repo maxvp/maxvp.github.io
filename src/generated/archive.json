@@ -53,7 +53,7 @@
     "image": "/archive/2025/ai-week.jpg",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Led the Cloudflare One data security documentation for Cloudflare’s inaugural AI Week. Developed technical guides for CASB and Data Loss Prevention (DLP) integrations with LLMs (ChatGPT, Claude, Gemini), focusing on preventing misconfigurations and sentiment-based data leaks for enterprise organizations.</p>"
+    "descriptionHtml": "<p>Led the Cloudflare One data security documentation for Cloudflare’s inaugural AI Week. Developed technical guides for CASB and Data Loss Prevention (DLP) integrations with LLMs (ChatGPT, Claude, Gemini), focusing on preventing misconfigurations and sentiment-based data leaks for enterprise organizations. For more information, refer to the Cloudflare Blog posts for <a href=\"https://blog.cloudflare.com/ai-prompt-protection/\">DLP</a>, <a href=\"https://blog.cloudflare.com/shadow-AI-analytics/\">Shadow IT</a>, and <a href=\"https://blog.cloudflare.com/casb-ai-integrations/\">CASB</a>.</p>"
   },
   {
     "slug": "2025-07-app-library-21232",
@@ -81,7 +81,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>CASB expanded its integrations to support FedRAMP variants for ServiceNow, Google Workspace, and Microsoft 365. To support this effort, I created documentation for these more secure variants according to the FedRAMP requirements. These changes directly correlated with an increase in performance ratings in the Gartner Magic Quadrant (MQ) survey.</p>"
+    "descriptionHtml": "<p>CASB expanded its integrations to support FedRAMP variants for ServiceNow, Google Workspace, and Microsoft 365. To support this effort, I created documentation for these more secure variants according to the FedRAMP requirements. These changes directly correlated with an increase in performance ratings in the <a href=\"https://www.gartner.com/en/research/magic-quadrant\">Gartner Magic Quadrant (MQ) survey</a>.</p>"
   },
   {
     "slug": "2025-02-sit-network-policies-api-and-terraform-20150",
@@ -95,7 +95,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Identified a significant documentation gap for enterprise users that require deploying policies at scale. Designed and implemented a technical specification for representing API and Terraform policies alongside UI examples. Led the rollout of these standards across all Gateway documentation, enabling infrastrucutre-as-code users to use baseline policies.</p>"
+    "descriptionHtml": "<p>Identified a significant documentation gap for enterprise users that require deploying policies at scale. Designed and implemented a technical specification for representing API and Terraform policies alongside UI examples. Led the rollout of these standards across all Gateway documentation, allowing infrastructure-as-code users to implement baseline policies.</p>"
   },
   {
     "slug": "2024-10-per-account-certs",
@@ -109,7 +109,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Led the change management strategy for a critical security migration following the global Cloudflare root certificate expiration. Managed stakeholder communication and technical documentation to guide enterprise users through transition to unique account-based certificates, Successfully mitigated major service disruptions.</p>"
+    "descriptionHtml": "<p>Led the change management strategy for a critical security migration following the global Cloudflare root certificate expiration. Managed stakeholder communication and technical documentation to guide enterprise users through transition to unique account-based certificates. Successfully mitigated major service disruptions.</p>"
   },
   {
     "slug": "2024-08-starlight",
@@ -193,7 +193,7 @@
     "image": "",
     "imageAlt": "",
     "tags": [],
-    "descriptionHtml": "<p>Added a Mermaid diagram to the developer docs to visually illustrate how Gateway intercepts, proxies, and filters traffic from onboarding to egressing to the Internet.</p>"
+    "descriptionHtml": "<p>Added a <a href=\"https://mermaid.js.org/\">Mermaid flowchart</a> to the developer docs to visually illustrate how Gateway intercepts, proxies, and filters traffic from onboarding to egressing to the Internet.</p>"
   },
   {
     "slug": "2023-07-bsides-pgh-23",

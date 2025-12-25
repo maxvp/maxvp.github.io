@@ -18,7 +18,11 @@
 
 /* Grid item sections  */
 #portfolio {
-  padding: 1.5rem 0 1.5rem;
+  padding: 1.5rem 0 0;
+}
+
+#portfolio~.status-bar {
+  border-top: none;
 }
 
 .archive-grid {
@@ -120,7 +124,7 @@ a:has(img):hover {
   font-size: clamp(1.5rem, 2vw, 1.8rem);
   padding: 0;
   margin: 0;
-  display: block;
+  display: inline;
 }
 
 .archive-title:link,
@@ -144,8 +148,8 @@ a:has(img):hover {
   color: var(--text-color);
 }
 
-.archive-title:hover,
-.archive-title:focus-visible {
+a.archive-title:hover,
+a.archive-title:focus-visible {
   background: var(--text-hover-color);
 }
 

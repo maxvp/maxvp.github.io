@@ -10,4 +10,4 @@ imageAlt: ""
 featured: false
 ---
 
-Added a Mermaid diagram to the developer docs to visually illustrate how Gateway intercepts, proxies, and filters traffic from onboarding to egressing to the Internet.
+Added a [Mermaid flowchart](https://mermaid.js.org/) to the developer docs to visually illustrate how Gateway intercepts, proxies, and filters traffic from onboarding to egressing to the Internet.
