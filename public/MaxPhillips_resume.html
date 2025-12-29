@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>Maximillian V. Phillips</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,13 +12,13 @@
             size: letter;
             margin: 0;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             font-size: 11pt;
@@ -25,28 +26,28 @@
             color: #000;
             margin: 0.75in 0.75in;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 8pt;
         }
-        
+
         .header h1 {
             font-size: 16pt;
             font-weight: 700;
             margin-bottom: 2pt;
             letter-spacing: 0.02em;
         }
-        
+
         .header .contact {
             font-size: 11pt;
             font-weight: 400;
         }
-        
+
         .section {
             margin-bottom: 10pt;
         }
-        
+
         .section-title {
             font-size: 11pt;
             font-weight: 700;
@@ -56,39 +57,39 @@
             padding-bottom: 2pt;
             border-bottom: 0.5pt solid #000;
         }
-        
+
         a {
             color: #000;
             text-decoration: none;
             border-bottom: 1px dotted #999;
         }
-        
+
         a:hover {
             background-color: #f0f0f0;
         }
-        
+
         /* --- SKILLS SECTION FIX --- */
         .skills-list {
             /* Now an actual unordered list for proper bullet control */
             list-style: disc;
             /* Indent the whole list slightly for visual space */
-            margin-left: 10pt; 
+            margin-left: 10pt;
             padding-left: 0;
             list-style-position: outside; /* Ensure wrapped text aligns correctly */
         }
-        
+
         .skill-item {
             margin-bottom: 3pt;
             /* Using list-style takes care of the indent automatically */
-            margin-left: 10pt; 
+            margin-left: 10pt;
             padding-left: 0;
         }
         /* -------------------------- */
-        
+
         .experience-item, .education-item, .project-item {
             margin-bottom: 8pt;
         }
-        
+
         .company-header {
             display: flex;
             justify-content: space-between;
@@ -96,21 +97,21 @@
             margin-bottom: 0pt;
             font-weight: 600;
         }
-        
+
         .company-name {
             font-weight: 600;
         }
-        
+
         .company-dates {
             font-weight: 400;
             font-style: italic;
         }
-        
+
         .role-item {
             margin-left: 0;
             margin-bottom: 4pt;
         }
-        
+
         .role-header {
             display: flex;
             justify-content: space-between;
@@ -118,56 +119,56 @@
             font-weight: 400;
             margin-top: 1pt;
         }
-        
+
         .role-dates {
             font-style: italic;
             font-weight: 400;
             font-size: 10pt;
         }
-        
+
         .responsibilities {
             margin-left: 12pt;
             margin-top: 1pt;
         }
-        
+
         .responsibilities li {
             margin-bottom: 1pt;
         }
-        
+
         .project-header {
             margin-bottom: 1pt;
         }
-        
+
         .project-name {
             font-weight: 600;
             display: inline;
         }
-        
+
         .project-tech {
             font-style: italic;
             display: inline;
         }
-        
+
         .project-url {
             float: right;
             font-style: italic;
         }
-        
+
         .coursework {
             margin-left: 12pt;
         }
-        
+
         .education-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 1pt;
         }
-        
+
         .institution {
             font-weight: 600;
         }
-        
+
         .degree-line {
             margin-bottom: 1pt;
         }
@@ -178,7 +179,7 @@
         <h1>Maximillian V. Phillips</h1>
         <div class="contact">Dallas, TX — <a href="mailto:max@maxvphillips.com">max@maxvphillips.com</a> — <a href="https://www.maxvphillips.com/">maxvphillips.com</a></div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">Skills</div>
         <ul class="skills-list">
@@ -187,11 +188,11 @@
             
             <li class="skill-item"><strong>Docs-as-Code & Development:</strong> MDX/Markdown, Git, Astro, HTML/CSS, Python, TypeScript</li>
             
-            <li class="skill-item"><strong>Infrastructure & DevOps:</strong> OpenAPI/REST APIs, Terraform, CI/CD Pipelines, Linux/CLI, Docker</li>
+            <li class="skill-item"><strong>Infrastructure & DevOps:</strong> OpenAPI/REST APIs, Terraform, Docker, CI/CD Pipelines, Linux/CLI</li>
             
         </ul>
     </div>
-    
+
     <div class="section">
         <div class="section-title">Experience</div>
         
@@ -205,11 +206,11 @@
                 <div style="margin-bottom: 2pt;">Cloudflare • Remote</div>
                 <ul class="responsibilities">
                     
-                    <li>Reduced manual writer maintenance overhead by developing automated screenshot system with <a href="https://developers.cloudflare.com/browser-rendering/">Cloudflare Browser Rendering</a> and <a href="https://developers.cloudflare.com/workers-ai/">Workers AI</a> to detect product changes and update docs.</li>
-                    
                     <li>Unified enterprise Zero Trust docs and product user experience by leading data-driven IA strategy for 7-person writing team, migrating 600+ docs pages and clarifying 1,000+ UI instructions.</li>
                     
-                    <li>Serve as primary point of contact for open source Cloudflare Docs site to triage 100+ monthly contributions and make consistent content decisions with cross-functional partners.</li>
+                    <li>Reduced manual writer maintenance overhead by developing automated screenshot system with <a href="https://developers.cloudflare.com/browser-rendering/">Cloudflare Browser Rendering</a> and <a href="https://developers.cloudflare.com/workers-ai/">Workers AI</a> to detect product changes and update docs.</li>
+                    
+                    <li>Manage internal and community contributions to open source Cloudflare Docs site, triaging 100+ monthly pull requests to make consistent content decisions with cross-functional partners.</li>
                     
                 </ul>
             </div>
@@ -228,7 +229,7 @@
                     
                     <li>Authored documentation for <a href="https://web.archive.org/web/20220811123633/https://developers.cloudflare.com/argo-smart-routing/">Argo Smart Routing</a> to serve 3M+ unique monthly visitors.</li>
                     
-                    <li>Unified user experience across product docs by implementing extensible Hugo site components.</li>
+                    <li>Improved user experience across product docs by implementing extensible Hugo site components.</li>
                     
                     <li>Promoted accessibility and inclusion by advocating for refined language and site improvements.</li>
                     
@@ -272,7 +273,7 @@
         </div>
         
     </div>
-    
+
     <div class="section">
         <div class="section-title">Awards</div>
         
@@ -286,7 +287,7 @@
         </div>
         
     </div>
-    
+
     <div class="section">
         <div class="section-title">Education</div>
         
