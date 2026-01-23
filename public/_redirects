@@ -1,5 +1,6 @@
 # Cloudflare Pages redirects
-# Serve static files and directories as-is
-/archive/* /archive/:splat 200
+# Redirect old archive URLs to projects
+/archive/* /projects/:splat 301
+# Serve static files as-is
 /MaxPhillips_resume.pdf /MaxPhillips_resume.pdf 200
 /MaxPhillips_resume.html /MaxPhillips_resume.html 200
