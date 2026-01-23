@@ -5,7 +5,7 @@ client: "University of Pittsburgh"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid=991726
 clientClass: "student"
 course: "Integrating Writing and Design"
-url: design/integrating/instagram/instagram.pdf
+url: /archive/design/integrating/instagram/instagram.pdf
 image: /archive/design/integrating/instagram/lacroix_mockup.png
 imageAlt: ""
 featured: false

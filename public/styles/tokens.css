@@ -12,7 +12,7 @@
 
   --highlight-color: var(--accent-color);
 
-  --archive-item-hover-color: rgba(0, 0, 0, 0.03);
+  --portfolio-item-hover-color: rgba(0, 0, 0, 0.03);
 
   /* I don't remember what these were for */
   --svg-filter: invert(0%) sepia(5%) saturate(393%) hue-rotate(5deg)
@@ -20,12 +20,14 @@
   --image-light-dark: light;
 
   /* Fonts */
-  --font-family-serif: "EB Garamond", ui-serif, Iowan Old Style,
-    "Palatino Linotype", Palatino, Georgia, serif;
-  --font-family-sans-serif: "Inter", system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  --font-family-monospace: "Inconsolata", "Nimbus Mono PS", "Courier New",
-    monospace;
+  --font-family-serif:
+    "EB Garamond", ui-serif, Iowan Old Style, "Palatino Linotype", Palatino,
+    Georgia, serif;
+  --font-family-sans-serif:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+    sans-serif;
+  --font-family-monospace:
+    "Inconsolata", "Nimbus Mono PS", "Courier New", monospace;
 }
 
 /* If user prefers dark mode */
@@ -38,7 +40,7 @@
 
     --highlight-color: #8db5ab;
 
-    --archive-item-hover-color: rgba(255, 255, 255, 0.03);
+    --portfolio-item-hover-color: rgba(255, 255, 255, 0.03);
 
     --svg-filter: invert(99%) sepia(2%) saturate(2988%) hue-rotate(357deg)
       brightness(111%) contrast(105%);

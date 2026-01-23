@@ -2,8 +2,8 @@ import { promises as fs } from "fs";
 import { execSync } from "child_process";
 import path from "path";
 
-const contentDir = path.resolve("content/archive");
-const outFile = path.resolve("src/generated/archive.json");
+const contentDir = path.resolve("content/portfolio");
+const outFile = path.resolve("src/generated/portfolio.json");
 const siteMetaFile = path.resolve("src/generated/site-meta.json");
 
 async function collectMarkdownFiles(dir) {
@@ -66,9 +66,9 @@ function parseFrontmatter(source) {
       const inner = value.slice(1, -1).trim();
       data[key] = inner
         ? inner
-          .split(",")
-          .map((v) => v.trim())
-          .filter(Boolean)
+            .split(",")
+            .map((v) => v.trim())
+            .filter(Boolean)
         : [];
       continue;
     }
@@ -111,11 +111,11 @@ function inlineTextToHtml(text) {
 
   html = html.replace(
     /(^|[^\w])\*\*([^*]+?)\*\*([^\w]|$)/g,
-    "$1<strong>$2</strong>$3"
+    "$1<strong>$2</strong>$3",
   );
   html = html.replace(
     /(^|[^\w])__([^_]+?)__([^\w]|$)/g,
-    "$1<strong>$2</strong>$3"
+    "$1<strong>$2</strong>$3",
   );
   html = html.replace(/(^|[^\w])\*([^*]+?)\*([^\w]|$)/g, "$1<em>$2</em>$3");
   html = html.replace(/(^|[^\w])_([^_]+?)_([^\w]|$)/g, "$1<em>$2</em>$3");
@@ -245,9 +245,9 @@ async function main() {
         commitDateIso,
       },
       null,
-      2
+      2,
     ) + "\n",
-    "utf8"
+    "utf8",
   );
 }
 

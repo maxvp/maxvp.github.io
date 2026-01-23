@@ -22,13 +22,13 @@
   flex: 1;
 }
 
-#portfolio~.status-bar {
+#portfolio ~ .status-bar {
   margin-top: -2px;
   position: relative;
   z-index: 10;
 }
 
-.archive-controls {
+.portfolio-controls {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -38,7 +38,7 @@
   letter-spacing: 0.02em;
 }
 
-.archive-controls button {
+.portfolio-controls button {
   background: var(--background-color);
   border: 2px solid var(--border-color);
   color: var(--text-color);
@@ -46,16 +46,18 @@
   padding: 0.15rem 0.6rem;
   font-family: inherit;
   font-size: inherit;
-  transition: background-color 0.1s, color 0.1s;
+  transition:
+    background-color 0.1s,
+    color 0.1s;
 }
 
-.archive-controls button:hover,
-.archive-controls button.active {
+.portfolio-controls button:hover,
+.portfolio-controls button.active {
   background-color: var(--text-color);
   color: var(--background-color);
 }
 
-.archive-grid {
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
@@ -117,8 +119,6 @@
   border-right: 0;
 }
 
-
-
 .credit a {
   text-decoration: underline dotted;
 }
@@ -128,25 +128,25 @@ a:has(img):hover {
 }
 
 /* New structure */
-.archive-date-row {
+.portfolio-date-row {
   margin-bottom: 0.5rem;
 }
 
-.archive-main-row {
+.portfolio-main-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
 }
 
-.archive-main {
+.portfolio-main {
   position: relative;
   display: block;
   flex: 1;
   min-width: 0;
 }
 
-.archive-title {
+.portfolio-title {
   color: var(--text-color);
   text-decoration: none !important;
   font-family: var(--font-family-serif);
@@ -159,54 +159,54 @@ a:has(img):hover {
   display: inline;
 }
 
-.archive-title:link,
-.archive-title:visited,
-.archive-title:hover,
-.archive-title:active {
+.portfolio-title:link,
+.portfolio-title:visited,
+.portfolio-title:hover,
+.portfolio-title:active {
   text-decoration: none !important;
 }
 
-.archive-title:visited {
+.portfolio-title:visited {
   color: var(--text-color);
 }
 
-.archive-title:hover {
+.portfolio-title:hover {
   background: transparent;
   color: var(--text-color);
 }
 
-.archive-title:active {
+.acch-veitle:active {
   background: transparent;
   color: var(--text-color);
 }
 
-a.archive-title:hover,
-a.archive-title:focus-visible {
+a.portfolio-title:hover,
+a.portfolio-title:focus-visible {
   background: var(--text-hover-color);
 }
 
-.archive-featured {
+.portfolio-featured {
   display: inline-block;
   margin-right: 0.25rem;
 }
 
-.archive-title:focus-visible {
+.portfolio-title:focus-visible {
   outline: 2px solid var(--border-color);
   outline-offset: 4px;
 }
 
-.archive-thumb {
+.portfolio-thumb {
   display: block;
   flex: 0 0 auto;
   margin-left: auto;
 }
 
-.archive-thumb:hover,
-.archive-thumb:active {
+.portfolio-thumb:hover,
+.portfolio-thumb:active {
   background: transparent;
 }
 
-.archive-thumb img {
+.portfolio-thumb img {
   width: 64px;
   height: 64px;
   object-fit: cover;
@@ -214,7 +214,7 @@ a.archive-title:focus-visible {
   display: block;
 }
 
-.archive-year {
+.portfolio-year {
   display: block;
   text-align: left;
   font-family: var(--font-family-monospace);
@@ -225,9 +225,7 @@ a.archive-title:focus-visible {
   text-transform: uppercase;
 }
 
-
-
-.archive-desc {
+.portfolio-desc {
   display: block !important;
   font-family: var(--font-family-sans-serif);
   font-size: 0.85rem;
@@ -236,11 +234,11 @@ a.archive-title:focus-visible {
   color: var(--text-color);
 }
 
-.archive-tooltip {
+.portfolio-tooltip {
   display: none !important;
 }
 
-.archive-client-subtitle {
+.portfolio-client-subtitle {
   display: block;
   font-family: var(--font-family-monospace);
   font-size: 0.75rem;
@@ -249,20 +247,19 @@ a.archive-title:focus-visible {
   text-transform: uppercase;
 }
 
-.archive-client {
+.portfolio-client {
   font-family: var(--font-family-monospace);
   font-weight: 300;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
 }
 
-html.has-archive-tooltip .archive-desc {
+html.has-portfolio-tooltip .portfolio-desc {
   display: none !important;
 }
 
-@media (hover: none),
-(pointer: coarse) {
-  .archive-desc {
+@media (hover: none), (pointer: coarse) {
+  .portfolio-desc {
     display: block;
     margin-top: 0.35rem;
     padding: 0.35rem 0 0;

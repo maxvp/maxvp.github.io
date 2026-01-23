@@ -5,7 +5,7 @@ client: "University of Pittsburgh"
 clientUrl: "https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=210&coid=1095052"
 course: "Introduction to Film"
 clientClass: "student"
-url: writing/chianti.pdf
+url: /archive/writing/chianti.pdf
 image: ""
 imageAlt: ""
 featured: false

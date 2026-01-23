@@ -1,4 +1,4 @@
-import entries from "../generated/archive.json";
+import entries from "../generated/portfolio.json";
 
 function escapeHtml(value) {
   return String(value)
@@ -57,44 +57,45 @@ function renderEntry(entry) {
     : "";
 
   const clientHtml = client
-    ? `<span class="archive-client">${client}</span>`
+    ? `<span class="portfolio-client">${client}</span>`
     : "";
 
   const featuredHtml = entry.featured
-    ? `<span class="archive-featured" aria-hidden="true">★ </span>`
+    ? `<span class="portfolio-featured" aria-hidden="true">★ </span>`
     : "";
 
   const titleHtml = url
-    ? `<a class="archive-title" href="${escapeHtml(url)}">${featuredHtml}${title}</a>`
-    : `<span class="archive-title">${featuredHtml}${title}</span>`;
+    ? `<a class="portfolio-title" href="${escapeHtml(url)}">${featuredHtml}${title}</a>`
+    : `<span class="portfolio-title">${featuredHtml}${title}</span>`;
 
   const thumbHtml = image
-    ? `<a class="archive-thumb" href="${escapeHtml(
-      url || image
-    )}"><img src="${escapeHtml(
-      image
-    )}" alt="${imageAlt}" loading="lazy" decoding="async" /></a>`
+    ? `<a class="portfolio-thumb" href="${escapeHtml(
+        url || image,
+      )}"><img src="${escapeHtml(
+        image,
+      )}" alt="${imageAlt}" loading="lazy" decoding="async" /></a>`
     : "";
 
   return `
     <div class="portfolio-item">
-      ${dateLabel ? `<div class="archive-date-row"><span class="archive-year">${dateLabel}</span></div>` : ""}
-      <div class="archive-main-row">
-        <div class="archive-main">
+      ${dateLabel ? `<div class="portfolio-date-row"><span class="portfolio-year">${dateLabel}</span></div>` : ""}
+      <div class="portfolio-main-row">
+        <div class="portfolio-main">
           ${titleHtml}
-          ${clientHtml ? `<div class="archive-client-subtitle">${clientHtml}</div>` : ""}
+          ${clientHtml ? `<div class="portfolio-client-subtitle">${clientHtml}</div>` : ""}
         </div>
         ${thumbHtml}
       </div>
-      ${descriptionHtml
-      ? `<div class="archive-desc">${descriptionHtml}</div>`
-      : ""
-    }
+      ${
+        descriptionHtml
+          ? `<div class="portfolio-desc">${descriptionHtml}</div>`
+          : ""
+      }
     </div>
   `;
 }
 
-function initArchiveTooltips(root) {
+function initPortfolioTooltips(root) {
   if (!root) return;
 
   const canHover = window.matchMedia
@@ -102,17 +103,17 @@ function initArchiveTooltips(root) {
     : false;
   if (!canHover) return;
 
-  document.documentElement.classList.add("has-archive-tooltip");
+  document.documentElement.classList.add("has-portfolio-tooltip");
 
   const tooltip = document.createElement("div");
-  tooltip.className = "archive-tooltip";
+  tooltip.className = "portfolio-tooltip";
   tooltip.style.display = "none";
   document.body.appendChild(tooltip);
 
   let activeItem = null;
 
   function showForItem(item) {
-    const desc = item ? item.querySelector(".archive-desc") : null;
+    const desc = item ? item.querySelector(".portfolio-desc") : null;
     if (!desc) return;
     tooltip.innerHTML = desc.innerHTML;
     tooltip.style.display = "block";
@@ -141,8 +142,8 @@ function initArchiveTooltips(root) {
   }
 
   for (const item of root.querySelectorAll(".portfolio-item")) {
-    const desc = item.querySelector(".archive-desc");
-    const title = item.querySelector(".archive-title");
+    const desc = item.querySelector(".portfolio-desc");
+    const title = item.querySelector(".portfolio-title");
     if (!desc || !title) continue;
 
     title.addEventListener("pointerenter", (e) => {
@@ -168,7 +169,7 @@ function initArchiveTooltips(root) {
   }
 }
 
-function renderArchive(showAll) {
+function renderPortfolio(showAll) {
   const mount = document.getElementById("portfolio-app");
   if (!mount) return;
 
@@ -191,7 +192,7 @@ if (btnFeatured && btnAll) {
     btnFeatured.setAttribute("aria-pressed", "true");
     btnAll.classList.remove("active");
     btnAll.setAttribute("aria-pressed", "false");
-    renderArchive(false);
+    renderPortfolio(false);
   });
 
   btnAll.addEventListener("click", () => {
@@ -199,9 +200,9 @@ if (btnFeatured && btnAll) {
     btnAll.setAttribute("aria-pressed", "true");
     btnFeatured.classList.remove("active");
     btnFeatured.setAttribute("aria-pressed", "false");
-    renderArchive(true);
+    renderPortfolio(true);
   });
 
   // Initial render: show featured by default
-  renderArchive(false);
+  renderPortfolio(false);
 }

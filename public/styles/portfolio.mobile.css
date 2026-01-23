@@ -1,7 +1,6 @@
 /*** Mobile responsive design ***/
 
 @media only screen and (max-width: 768px) {
-
   /* Portfolio */
   #portfolio {
     padding: 1.5rem 1rem 0;
@@ -19,8 +18,8 @@
     width: 100%;
   }
 
-  /* Archive Grid Mobile Override */
-  .archive-grid {
+  /* Portfolio Grid Mobile Override */
+  .portfolio-grid {
     grid-template-columns: 1fr;
     border-left: 0;
     border-top: 0;
@@ -35,22 +34,20 @@
     margin: 0 -1rem;
   }
 
-
-
-  .archive-grid {
+  .portfolio-grid {
     border: 0;
     /* Remove the desktop container borders */
   }
 
   /* Restore image size/pos if needed or keep new layout */
-  .archive-thumb img {
+  .portfolio-thumb img {
     width: 64px;
     /* Keep same size */
     height: 64px;
     margin: 0;
   }
 
-  .archive-year {
+  .portfolio-year {
     opacity: 0.6;
     margin-bottom: 0.25rem;
   }

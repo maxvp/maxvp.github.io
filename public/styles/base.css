@@ -44,7 +44,8 @@ body.home .home-marquee {
   animation: home-marquee 70s linear infinite;
 }
 
-.archive-header {
+.archive-header,
+.portfolio-header {
   position: sticky;
   top: 0;
   z-index: 50;
@@ -53,7 +54,8 @@ body.home .home-marquee {
   grid-template-columns: auto 1fr;
 }
 
-.archive-back {
+.archive-back,
+.portfolio-back {
   position: relative;
   grid-column: 1;
   grid-row: 1;
@@ -73,22 +75,28 @@ body.home .home-marquee {
 }
 
 .archive-back:link,
-.archive-back:visited {
+.archive-back:visited,
+.portfolio-back:link,
+.portfolio-back:visited {
   text-decoration: none;
 }
 
-.archive-marquee {
+.archive-marquee,
+.portfolio-marquee {
   grid-column: 1 / -1;
   grid-row: 1;
 }
 
 .archive-back:hover,
-.archive-back:focus-visible {
+.archive-back:focus-visible,
+.portfolio-back:hover,
+.portfolio-back:focus-visible {
   background-color: var(--text-color);
   color: var(--background-color);
 }
 
-.archive-marquee .home-marquee-track {
+.archive-marquee .home-marquee-track,
+.portfolio-marquee .home-marquee-track {
   padding-left: 3rem;
 }
 
@@ -105,7 +113,7 @@ body.home .home-marquee {
   line-height: 1;
 }
 
-.archive-back:hover + .archive-marquee .home-marquee-track {
+.portfolio-back:hover + .portfolio-marquee .home-marquee-track {
   animation-play-state: running;
 }
 
