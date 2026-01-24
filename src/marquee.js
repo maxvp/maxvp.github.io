@@ -1,5 +1,5 @@
 // Initialize marquee elements
-document.addEventListener("DOMContentLoaded", () => {
+function initMarquees() {
   const marquees = document.querySelectorAll(".home-marquee");
 
   marquees.forEach((marquee) => {
@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const text = marquee.dataset.marqueeText;
 
     if (!track || !text) return;
+
+    // Skip if already initialized
+    if (track.children.length > 0) return;
 
     // Create two segments for seamless looping
     const segment1 = document.createElement("span");
@@ -20,4 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     track.appendChild(segment1);
     track.appendChild(segment2);
   });
-});
+}
+
+// Run immediately if DOM is ready, otherwise wait
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initMarquees);
+} else {
+  initMarquees();
+}
