@@ -1,5 +1,6 @@
 # Cloudflare Pages redirects
 # Redirect old archive HTML pages to projects (but not static assets)
+/archive /projects/ 301
 /archive/ /projects/ 301
 /archive/index.html /projects/ 301
 # Serve static files as-is
