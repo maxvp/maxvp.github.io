@@ -29,5 +29,11 @@ function initMarquees() {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initMarquees);
 } else {
-  initMarquees();
+  // For iOS Safari, add a small delay to ensure everything is ready
+  setTimeout(initMarquees, 0);
 }
+
+// Also run on window load as a fallback for iOS Safari
+window.addEventListener("load", () => {
+  initMarquees();
+});
