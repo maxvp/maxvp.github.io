@@ -1,6 +1,7 @@
 # Cloudflare Pages redirects
-# Redirect old archive URLs to projects
-/archive/* /projects/:splat 301
+# Redirect old archive HTML pages to projects (but not static assets)
+/archive/ /projects/ 301
+/archive/index.html /projects/ 301
 # Serve static files as-is
 /MaxPhillips_resume.pdf /MaxPhillips_resume.pdf 200
 /MaxPhillips_resume.html /MaxPhillips_resume.html 200
