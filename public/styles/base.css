@@ -100,7 +100,8 @@ body.home .home-marquee {
   padding-left: 3rem;
 }
 
-.home-marquee:hover .home-marquee-track {
+/* Only pause on hover for the home page marquee, not portfolio page */
+body.home .home-marquee:hover .home-marquee-track {
   animation-play-state: paused;
 }
 
@@ -111,10 +112,6 @@ body.home .home-marquee {
   letter-spacing: 0.02em;
   flex: 0 0 auto;
   line-height: 1;
-}
-
-.portfolio-back:hover + .portfolio-marquee .home-marquee-track {
-  animation-play-state: running;
 }
 
 .title-bar {
