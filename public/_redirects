@@ -8,6 +8,3 @@
 # Serve static files as-is
 /MaxPhillips_resume.pdf /MaxPhillips_resume.pdf 200
 /MaxPhillips_resume.html /MaxPhillips_resume.html 200
-
-# Redirect to apex (no www)
-/*  https://maxvphillips.com/:splat  301
