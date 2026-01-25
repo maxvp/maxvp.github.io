@@ -141,7 +141,7 @@ body.home .home-marquee:hover .home-marquee-track {
   justify-content: space-between;
   align-items: center;
   border-top: 2px solid var(--border-color);
-  padding: 0.55rem 0.75rem;
+  padding: 0.45rem 0.75rem;
   background-color: var(--background-color);
   flex: 0 0 auto;
 }
