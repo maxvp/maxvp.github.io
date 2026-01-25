@@ -10,4 +10,4 @@
 /MaxPhillips_resume.html /MaxPhillips_resume.html 200
 
 # Redirect to apex (no www)
-/*  https://maxvphillips.com/$1  301
+/*  https://maxvphillips.com/:splat  301
