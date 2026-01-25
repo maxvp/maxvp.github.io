@@ -1,0 +1,89 @@
+.sitemap-container {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-family-monospace);
+}
+
+.sitemap-trigger {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.12em;
+}
+
+.sitemap-trigger:hover {
+  background-color: var(--text-hover-color);
+}
+
+.sitemap-content {
+  display: none;
+  position: absolute;
+  /* Use bottom calc instead of margin for cleaner positioning */
+  bottom: calc(100% + 1.5rem); 
+  left: 0;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  min-width: 280px;
+  max-width: 400px;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 9999;
+  /* Remove margin-bottom as we handle it with 'bottom' */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+}
+
+.sitemap-container.is-active .sitemap-content {
+  display: block;
+}
+
+/* Tree styles */
+.sitemap-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sitemap-list ul {
+  padding-left: 1.25em; /* Indent info */
+  border-left: 1px solid rgba(127, 127, 127, 0.2);
+  margin-left: 0.25em;
+}
+
+.sitemap-item {
+  margin: 0.25em 0;
+  white-space: nowrap;
+}
+
+.sitemap-dir-name {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+.sitemap-item a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: inline-block;
+  width: 100%;
+}
+
+.sitemap-item a:hover {
+  background-color: var(--text-hover-color);
+}
+
+/* Scrollbar styles for pure aesthetics */
+.sitemap-content::-webkit-scrollbar {
+  width: 6px;
+}
+.sitemap-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sitemap-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}

@@ -5,6 +5,7 @@ import path from "path";
 const contentDir = path.resolve("content/portfolio");
 const outFile = path.resolve("src/generated/portfolio.json");
 const siteMetaFile = path.resolve("src/generated/site-meta.json");
+const sitemapFile = path.resolve("src/generated/sitemap.json");
 
 async function collectMarkdownFiles(dir) {
   const results = [];
@@ -251,4 +252,130 @@ async function main() {
   );
 }
 
+async function generateSitemap() {
+  const rootDirs = ["archive", "projects"];
+  const rootFiles = ["index.html"];
+  const publicDir = path.resolve("public");
+
+  const entries = [];
+
+  // Helper to check if file exists
+  async function exists(p) {
+    try {
+      await fs.access(p);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  // Recursive walker
+  async function walk(dir, relativeToRoot) {
+    let dirents = [];
+    try {
+      dirents = await fs.readdir(dir, { withFileTypes: true });
+    } catch {
+      return [];
+    }
+
+    const children = [];
+    for (const d of dirents) {
+      if (d.name.startsWith(".")) continue;
+      
+      // Filter out utility dirs
+      if (["styles", "node_modules", "scripts", "src", "public", "content", "dist"].includes(d.name)) continue;
+
+      const fullPath = path.join(dir, d.name);
+      const itemRelPath = path.join(relativeToRoot, d.name);
+
+      if (d.isDirectory()) {
+        const subChildren = await walk(fullPath, itemRelPath);
+        if (subChildren.length > 0) {
+          children.push({
+            name: d.name,
+            type: "directory",
+            children: subChildren,
+            path: "/" + itemRelPath + "/" // Optional: link to dir if index.html exists?
+          });
+        }
+      } else {
+        if (d.name.endsWith(".html") || d.name.endsWith(".pdf")) {
+           children.push({
+             name: d.name,
+             type: "file",
+             path: "/" + itemRelPath
+           });
+        }
+      }
+    }
+    
+    // Sort directories first, then files
+    return children.sort((a, b) => {
+      if (a.type === b.type) return a.name.localeCompare(b.name);
+      return a.type === "directory" ? -1 : 1;
+    });
+  }
+
+  // 1. Walk root dirs
+  for (const d of rootDirs) {
+    const fullPath = path.resolve(d);
+    if (await exists(fullPath)) {
+      const children = await walk(fullPath, d);
+      if (children.length > 0) {
+        entries.push({
+          name: d,
+          type: "directory",
+          children,
+          path: "/" + d + "/"
+        });
+      }
+    }
+  }
+
+  // 2. Walk public dir (merged to root)
+  if (await exists(publicDir)) {
+    const publicChildren = await walk(publicDir, "");
+    // Merge public children into entries
+    // But we need to handle directories merging if they share names?
+    // For now, simplify: just push content.
+    // However, if public has "archive", it conflicts with root "archive".
+    // public/archive shouldn't exist if root/archive exists usually, or they merge.
+    // The walker filters "archive" in rootDirs, but public walker doesn't know about it.
+    
+    for (const item of publicChildren) {
+        // Check if already exists in entries (simple check by name)
+        const existing = entries.find(e => e.name === item.name);
+        if (existing && existing.type === "directory" && item.type === "directory") {
+            existing.children.push(...item.children); // minimal merge
+             existing.children.sort((a, b) => { // re-sort
+                if (a.type === b.type) return a.name.localeCompare(b.name);
+                return a.type === "directory" ? -1 : 1;
+            });
+        } else {
+            entries.push(item);
+        }
+    }
+  }
+
+  // 3. Add root files
+  for (const f of rootFiles) {
+    if (await exists(path.resolve(f))) {
+      entries.push({
+        name: f,
+        type: "file",
+        path: "/" + f
+      });
+    }
+  }
+
+  // Final sort
+  entries.sort((a, b) => {
+      if (a.type === b.type) return a.name.localeCompare(b.name);
+      return a.type === "directory" ? -1 : 1;
+  });
+
+  await fs.writeFile(sitemapFile, JSON.stringify(entries, null, 2), "utf8");
+}
+
 await main();
+await generateSitemap();

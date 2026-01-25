@@ -1,0 +1,200 @@
+[
+  {
+    "name": "archive",
+    "type": "directory",
+    "children": [
+      {
+        "name": "2025",
+        "type": "directory",
+        "children": [
+          {
+            "name": "CF1_docs_IA_restructure_wrapped.pdf",
+            "type": "file",
+            "path": "/archive/2025/CF1_docs_IA_restructure_wrapped.pdf"
+          }
+        ],
+        "path": "/archive/2025/"
+      },
+      {
+        "name": "design",
+        "type": "directory",
+        "children": [
+          {
+            "name": "integrating",
+            "type": "directory",
+            "children": [
+              {
+                "name": "event",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "event.pdf",
+                    "type": "file",
+                    "path": "/archive/design/integrating/event/event.pdf"
+                  }
+                ],
+                "path": "/archive/design/integrating/event/"
+              },
+              {
+                "name": "four_page",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "four_page.pdf",
+                    "type": "file",
+                    "path": "/archive/design/integrating/four_page/four_page.pdf"
+                  }
+                ],
+                "path": "/archive/design/integrating/four_page/"
+              },
+              {
+                "name": "inclusive",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "inclusive.pdf",
+                    "type": "file",
+                    "path": "/archive/design/integrating/inclusive/inclusive.pdf"
+                  }
+                ],
+                "path": "/archive/design/integrating/inclusive/"
+              },
+              {
+                "name": "instagram",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "instagram.pdf",
+                    "type": "file",
+                    "path": "/archive/design/integrating/instagram/instagram.pdf"
+                  }
+                ],
+                "path": "/archive/design/integrating/instagram/"
+              },
+              {
+                "name": "postcard",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "postcard.pdf",
+                    "type": "file",
+                    "path": "/archive/design/integrating/postcard/postcard.pdf"
+                  }
+                ],
+                "path": "/archive/design/integrating/postcard/"
+              },
+              {
+                "name": "quote",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "quote.pdf",
+                    "type": "file",
+                    "path": "/archive/design/integrating/quote/quote.pdf"
+                  }
+                ],
+                "path": "/archive/design/integrating/quote/"
+              },
+              {
+                "name": "redesign",
+                "type": "directory",
+                "children": [
+                  {
+                    "name": "redesign.pdf",
+                    "type": "file",
+                    "path": "/archive/design/integrating/redesign/redesign.pdf"
+                  }
+                ],
+                "path": "/archive/design/integrating/redesign/"
+              }
+            ],
+            "path": "/archive/design/integrating/"
+          },
+          {
+            "name": "techcomm",
+            "type": "directory",
+            "children": [
+              {
+                "name": "infographic.pdf",
+                "type": "file",
+                "path": "/archive/design/techcomm/infographic.pdf"
+              },
+              {
+                "name": "safety.pdf",
+                "type": "file",
+                "path": "/archive/design/techcomm/safety.pdf"
+              }
+            ],
+            "path": "/archive/design/techcomm/"
+          }
+        ],
+        "path": "/archive/design/"
+      },
+      {
+        "name": "writing",
+        "type": "directory",
+        "children": [
+          {
+            "name": "chianti.pdf",
+            "type": "file",
+            "path": "/archive/writing/chianti.pdf"
+          },
+          {
+            "name": "labor.pdf",
+            "type": "file",
+            "path": "/archive/writing/labor.pdf"
+          },
+          {
+            "name": "mistrust.pdf",
+            "type": "file",
+            "path": "/archive/writing/mistrust.pdf"
+          },
+          {
+            "name": "robot.pdf",
+            "type": "file",
+            "path": "/archive/writing/robot.pdf"
+          }
+        ],
+        "path": "/archive/writing/"
+      },
+      {
+        "name": "index.html",
+        "type": "file",
+        "path": "/archive/index.html"
+      },
+      {
+        "name": "legacy.html",
+        "type": "file",
+        "path": "/archive/legacy.html"
+      }
+    ],
+    "path": "/archive/"
+  },
+  {
+    "name": "projects",
+    "type": "directory",
+    "children": [
+      {
+        "name": "index.html",
+        "type": "file",
+        "path": "/projects/index.html"
+      }
+    ],
+    "path": "/projects/"
+  },
+  {
+    "name": "index.html",
+    "type": "file",
+    "path": "/index.html"
+  },
+  {
+    "name": "MaxPhillips_resume.html",
+    "type": "file",
+    "path": "/MaxPhillips_resume.html"
+  },
+  {
+    "name": "MaxPhillips_resume.pdf",
+    "type": "file",
+    "path": "/MaxPhillips_resume.pdf"
+  }
+]
