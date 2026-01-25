@@ -1,8 +1,5 @@
 ### Cloudflare Pages redirects ###
 
-# Redirect to apex (no www)
-/*  https://maxvphillips.com/$1  301
-
 # Redirect old archive HTML pages to projects (but not static assets)
 /archive /projects/ 301
 /archive/ /projects/ 301
@@ -11,3 +8,6 @@
 # Serve static files as-is
 /MaxPhillips_resume.pdf /MaxPhillips_resume.pdf 200
 /MaxPhillips_resume.html /MaxPhillips_resume.html 200
+
+# Redirect to apex (no www)
+/*  https://maxvphillips.com/$1  301
