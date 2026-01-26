@@ -5,8 +5,8 @@ client: "University of Pittsburgh"
 clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid=887599
 clientClass: "student"
 course: "Introduction to Technical Writing"
-url: /archive/design/techcomm/safety.pdf
-image: /archive/design/techcomm/safety.jpg
+url: /projects/narrative-design/technical-communication/safety.pdf
+image: /projects/narrative-design/technical-communication/safety.jpg
 imageAlt: ""
 featured: false
 ---

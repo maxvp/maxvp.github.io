@@ -6,7 +6,7 @@ clientUrl: https://courses.sci.pitt.edu/courses/view/CMPINF-1201
 clientClass: "student"
 course: "Digital Narrative and Interactive Design"
 url: https://github.com/maxvp/presidente-pedro/
-image: /archive/data/pedro.png
+image: /projects/narrative-design/data-analysis/pedro.png
 imageAlt: ""
 featured: false
 ---

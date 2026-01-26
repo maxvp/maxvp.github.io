@@ -5,7 +5,7 @@ client: "University of Pittsburgh"
 course: "Digital Humanity"
 clientUrl: "https://catalog.upp.pitt.edu/preview_course_nopop.php?coid=1095051&catoid=210"
 clientClass: "student"
-url: "/archive/writing/labor.pdf"
+url: "/projects/narrative-design/essays/labor.pdf"
 image: ""
 imageAlt: ""
 featured: false

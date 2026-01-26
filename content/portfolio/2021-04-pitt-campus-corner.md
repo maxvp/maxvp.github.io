@@ -6,7 +6,7 @@ clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid
 clientClass: "student"
 course: "Introduction to Technical Writing"
 url: https://maxvp.github.io/pitt-campus-corner/
-image: /archive/design/techcomm/pcc.png
+image: /projects/narrative-design/technical-communication/pcc.png
 imageAlt: ""
 featured: false
 ---

@@ -5,7 +5,7 @@ client: "Cloudflare"
 clientUrl: "https://www.cloudflare.com/"
 clientClass: ""
 url: ""
-image: /archive/2024/cluey.jpg
+image: /projects/systems-architecture/cluey.jpg
 imageAlt: "CLUE Index front-end mascot Cluey"
 featured: false
 ---

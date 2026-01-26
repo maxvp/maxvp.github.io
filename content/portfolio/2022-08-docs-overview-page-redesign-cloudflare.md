@@ -5,7 +5,7 @@ client: "Cloudflare"
 clientUrl: https://developers.cloudflare.com/
 clientClass: "cloudflare"
 url: https://developers.cloudflare.com/argo-smart-routing/
-image: /archive/2022/docs-feature-grid-dark.png
+image: /projects/technical-writing/docs-feature-grid-dark.png
 imageAlt: ""
 featured: false
 ---
