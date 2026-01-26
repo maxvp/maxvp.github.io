@@ -9,10 +9,6 @@
   cursor: pointer;
   user-select: none;
   font-weight: 300;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: from-font;
-  text-underline-offset: 0.12em;
 }
 
 .sitemap-trigger:hover {

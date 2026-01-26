@@ -26,7 +26,7 @@ if (left) {
 
   const trigger = document.createElement("div");
   trigger.className = "sitemap-trigger";
-  trigger.textContent = "Index";
+  trigger.textContent = "⌥";
 
   const content = document.createElement("div");
   content.className = "sitemap-content";
