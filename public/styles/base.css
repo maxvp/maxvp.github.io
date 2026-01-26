@@ -22,12 +22,9 @@ body.home {
   overflow: hidden;
 }
 
-body.home .home-marquee {
+.home-marquee {
   display: flex;
   align-items: center;
-}
-
-.home-marquee {
   overflow: hidden;
   border-bottom: 2px solid var(--border-color);
   padding: 0.55rem 0;
@@ -100,8 +97,8 @@ body.home .home-marquee {
   padding-left: 3rem;
 }
 
-/* Only pause on hover for the home page marquee, not portfolio page */
-body.home .home-marquee:hover .home-marquee-track {
+/* Pause on hover */
+.home-marquee:hover .home-marquee-track {
   animation-play-state: paused;
 }
 
