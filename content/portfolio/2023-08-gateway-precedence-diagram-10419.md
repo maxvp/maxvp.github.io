@@ -5,7 +5,7 @@ client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
 clientClass: ""
 url: "https://developers.cloudflare.com/cloudflare-one/traffic-policies/order-of-enforcement/"
-image: ""
+image: "/projects/technical-writing/gateway-precedence.png"
 imageAlt: ""
 featured: false
 ---
