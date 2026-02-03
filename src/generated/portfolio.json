@@ -190,7 +190,7 @@
     "clientClass": "",
     "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/order-of-enforcement/",
     "featured": false,
-    "image": "",
+    "image": "/projects/technical-writing/gateway-precedence.png",
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Added a <a href=\"https://mermaid.js.org/\">Mermaid flowchart</a> to the developer docs to visually illustrate how Gateway intercepts, proxies, and filters traffic from onboarding to egressing to the Internet.</p>"
