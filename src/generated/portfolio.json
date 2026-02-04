@@ -49,7 +49,7 @@
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
     "url": "https://developers.cloudflare.com/style-guide/documentation-content-strategy/accessibility/",
-    "featured": false,
+    "featured": true,
     "image": "",
     "imageAlt": "",
     "tags": [],
@@ -112,6 +112,20 @@
     "descriptionHtml": "<p>Served as the primary content stakeholder for the Cloudflare One Experiences team to resolve persistent user confusion regarding Zero Trust SaaS app integrations. Used user feedback to create a centralized <em>Application Library</em> documentation strategy, providing a single source of truth for IT approval and integration workflows.</p>"
   },
   {
+    "slug": "2025-07-casb-remediation-23744",
+    "title": "CASB remediation",
+    "date": "2025-07",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/cloud-and-saas-findings/manage-findings/#remediate-findings",
+    "featured": true,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Documented the addition of Microsoft 365 remediation support for Cloudflare CASB. Previously, CASB only supported visibility into security findings. This content guides users through configuring read-write permissions and automating the remediation of security findings, streamlining the process of fixing SaaS security issues.</p>"
+  },
+  {
     "slug": "2025-05-ai-wrapper-tenant-control-21756",
     "title": "AI wrapper tenant control tutorial",
     "date": "2025-05",
@@ -124,6 +138,20 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Created a comprehensive tutorial demonstrating how to use Cloudflare Gateway to control AI wrapper tenant access. This guide helps administrators secure their organization&#039;s usage of AI tools by enforcing Gateway tenant control policies.</p>"
+  },
+  {
+    "slug": "2025-04-gateway-redirect-policies-20687",
+    "title": "Gateway redirect",
+    "date": "2025-04",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/reusable-components/custom-pages/gateway-block-page/#redirect-to-a-block-page",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Documented the Redirect action, a highly requested capability that simplifies traffic management. This replaced complex workarounds with native policy controls, improving the user experience for managing HTTP redirects.</p>"
   },
   {
     "slug": "2025-03-expand-fedramp-integrations-21232",
@@ -196,6 +224,20 @@
     "descriptionHtml": "<p>Led the change management strategy for a critical security migration following the global Cloudflare root certificate expiration. Managed stakeholder communication and technical documentation to guide enterprise users through transition to unique account-based certificates. Successfully mitigated major service disruptions.</p>"
   },
   {
+    "slug": "2024-09-gateway-file-sandboxing-16786",
+    "title": "Gateway file sandboxing",
+    "date": "2024-09",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/http-policies/file-sandboxing/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Documented Gateway file sandboxing, detailing how to automatically analyze suspicious files in a secure environment. This work involved explaining the sandboxing workflow to help security teams identify zero-day threats.</p>"
+  },
+  {
     "slug": "2024-08-starlight",
     "title": "Hugo to Starlight migration",
     "date": "2024-08",
@@ -266,6 +308,20 @@
     "descriptionHtml": "<p>Partnered with Product Managers and Solutions Engineers to create the <em>Secure your Internet Traffic and SaaS apps</em> implementation guide, a from-zero guide for getting started with Cloudflare One. Transformed fragmented technical documentation into a cohesive onboarding funnel, creating an in-depth learning path for both new and advanced Zero Trust security users.</p>"
   },
   {
+    "slug": "2023-12-m365-dedicated-egress-tutorial",
+    "title": "Microsoft 365 with dedicated egress IPs",
+    "date": "2023-12",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/tutorials/m365-dedicated-egress-ips/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Authored a tutorial for enterprise Microsoft 365 deployments using dedicated egress IPs. This guide addressed a common enterprise compliance requirement, providing a verified configuration path for securing M365 traffic without triggering geolocation-based security blocks.</p>"
+  },
+  {
     "slug": "2023-12-style-guide-ui-elements-12152",
     "title": "UI elements style guide",
     "date": "2023-12",
@@ -280,6 +336,48 @@
     "descriptionHtml": "<p>Adapted internal Cloudflare UI design guidelines for the public-facing Cloudflare style guide. By externalizing these guidelines, I made contributions easier for the community and ensured UI consistency across our global open-source docs.</p>"
   },
   {
+    "slug": "2023-11-gateway-resolver-policies-10869",
+    "title": "Gateway resolver policies",
+    "date": "2023-11",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/resolver-policies/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Documented the Gateway resolver policies feature, allowing administrators to implement custom DNS resolution paths. This highly requested feature enables complex routing logic for hybrid networks, allowing enterprise customers to deploy Cloudflare Gateway alongside existing internal DNS resolvers.</p>"
+  },
+  {
+    "slug": "2023-10-risk-scoring",
+    "title": "User risk scoring",
+    "date": "2023-10",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/users/risk-score/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Authored the documentation for user risk scoring, Cloudflare One&#039;s User and Entity Behavior Analytics (UEBA) feature. This content explained how behavioral signals are aggregated into risk scores, allowing security teams to enforce policies based on real-time user risk levels.</p>"
+  },
+  {
+    "slug": "2023-09-casb-update-management-10745",
+    "title": "CASB integration update management",
+    "date": "2023-09",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/integrations/cloud-and-saas/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Created documentation to standardize the update process across CASB third-party integrations, ensuring consistent security posture management.</p>"
+  },
+  {
     "slug": "2023-08-gateway-precedence-diagram-10419",
     "title": "Gateway precedence flowchart",
     "date": "2023-08",
@@ -287,7 +385,7 @@
     "clientUrl": "https://cloudflare.com",
     "clientClass": "",
     "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/order-of-enforcement/",
-    "featured": false,
+    "featured": true,
     "image": "/projects/technical-writing/gateway-precedence.png",
     "imageAlt": "",
     "tags": [],
@@ -306,6 +404,20 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Represented Cloudflare as a technical Subject Matter Expert (SME) at 2023 BSidesPGH industry conference in Pittsburgh, PA. Used direct developer interactions and UX surveys to identify documentation pain points.</p>"
+  },
+  {
+    "slug": "2023-07-inclusive-language-audit",
+    "title": "Inclusive language audit",
+    "date": "2023-07",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Led a comprehensive audit to remove non-inclusive language across the Cloudflare One documentation. Systematically replaced input-specific instructions with input-neutral language (for example, &quot;navigate to&quot; --&gt; &quot;go to&quot;) to improve accessibility and align with modern technical writing standards.</p>"
   },
   {
     "slug": "2023-05-casb-8805",
@@ -336,6 +448,20 @@
     "descriptionHtml": "<p>I maintain the docs page for installing the Cloudflare certificate required by the WARP client to intercept and filter traffic. This work involves testing and documenting how to install certificates to various operating systems, desktop programs, and SaaS apps.</p>"
   },
   {
+    "slug": "2023-04-tutorial-audit",
+    "title": "Tutorial audit and migration",
+    "date": "2023-04",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/http-policies/common-policies/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Audited and migrated fragmented Zero Trust tutorials into standardized common policy examples.</p>"
+  },
+  {
     "slug": "2023-03-dlp",
     "title": "Data Loss Prevention (DLP) docs revamp",
     "date": "2023-03",
@@ -362,6 +488,20 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Led the documentation response for the strategic merge of the Cloudflare &quot;core&quot; and Zero Trust dashboards. Updated the documentation to reflect new feature discoverability paths and ensure a seamless transition for all Cloudflare users.</p>"
+  },
+  {
+    "slug": "2023-02-gateway-or-operator-7794",
+    "title": "Gateway 'OR' logical operator",
+    "date": "2023-02",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/policies/gateway/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Documented the `OR` logical operator in Gateway policies, enabling more flexible and concise policy logic. This update allowed administrators to combine multiple conditions into single policies, simplifying policy management.</p>"
   },
   {
     "slug": "2022-12-studyfinder-human-centered-systems",

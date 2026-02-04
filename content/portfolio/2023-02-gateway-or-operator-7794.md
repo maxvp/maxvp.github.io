@@ -4,7 +4,7 @@ date: 2023-02
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
 clientClass: ""
-url: "https://developers.cloudflare.com/cloudflare-one/policies/gateway/"
+url: "https://developers.cloudflare.com/cloudflare-one/traffic-policies/"
 image: ""
 imageAlt: ""
 featured: false
