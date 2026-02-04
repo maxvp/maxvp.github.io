@@ -1,0 +1,22 @@
+---
+interface Props {
+  text: string;
+  className?: string;
+  ariaLabel?: string;
+}
+
+const { text, className = "home-marquee", ariaLabel } = Astro.props;
+const repeatedText = text.repeat(8) + "\u00A0";
+---
+
+<div class={className} aria-label={ariaLabel} data-marquee-text={text}>
+  <div class="home-marquee-track" aria-hidden="true">
+    <span class="home-marquee-seg">{repeatedText}</span>
+    <span class="home-marquee-seg">{repeatedText}</span>
+  </div>
+</div>
+
+<style>
+  /* Styles are in main.css, but we can scope if needed. 
+     For now, relying on global CSS as requested usually. */
+</style>

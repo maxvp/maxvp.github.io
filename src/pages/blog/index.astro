@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Marquee from '../../components/Marquee.astro';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function formatMonthYear(date: Date) {
+    return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+}
+---
+
+<BaseLayout className="portfolio-page" title="MVP / BLOG">
+     <header class="portfolio-header" aria-label="Blog header">
+      <a class="portfolio-back" href="/" aria-label="Back to home">☗</a>
+
+       <Marquee 
+         text="MAXIMILLIAN V. PHILLIPS ⟡ blog & thoughts ⟡ " 
+         className="home-marquee portfolio-marquee"
+         ariaLabel="Maximillian V. Phillips ⟡ blog & thoughts"
+       />
+    </header>
+
+    <div id="blog-list" style="margin-top: 4rem;"> 
+      
+      <main class="portfolio-grid">
+         {posts.map((post) => (
+             <div class="portfolio-item is-visible" style="display: block;">
+                  <div class="portfolio-date-row">
+                      <span class="portfolio-year">{formatMonthYear(post.data.pubDate)}</span>
+                  </div>
+                  <div class="portfolio-main-row">
+                    <div class="portfolio-main">
+                       <a class="portfolio-title" href={`/blog/${post.slug}/`}>
+                           {post.data.title}
+                       </a>
+                       {post.data.description && (
+                           <div class="portfolio-client-subtitle">
+                               <span class="portfolio-client">{post.data.description}</span>
+                           </div>
+                       )}
+                    </div>
+                  </div>
+             </div>
+         ))}
+         {posts.length === 0 && (
+             <div class="portfolio-item" style="display:block; padding: 2rem; text-align: center; color: #888;">
+                 No posts found.
+             </div>
+         )}
+      </main>
+    </div>
+</BaseLayout>

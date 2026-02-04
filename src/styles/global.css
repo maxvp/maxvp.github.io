@@ -1,0 +1,3 @@
+/* Global styles import if we were using CSS modules or Astro's CSS handling. 
+   Currently we use /public/main.css linked in head. 
+   This file is here if we need to import specific component styles. */

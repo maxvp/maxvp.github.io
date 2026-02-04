@@ -1,0 +1,113 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Marquee from '../components/Marquee.astro';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+function formatMonthYear(date: Date) {
+    return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+}
+---
+
+<BaseLayout 
+    title={title} 
+    description={description} 
+    className="blog-post-page"
+>
+    <!-- Simple header similar to portfolio -->
+    <header class="portfolio-header" aria-label="Blog header">
+      <a class="portfolio-back" href="/blog/" aria-label="Back to blog index">☗</a>
+
+       <Marquee 
+         text={`BLOG: ${title} ⟡ `} 
+         className="home-marquee portfolio-marquee"
+         ariaLabel={`Blog post: ${title}`}
+       />
+    </header>
+
+    <main class="blog-container">
+        <article class="blog-content">
+            <header class="blog-article-header">
+                <div class="blog-date">{formatMonthYear(pubDate)}</div>
+                <h1>{title}</h1> 
+                {updatedDate && (
+                    <div class="last-updated-on">
+                        Last updated on {formatMonthYear(updatedDate)}
+                    </div>
+                )}
+            </header>
+            
+             {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+            
+            <div class="prose">
+                <slot />
+            </div>
+        </article>
+    </main>
+</BaseLayout>
+
+<style>
+/* Minimal blog styles - can be moved to a CSS file eventually */
+.blog-container {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.blog-article-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, #333);
+    padding-bottom: 1rem;
+}
+
+.blog-date {
+    font-family: var(--font-family-monospace, monospace);
+    color: var(--text-muted, #888);
+    font-size: 0.9em;
+    margin-bottom: 0.5rem;
+}
+
+.prose {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.prose :global(h2) {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.prose :global(p) {
+    margin-bottom: 1.5em;
+}
+
+.prose :global(a) {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.prose :global(ul), .prose :global(ol) {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+}
+
+.prose :global(code) {
+    background: rgba(127,127,127,0.2);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.prose :global(pre) {
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+    overflow-x: auto;
+}
+</style>

@@ -4,10 +4,11 @@
   "description": "My personal portofolio website, found at [maxvphillips.com](https://www.maxvphillips.com/).",
   "main": "index.js",
   "scripts": {
-    "predev": "node scripts/build-portfolio.mjs",
-    "dev": "vite",
-    "prebuild": "node scripts/build-portfolio.mjs",
-    "build": "vite build"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,9 @@
   },
   "homepage": "https://github.com/maxvp/maxvp.github.io#readme",
   "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "astro": "^5.17.1",
+    "typescript": "^5.9.3",
     "vite": "^7.2.4"
   }
 }

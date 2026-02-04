@@ -1,0 +1,230 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Marquee from '../../components/Marquee.astro';
+
+const entries = await getCollection('portfolio');
+// Sort by date descending
+entries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Formatting helpers
+function escapeHtml(value: string) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function formatMonthYear(date: Date) {
+    return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short' });
+}
+
+const entriesWithContent = await Promise.all(entries.map(async (entry) => {
+  const { Content } = await entry.render();
+  return { ...entry, Content };
+}));
+---
+
+<BaseLayout className="portfolio-page" title="MVP / PROJECTS">
+     <header class="portfolio-header" aria-label="Portfolio header">
+      <a class="portfolio-back" href="/" aria-label="Back to home">☗</a>
+
+       <Marquee 
+         text="MAXIMILLIAN V. PHILLIPS ⟡ technical UX content strategy and documentation ⟡ Dallas, TX ⟡ " 
+         className="home-marquee portfolio-marquee"
+         ariaLabel="Maximillian V. Phillips ⟡ technical UX content strategy and documentation ⟡ Dallas, TX"
+       />
+    </header>
+
+    <div id="portfolio">
+      <div class="portfolio-controls">
+        <button id="toggle-featured" class="active" aria-pressed="true">
+          [ SHOW FEATURED ★ ]
+        </button>
+        <button id="toggle-all" aria-pressed="false">[ SHOW ALL ]</button>
+      </div>
+      
+      <main id="portfolio-app" class="portfolio-grid">
+         {entriesWithContent.map((entry) => {
+             const { title, date, client, clientUrl, url, featured, image, imageAlt } = entry.data;
+             const { Content } = entry;
+             
+             // We need body HTML for the tooltip, but we can't get raw HTML easily from Content component in loop without rendering it.
+             // However, the original used the body as description. 
+             // In Astro, we can render the Content and wrap it in a hidden div.
+             
+             return (
+                 <div class={`portfolio-item ${featured ? 'is-featured' : 'is-normal'}`} data-featured={featured}>
+                      {date && <div class="portfolio-date-row"><span class="portfolio-year">{formatMonthYear(date)}</span></div>}
+                      <div class="portfolio-main-row">
+                        <div class="portfolio-main">
+                           {url ? (
+                               <a class="portfolio-title" href={url}>
+                                   {featured && <span class="portfolio-featured" aria-hidden="true">★ </span>}
+                                   {title}
+                               </a>
+                           ) : (
+                               <span class="portfolio-title">
+                                   {featured && <span class="portfolio-featured" aria-hidden="true">★ </span>}
+                                   {title}
+                               </span>
+                           )}
+                           
+                           {client && (
+                               <div class="portfolio-client-subtitle">
+                                   <span class="portfolio-client">{client}</span>
+                               </div>
+                           )}
+                        </div>
+                        
+                        {(image || url) && image && (
+                            <a class="portfolio-thumb" href={url || image}>
+                                <img src={image} alt={imageAlt || ""} loading="lazy" decoding="async" />
+                            </a>
+                        )}
+                      </div>
+                      
+                      {/* Description for tooltips */}
+                      <div class="portfolio-desc">
+                          <Content />
+                      </div>
+                 </div>
+             );
+         })}
+      </main>
+    </div>
+</BaseLayout>
+
+<script>
+    // Toggle Logic
+    const btnFeatured = document.getElementById("toggle-featured");
+    const btnAll = document.getElementById("toggle-all");
+    const items = document.querySelectorAll(".portfolio-item");
+    
+    function renderPortfolio(showAll: boolean) {
+        let visibleCount = 0;
+        items.forEach(item => {
+            const isFeatured = item.getAttribute('data-featured') === 'true';
+            const isVisible = showAll || isFeatured;
+            
+            if (isVisible) {
+                (item as HTMLElement).style.display = 'block';
+                visibleCount++;
+                
+                // Every 3rd visible item is end of row (no right border)
+                if (visibleCount % 3 === 0) {
+                    item.classList.add('is-end-of-row');
+                } else {
+                    item.classList.remove('is-end-of-row');
+                }
+            } else {
+                (item as HTMLElement).style.display = 'none';
+                item.classList.remove('is-end-of-row');
+            }
+        });
+    }
+
+    if (btnFeatured && btnAll) {
+      btnFeatured.addEventListener("click", () => {
+        btnFeatured.classList.add("active");
+        btnFeatured.setAttribute("aria-pressed", "true");
+        btnAll.classList.remove("active");
+        btnAll.setAttribute("aria-pressed", "false");
+        renderPortfolio(false);
+      });
+    
+      btnAll.addEventListener("click", () => {
+        btnAll.classList.add("active");
+        btnAll.setAttribute("aria-pressed", "true");
+        btnFeatured.classList.remove("active");
+        btnFeatured.setAttribute("aria-pressed", "false");
+        renderPortfolio(true);
+      });
+      
+      // Init
+      renderPortfolio(false);
+    }
+    
+    // Tooltip Logic
+    function initPortfolioTooltips() {
+      const root = document.getElementById('portfolio-app');
+      if (!root) return;
+    
+      const canHover = window.matchMedia
+        ? window.matchMedia("(hover: hover) and (pointer: fine)").matches
+        : false;
+      if (!canHover) return;
+    
+      // Image Tooltip
+      const imgTooltip = document.createElement("div");
+      imgTooltip.className = "portfolio-image-tooltip";
+      Object.assign(imgTooltip.style, {
+           display: 'none',
+           position: 'fixed',
+           zIndex: '1100',
+           pointerEvents: 'none',
+           border: '1px solid var(--border-color)',
+           background: 'var(--background-color)',
+           padding: '0.5rem',
+           maxWidth: '80vw',
+           maxHeight: '80vh',
+           boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+       });
+      document.body.appendChild(imgTooltip);
+    
+      let activeImgItem: Element | null = null;
+    
+      function showImg(src: string) {
+           imgTooltip.innerHTML = `<img src="${src}" style="max-width: 100%; max-height: 50vh; display: block;" />`;
+           imgTooltip.style.display = 'block';
+       }
+
+       function hideImg() {
+           imgTooltip.style.display = 'none';
+           activeImgItem = null;
+       }
+    
+      function positionAt(el: HTMLElement, x: number, y: number, offset = 12) {
+        const maxW = el.offsetWidth || 0;
+        const maxH = el.offsetHeight || 0;
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+    
+        let left = x + offset;
+        let top = y + offset;
+        if (left + maxW + offset > vw) left = Math.max(offset, x - maxW - offset);
+        if (top + maxH + offset > vh) top = Math.max(offset, y - maxH - offset);
+    
+        el.style.left = `${left}px`;
+        el.style.top = `${top}px`;
+      }
+    
+      // Attach Image Tooltips
+      for (const thumb of root.querySelectorAll(".portfolio-thumb")) {
+           const img = thumb.querySelector("img");
+           if (!img) continue;
+           const src = img.src;
+
+           thumb.addEventListener("pointerenter", (e: Event) => {
+               activeImgItem = thumb;
+               showImg(src);
+               const pe = e as PointerEvent;
+               positionAt(imgTooltip, pe.clientX, pe.clientY, 15);
+           });
+           
+           thumb.addEventListener("pointermove", (e: Event) => {
+               if (activeImgItem !== thumb) return;
+               const pe = e as PointerEvent;
+               positionAt(imgTooltip, pe.clientX, pe.clientY, 15);
+           });
+           
+           thumb.addEventListener("pointerleave", () => {
+               if (activeImgItem === thumb) hideImg();
+           });
+       }
+    }
+    
+    initPortfolioTooltips();
+</script>

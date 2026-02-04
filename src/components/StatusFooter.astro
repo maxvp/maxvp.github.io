@@ -1,0 +1,187 @@
+---
+import { execSync } from "node:child_process";
+import fs from "node:fs/promises";
+import path from "node:path";
+import '../status-bar.css'; // Import styles
+
+// 1. Get detailed version info
+let commitDateIso = "";
+try {
+  commitDateIso = execSync("git log -1 --format=%cI", {
+    encoding: "utf8",
+  }).trim();
+} catch (e) {
+  console.warn("Failed to get git info", e);
+  commitDateIso = new Date().toISOString();
+}
+
+function formatDate(value: string) {
+  try {
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) return String(value || "");
+    return d.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    });
+  } catch {
+    return String(value || "");
+  }
+}
+
+const lastUpdated = formatDate(commitDateIso);
+
+// 2. Generate Sitemap Tree
+// We will simple-scan src/pages and public/archive if exists
+// This is a simplified version of the original custom script
+interface SitemapItem {
+    name: string;
+    type: 'file' | 'directory';
+    path?: string;
+    children?: SitemapItem[];
+}
+
+const sitemap: SitemapItem[] = [];
+
+// Helper to add fixed pages
+sitemap.push(
+    { name: "index.html", type: "file", path: "/" },
+    { name: "projects", type: "directory", children: [
+        { name: "index.html", type: "file", path: "/projects/" }
+    ]},
+    { name: "blog", type: "directory", children: [
+        { name: "index.html", type: "file", path: "/blog/" }
+    ]}
+);
+
+// Scan public/archive
+const publicDir = path.resolve('public');
+const archiveDir = path.join(publicDir, 'archive');
+
+async function scanDir(dir: string, relativePath: string): Promise<SitemapItem[]> {
+    const items: SitemapItem[] = [];
+    try {
+        const dirents = await fs.readdir(dir, { withFileTypes: true });
+        for (const d of dirents) {
+            if (d.name.startsWith('.')) continue;
+            const fullPath = path.join(dir, d.name);
+            const itemRelPath = path.join(relativePath, d.name);
+            
+            if (d.isDirectory()) {
+                 const children = await scanDir(fullPath, itemRelPath);
+                 if (children.length > 0) {
+                     items.push({
+                         name: d.name,
+                         type: 'directory',
+                         children,
+                         // path: '/' + itemRelPath + '/'
+                     });
+                 }
+            } else {
+                 items.push({
+                     name: d.name,
+                     type: 'file',
+                     path: '/' + itemRelPath
+                 });
+            }
+        }
+    } catch (e) {
+        // ignore
+    }
+    // Sort directories first
+    return items.sort((a, b) => {
+        if (a.type === b.type) return a.name.localeCompare(b.name);
+        return a.type === 'directory' ? -1 : 1;
+    });
+}
+
+const archiveItems = await scanDir(archiveDir, 'archive');
+if (archiveItems.length > 0) {
+    sitemap.push({
+        name: 'archive',
+        type: 'directory',
+        children: archiveItems
+    });
+}
+
+// Re-sort root
+sitemap.sort((a, b) => {
+    if (a.type === b.type) return a.name.localeCompare(b.name);
+    return a.type === 'directory' ? -1 : 1;
+});
+
+---
+
+<footer class="status-bar" role="contentinfo">
+  <div id="status-copyright" class="status-left">
+    <div class="sitemap-container">
+        <div class="sitemap-trigger">⌥</div>
+        <div class="sitemap-content">
+            <ul class="sitemap-list">
+                {sitemap.map((item) => (
+                    <li class={`sitemap-item sitemap-${item.type}`}>
+                        {item.type === 'file' ? (
+                            <a href={item.path}>{item.name}</a>
+                        ) : (
+                            <>
+                                <span class="sitemap-dir-name">{item.name}/</span>
+                                {item.children && (
+                                    <ul class="sitemap-list">
+                                        {item.children.map(child => (
+                                            <li class={`sitemap-item sitemap-${child.type}`}>
+                                                 {child.type === 'file' ? (
+                                                    <a href={child.path}>{child.name}</a>
+                                                 ) : (
+                                                     <span class="sitemap-dir-name">{child.name}/</span>
+                                                     // Recursive rendering in Astro requires a self-referencing component or just depth limitation 
+                                                     // For simplicity in this inline JSX, we handle 1 level of depth for archive which is usually enough, 
+                                                     // or we can implement a recursive functional component if needed. 
+                                                     // The original only went deep if needed. 
+                                                     // Let's assume archive isn't infinitely deep.
+                                                 )}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+  </div>
+  <div id="status-updated" class="status-right">
+    {lastUpdated && (
+        <>
+        Last updated <a href="https://github.com/maxvp/maxvp.github.io" target="_blank" rel="noopener noreferrer">{lastUpdated}</a>
+        </>
+    )}
+  </div>
+</footer>
+
+<script>
+    // Client-side interaction for the footer menu
+    const triggers = document.querySelectorAll('.sitemap-trigger');
+    const contents = document.querySelectorAll('.sitemap-content');
+    const containers = document.querySelectorAll('.sitemap-container');
+    
+    // Simple hover logic
+    containers.forEach(container => {
+        let timeoutId;
+        const show = () => {
+            clearTimeout(timeoutId);
+            container.classList.add('is-active');
+        };
+        const hide = () => {
+            timeoutId = setTimeout(() => {
+                container.classList.remove('is-active');
+            }, 150);
+        };
+        
+        container.addEventListener('mouseenter', show);
+        container.addEventListener('mouseleave', hide);
+        
+        // Also handle focus?
+    });
+</script>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Marquee from '../components/Marquee.astro';
+---
+
+<BaseLayout className="home">
+  <Marquee 
+    text="MAXIMILLIAN V. PHILLIPS ⟡ documentation and content strategy ⟡ Dallas, TX ⟡ " 
+    ariaLabel="Maximillian V. Phillips ⟡ documentation and content strategy ⟡ Dallas, TX"
+  />
+
+  <main class="home-grid">
+    <div class="home-photo">
+      <img id="headshot" src="/godzilla.jpg" alt="Max in front of Godzilla hotel statue in Shinjuku,Tokyo, Japan" />
+    </div>
+
+    <div class="home-right">
+      <section class="home-panel home-about">
+        <h1>About</h1>
+        <p>
+          I'm a technical writer and content strategist based in Dallas, TX. 
+          I'm looking for my next opportunity to build and scale developer documentation.
+        </p>
+        <p>Most recently, I worked on the
+          <i>Product Content Experience (PCX)</i> team at
+          <a href="https://www.cloudflare.com/">Cloudflare</a>, focusing on
+          the award-winning
+          <a href="https://developers.cloudflare.com/">Cloudflare Docs</a>.
+        </p>
+        <p>
+          I studied <a href="https://www.sci.pitt.edu/academics/undergraduate-degrees/digital-narrative-and-interactive-design">Digital Narrative and Interactive Design</a> at Pitt.
+        </p>
+      </section>
+
+      <section class="home-panel home-work">
+        <h1>Work</h1>
+        <p>
+          Check out my <a href="/projects/">projects</a>, or
+          download my résumé in <a href="/MaxPhillips_resume.pdf">PDF</a> or
+          <a href="/MaxPhillips_resume.html">HTML</a> format.
+        </p>
+        <p>
+          I also share my code and personal projects on
+          <a href="https://github.com/maxvp">GitHub</a>.
+        </p>
+      </section>
+
+      <section class="home-panel home-contact">
+        <h1>Contact</h1>
+        <p>
+          Feel free to email me at
+          <a href="mailto:max@maxvphillips.com">max@maxvphillips.com</a> or
+          connect with me on
+          <a href="https://www.linkedin.com/in/maxvphillips/">LinkedIn</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
