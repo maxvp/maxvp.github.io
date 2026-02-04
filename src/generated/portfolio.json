@@ -28,6 +28,34 @@
     "descriptionHtml": "<p>Created a custom resume engine that treats career data as source code. Built a Python-based pipeline that parses YAML source files into HTML and PDF formats. This tool also uses a watcher script for real-time browser rendering.</p>"
   },
   {
+    "slug": "2025-12-third-party-cert-procedures-27260",
+    "title": "Third-party certificate procedures",
+    "date": "2025-12",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/user-side-certificates/manual-deployment/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Overhauled the certificate management documentation to update procedures for a wide range of third-party applications. This initiative established the Cloudflare One documentation as the authoritative source for adding certificates to these third-party applications, surpassing competitor resources in both comprehensive coverage and technical accuracy.</p>"
+  },
+  {
+    "slug": "2025-11-accessibility-page-style-guide-26746",
+    "title": "Accessibility standards",
+    "date": "2025-11",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/style-guide/documentation-content-strategy/accessibility/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Established a new section in the Style Guide defining accessibility standards to ensure documentation meets the <a href=\"https://ec.europa.eu/social/main.jsp?catId=1202\">European Accessibility Act (EAA)</a> compliance guidelines. This initiative improves the quality of AI-powered contributions and ensures content is accessible to all users.</p>"
+  },
+  {
     "slug": "2025-11-cf1-ia-restructure",
     "title": "Cloudflare One docs IA restructure",
     "date": "2025-11",
@@ -56,6 +84,20 @@
     "descriptionHtml": "<p>Led the Cloudflare One data security documentation for Cloudflare’s inaugural AI Week. Developed technical guides for CASB and Data Loss Prevention (DLP) integrations with LLMs (ChatGPT, Claude, Gemini), focusing on preventing misconfigurations and sentiment-based data leaks for enterprise organizations. For more information, refer to the Cloudflare Blog posts for <a href=\"https://blog.cloudflare.com/ai-prompt-protection/\">DLP</a>, <a href=\"https://blog.cloudflare.com/shadow-AI-analytics/\">Shadow IT</a>, and <a href=\"https://blog.cloudflare.com/casb-ai-integrations/\">CASB</a>.</p>"
   },
   {
+    "slug": "2025-08-api-request-component-24458",
+    "title": "APIRequest component implementation",
+    "date": "2025-08",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/style-guide/components/api-request/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Implemented the `APIRequest` component to standardize how API requests are documented across the developer platform. This component simplifies the authoring process for technical writers and improves consistency for developers consuming the API documentation.</p>"
+  },
+  {
     "slug": "2025-07-app-library-21232",
     "title": "Application Library docs",
     "date": "2025-07",
@@ -70,7 +112,21 @@
     "descriptionHtml": "<p>Served as the primary content stakeholder for the Cloudflare One Experiences team to resolve persistent user confusion regarding Zero Trust SaaS app integrations. Used user feedback to create a centralized <em>Application Library</em> documentation strategy, providing a single source of truth for IT approval and integration workflows.</p>"
   },
   {
-    "slug": "2025-03-expand-fedramp-integrations-21232 copy",
+    "slug": "2025-05-ai-wrapper-tenant-control-21756",
+    "title": "AI wrapper tenant control tutorial",
+    "date": "2025-05",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/tutorials/ai-wrapper-tenant-control/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Created a comprehensive tutorial demonstrating how to use Cloudflare Gateway to control AI wrapper tenant access. This guide helps administrators secure their organization&#039;s usage of AI tools by enforcing Gateway tenant control policies.</p>"
+  },
+  {
+    "slug": "2025-03-expand-fedramp-integrations-21232",
     "title": "CASB FedRAMP integration expansion",
     "date": "2025-03",
     "client": "Cloudflare",
@@ -82,6 +138,20 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>CASB expanded its integrations to support FedRAMP variants for ServiceNow, Google Workspace, and Microsoft 365. To support this effort, I created documentation for these more secure variants according to the FedRAMP requirements. These changes directly correlated with an increase in performance ratings in the <a href=\"https://www.gartner.com/en/research/magic-quadrant\">Gartner Magic Quadrant (MQ) survey</a>.</p>"
+  },
+  {
+    "slug": "2025-02-msp-feature-19924",
+    "title": "Managed Service Provider features",
+    "date": "2025-02",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/managed-service-providers/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Documented the new Managed Service Provider (MSP) feature set, enabling strategic partners to manage multi-tenant environments efficiently. This work involved creating new workflows for account provisioning and policy management tailored specifically for MSP architectures.</p>"
   },
   {
     "slug": "2025-02-sit-network-policies-api-and-terraform-20150",
@@ -96,6 +166,20 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Identified a significant documentation gap for enterprise users that require deploying policies at scale. Designed and implemented a technical specification for representing API and Terraform policies alongside UI examples. Led the rollout of these standards across all Gateway documentation, allowing infrastructure-as-code users to implement baseline policies.</p>"
+  },
+  {
+    "slug": "2024-12-api-policy-examples-18942",
+    "title": "API policy examples revamp",
+    "date": "2024-12",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Standardized and expanded API usage examples across Gateway HTTP, Network, and DNS policies. This revamp improved the developer experience by providing consistent, usable examples for common policy configurations, addressing a key pain point for developers building on the Gateway API.</p>"
   },
   {
     "slug": "2024-10-per-account-certs",
@@ -124,6 +208,20 @@
     "imageAlt": "",
     "tags": [],
     "descriptionHtml": "<p>Acted as a technical lead in migrating the Cloudflare Developer Docs from legacy Hugo site framework to a modern <a href=\"https://starlight.astro.build/\">Starlight (Astro) framework</a>. Made foundational IA decisions, updated global styling, and ported Hugo components to JSX to improve site performance and contributor experience.</p>"
+  },
+  {
+    "slug": "2024-07-compatible-selectors-15789",
+    "title": "Compatible selectors matrix",
+    "date": "2024-07",
+    "client": "Cloudflare",
+    "clientUrl": "https://cloudflare.com",
+    "clientClass": "",
+    "url": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/dns-policies/",
+    "featured": false,
+    "image": "",
+    "imageAlt": "",
+    "tags": [],
+    "descriptionHtml": "<p>Created a reference validation matrix for Gateway selectors to help users understand which selectors work with specific policy actions. This implementation uses reusable components to ensure consistency across all selector definitions, significantly reducing maintenance overhead and ensuring a unified developer experience across the Gateway docs.</p>"
   },
   {
     "slug": "2024-06-clue-index",
