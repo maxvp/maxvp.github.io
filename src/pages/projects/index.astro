@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Marquee from '../../components/Marquee.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 
 const entries = await getCollection('portfolio');
 // Sort by date descending
@@ -24,7 +24,9 @@ function formatMonthYear(date: Date) {
 
 const entriesWithContent = await Promise.all(entries.map(async (entry) => {
   const { Content } = await entry.render();
-  return { ...entry, Content };
+  // Generate a larger optimized version for the hover preview
+  const preview = entry.data.image ? await getImage({ src: entry.data.image, width: 800 }) : null;
+  return { ...entry, Content, preview };
 }));
 ---
 
@@ -50,7 +52,7 @@ const entriesWithContent = await Promise.all(entries.map(async (entry) => {
       <main id="portfolio-app" class="portfolio-grid">
          {entriesWithContent.map((entry) => {
              const { title, date, client, clientUrl, url, featured, image, imageAlt } = entry.data;
-             const { Content } = entry;
+             const { Content, preview } = entry;
              
              // We need body HTML for the tooltip, but we can't get raw HTML easily from Content component in loop without rendering it.
              // However, the original used the body as description. 
@@ -81,7 +83,7 @@ const entriesWithContent = await Promise.all(entries.map(async (entry) => {
                         </div>
                         
                         {(image || url) && image && (
-                            <a class="portfolio-thumb" href={url || (image as any).src}>
+                            <a class="portfolio-thumb" href={url || (image as any).src} data-preview={preview?.src}>
                                 <Image src={image} alt={imageAlt || ""} loading="lazy" decoding="async" width={128} height={128} />
                             </a>
                         )}
@@ -204,9 +206,11 @@ const entriesWithContent = await Promise.all(entries.map(async (entry) => {
     
       // Attach Image Tooltips
       for (const thumb of root.querySelectorAll(".portfolio-thumb")) {
+           const previewSrc = thumb.getAttribute('data-preview');
            const img = thumb.querySelector("img");
-           if (!img) continue;
-           const src = img.src;
+           if (!img && !previewSrc) continue;
+           
+           const src = previewSrc || img?.src || "";
 
            thumb.addEventListener("pointerenter", (e: Event) => {
                activeImgItem = thumb;
