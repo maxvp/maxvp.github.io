@@ -82,10 +82,16 @@ const entriesWithContent = await Promise.all(entries.map(async (entry) => {
                            )}
                         </div>
                         
-                        {(image || url) && image && (
-                            <a class="portfolio-thumb" href={url || (image as any).src} data-preview={preview?.src}>
-                                <Image src={image} alt={imageAlt || ""} loading="lazy" decoding="async" width={128} height={128} />
-                            </a>
+                        {image && (
+                            url ? (
+                                <a class="portfolio-thumb" href={url} data-preview={preview?.src}>
+                                    <Image src={image} alt={imageAlt || ""} loading="lazy" decoding="async" width={128} height={128} />
+                                </a>
+                            ) : (
+                                <div class="portfolio-thumb" data-preview={preview?.src}>
+                                    <Image src={image} alt={imageAlt || ""} loading="lazy" decoding="async" width={128} height={128} />
+                                </div>
+                            )
                         )}
                       </div>
                       
