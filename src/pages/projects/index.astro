@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Marquee from '../../components/Marquee.astro';
+import { Image } from 'astro:assets';
 
 const entries = await getCollection('portfolio');
 // Sort by date descending
@@ -80,8 +81,8 @@ const entriesWithContent = await Promise.all(entries.map(async (entry) => {
                         </div>
                         
                         {(image || url) && image && (
-                            <a class="portfolio-thumb" href={url || image}>
-                                <img src={image} alt={imageAlt || ""} loading="lazy" decoding="async" />
+                            <a class="portfolio-thumb" href={url || (image as any).src}>
+                                <Image src={image} alt={imageAlt || ""} loading="lazy" decoding="async" width={128} height={128} />
                             </a>
                         )}
                       </div>

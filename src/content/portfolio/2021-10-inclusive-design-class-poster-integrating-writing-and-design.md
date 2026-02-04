@@ -6,7 +6,7 @@ clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid
 clientClass: "student"
 course: "Integrating Writing and Design"
 url: /projects/narrative-design/integrating-writing-design/inclusive/inclusive.pdf
-image: /projects/narrative-design/integrating-writing-design/inclusive/inclusive.jpg
+image: ../../assets/projects/narrative-design/integrating-writing-design/inclusive/inclusive.jpg
 imageAlt: ""
 featured: false
 ---

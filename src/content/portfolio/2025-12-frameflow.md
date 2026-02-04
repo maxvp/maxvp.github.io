@@ -5,7 +5,7 @@ client: "Cloudflare"
 clientUrl: ""
 clientClass: ""
 url: ""
-image: "/projects/systems-architecture/frameflow.png"
+image: ../../assets/projects/systems-architecture/frameflow.png
 imageAlt: ""
 featured: true
 ---

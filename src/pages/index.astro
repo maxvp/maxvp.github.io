@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Marquee from '../components/Marquee.astro';
+import { Image } from 'astro:assets';
+import godzillaImage from '../assets/godzilla.jpg';
 ---
 
 <BaseLayout className="home">
@@ -11,7 +13,7 @@ import Marquee from '../components/Marquee.astro';
 
   <main class="home-grid">
     <div class="home-photo">
-      <img id="headshot" src="/godzilla.jpg" alt="Max in front of Godzilla hotel statue in Shinjuku,Tokyo, Japan" />
+      <Image id="headshot" src={godzillaImage} alt="Max in front of Godzilla hotel statue in Shinjuku,Tokyo, Japan" loading="eager" />
     </div>
 
     <div class="home-right">

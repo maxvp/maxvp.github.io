@@ -6,7 +6,7 @@ clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=188&coid
 clientClass: "student"
 course: "Human-Centered Systems"
 url: https://www.figma.com/file/PtiWXMbfY4iEFFS9pvnGiZ/Untitled?node-id=0%3A1&t=MfwA7eDXLlGjVXBI-1
-image: /projects/narrative-design/ux-design/studyfinder.jpg
+image: ../../assets/projects/narrative-design/ux-design/studyfinder.jpg
 imageAlt: ""
 featured: false
 ---

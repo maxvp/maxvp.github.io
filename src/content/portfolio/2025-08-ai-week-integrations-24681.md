@@ -5,7 +5,7 @@ client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
 clientClass: ""
 url: "https://blog.cloudflare.com/ai-week-2025-wrapup/"
-image: /projects/systems-architecture/ai-week.jpg
+image: ../../assets/projects/systems-architecture/ai-week.jpg
 imageAlt: ""
 featured: false
 ---

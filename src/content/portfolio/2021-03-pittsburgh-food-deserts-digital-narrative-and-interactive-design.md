@@ -6,7 +6,7 @@ clientUrl: https://courses.sci.pitt.edu/courses/view/CMPINF-1201
 clientClass: "student"
 course: "Digital Narrative and Interactive Design"
 url: https://github.com/maxvp/PGH-food-deserts
-image: /projects/narrative-design/data-analysis/map.png
+image: ../../assets/projects/narrative-design/data-analysis/map.png
 imageAlt: ""
 featured: false
 ---

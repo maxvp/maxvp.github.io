@@ -2,7 +2,7 @@
 title: 'Welcome to my new blog!'
 description: 'Reflections on migrating my portfolio to Astro.'
 pubDate: '2026-02-04'
-heroImage: '/mugi.jpg'
+heroImage: ../../assets/mugi.jpg
 ---
 
 Hello world! This is my first blog post on my newly migrated site. 

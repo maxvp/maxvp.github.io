@@ -6,7 +6,7 @@ clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid
 clientClass: "student"
 course: "Introduction to Technical Writing"
 url: /projects/narrative-design/technical-communication/infographic.pdf
-image: /projects/narrative-design/technical-communication/infographic.jpg
+image: ../../assets/projects/narrative-design/technical-communication/infographic.jpg
 imageAlt: ""
 featured: false
 ---

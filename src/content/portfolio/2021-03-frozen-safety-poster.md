@@ -6,7 +6,7 @@ clientUrl: https://catalog.upp.pitt.edu/preview_course_nopop.php?catoid=170&coid
 clientClass: "student"
 course: "Introduction to Technical Writing"
 url: /projects/narrative-design/technical-communication/safety.pdf
-image: /projects/narrative-design/technical-communication/safety.jpg
+image: ../../assets/projects/narrative-design/technical-communication/safety.jpg
 imageAlt: ""
 featured: false
 ---
