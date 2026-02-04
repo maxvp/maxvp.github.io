@@ -27,6 +27,9 @@
     "astro": "^5.17.1",
     "typescript": "^5.9.3"
   },
+  "engines": {
+    "node": ">=18.17.1"
+  },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/sitemap": "^3.7.0"
