@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 365 with dedicated egress IPs"
+title: "Microsoft 365 with dedicated egress IPs tutorial"
 date: 2023-12
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"

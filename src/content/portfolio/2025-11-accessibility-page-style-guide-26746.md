@@ -1,5 +1,5 @@
 ---
-title: "Accessibility standards"
+title: "EAA accessibility guidelines"
 date: 2025-11
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"

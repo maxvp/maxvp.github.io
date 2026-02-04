@@ -1,5 +1,5 @@
 ---
-title: "Gateway 'OR' logical operator"
+title: "Gateway OR logical operator"
 date: 2023-02
 client: "Cloudflare"
 clientUrl: "https://cloudflare.com"
