@@ -166,9 +166,11 @@ sitemap.sort((a, b) => {
     const contents = document.querySelectorAll('.sitemap-content');
     const containers = document.querySelectorAll('.sitemap-container');
     
-    // Simple hover logic
+    // Hover or Click logic for mobile support
     containers.forEach(container => {
+        const trigger = container.querySelector('.sitemap-trigger');
         let timeoutId;
+        
         const show = () => {
             clearTimeout(timeoutId);
             container.classList.add('is-active');
@@ -181,7 +183,34 @@ sitemap.sort((a, b) => {
         
         container.addEventListener('mouseenter', show);
         container.addEventListener('mouseleave', hide);
-        
-        // Also handle focus?
+
+        if (trigger) {
+            // Toggle on click for mobile/touch
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isActive = container.classList.contains('is-active');
+                
+                // Close all other active containers first if any
+                document.querySelectorAll('.sitemap-container.is-active').forEach(c => {
+                    if (c !== container) c.classList.remove('is-active');
+                });
+
+                if (isActive) {
+                    container.classList.remove('is-active');
+                } else {
+                    container.classList.add('is-active');
+                }
+            });
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.sitemap-container')) {
+            document.querySelectorAll('.sitemap-container.is-active').forEach(c => {
+                c.classList.remove('is-active');
+            });
+        }
     });
 </script>
