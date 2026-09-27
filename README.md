@@ -2,7 +2,7 @@
 
 My personal portfolio website, found at [maxvphillips.com](https://www.maxvphillips.com/).
 
-Plain HTML and CSS with no framework, no package manager, and no build step for deploys. The only tooling is two POSIX shell scripts for adding entries to the projects list.
+Plain HTML and CSS with no framework, no package manager, and no build step for deploys. The only tooling is a few POSIX shell scripts for adding entries to the projects list.
 
 ```
 projects/*.md            one file per project (source for the projects list)
@@ -10,6 +10,7 @@ scripts/
   new-project.sh         creates a new projects/*.md entry
   build-projects.sh      regenerates the list in site/projects/index.html
   project.awk            renders one entry as HTML (used by build-projects.sh)
+  make-thumbnail.sh      makes a project thumbnail and preview (ImageMagick)
 site/                    deployed exactly as-is
   index.html             home page (hand-edited)
   projects/index.html    projects page (the list inside it is generated)
@@ -87,17 +88,14 @@ _emphasis_ and `code`.
 
 ### Images
 
-Thumbnails go in `site/img/projects/`. Any web format works; the existing ones are webp. Make a 128×128 thumbnail and, optionally, an 800px preview:
+To add a thumbnail, run the thumbnail script on any source image (requires [ImageMagick](https://imagemagick.org), version 6 or 7):
 
 ```bash
-# macOS
-sips -z 128 128 original.png --out site/img/projects/name.png
-sips -Z 800 original.png --out site/img/projects/name-large.png
-
-# Linux (ImageMagick 7; on ImageMagick 6, use `convert` instead of `magick`)
-magick original.png -resize 128x128^ -gravity center -extent 128x128 site/img/projects/name.png
-magick original.png -resize 800x800 site/img/projects/name-large.png
+scripts/make-thumbnail.sh ~/Downloads/original.png            # name from the file: "original"
+scripts/make-thumbnail.sh ~/Downloads/original.png frameflow  # or choose the name
 ```
+
+This writes `site/img/projects/<name>.webp`, a 128×128 center crop, and `<name>-large.webp`, which fits within 800×800 and is never upscaled. It then prints the `image:` and `preview:` lines to paste into the entry. The output is deterministic: settings are fixed, metadata is stripped and processing is single-threaded, so the same image always produces identical files.
 
 ## Deploy
 
