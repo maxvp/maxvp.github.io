@@ -1,0 +1,12 @@
+---
+title: Rushmore Horror edit
+date: 2021-10
+client: University of Pittsburgh
+url: https://youtu.be/BOkxbVqXIes
+featured: false
+image:
+preview:
+alt:
+---
+
+Trailer for Wes Anderson's [Rushmore](https://www.imdb.com/title/tt0128445/), recut to fit within genre conventions of psychological horror/thriller films.

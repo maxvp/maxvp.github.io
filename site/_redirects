@@ -1,0 +1,7 @@
+/archive             /projects/ 301
+/archive/            /projects/ 301
+/archive/index.html  /projects/ 301
+/sitemap-index.xml    /sitemap.xml 301
+/sitemap-0.xml        /sitemap.xml 301
+/blog                /    301
+/blog/*              /    301

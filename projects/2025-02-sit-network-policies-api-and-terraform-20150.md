@@ -1,0 +1,12 @@
+---
+title: API and Terraform policy overhaul
+date: 2025-02
+client: Cloudflare
+url: https://developers.cloudflare.com/cloudflare-one/traffic-policies/
+featured: true
+image:
+preview:
+alt:
+---
+
+Identified a significant documentation gap for enterprise users that require deploying policies at scale. Designed and implemented a technical specification for representing API and Terraform policies alongside UI examples. Led the rollout of these standards across all Gateway documentation, allowing infrastructure-as-code users to implement baseline policies.

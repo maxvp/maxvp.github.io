@@ -1,0 +1,588 @@
+/*** Fonts ***/
+/* Only the serif is a web font (self-hosted, latin subset). Sans and mono use system fonts. */
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/eb-garamond-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "EB Garamond";
+  font-style: italic;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/eb-garamond-latin-italic.woff2") format("woff2");
+}
+
+/*** Tokens ***/
+:root {
+  --background-color: #f3f3ee;
+  --text-color: #1b1512;
+  --border-color: #1b1512;
+  --text-hover-color: rgba(27, 21, 18, 0.06);
+  --link-visited-color: rgba(27, 21, 18, 0.6);
+
+  --font-family-serif:
+    "EB Garamond", ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino,
+    Georgia, serif;
+  --font-family-sans-serif:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  --font-family-monospace:
+    ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", "Courier New",
+    monospace;
+}
+
+/*** Reset (after Josh W. Comeau) ***/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
+/*** Base ***/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family-sans-serif);
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.75em;
+}
+
+ul,
+ol {
+  padding-left: 1.25em;
+}
+
+li {
+  margin: 0.4em 0;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.12em;
+}
+
+a:visited {
+  color: var(--link-visited-color);
+}
+
+a:hover {
+  background-color: var(--text-hover-color);
+  color: inherit;
+}
+
+a:active {
+  background-color: rgba(27, 21, 18, 0.12);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--border-color);
+  outline-offset: 3px;
+}
+
+a:has(img):hover {
+  background-color: var(--background-color);
+}
+
+::selection {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/* Small monospace UI text: marquee, back button, status bar */
+.home-marquee-track span,
+.portfolio-back,
+.status-bar {
+  font-family: var(--font-family-monospace);
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    hyphens: auto;
+  }
+}
+
+/*** Marquee ***/
+.home-marquee {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 2px solid var(--border-color);
+  padding: 0.55rem 0;
+}
+
+.home-marquee-track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: home-marquee 70s linear infinite;
+}
+
+.home-marquee:hover .home-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes home-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*** Sub-page header (marquee with a home button over it) ***/
+.portfolio-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: var(--background-color);
+}
+
+.portfolio-back,
+.portfolio-marquee {
+  grid-row: 1;
+}
+
+.portfolio-marquee {
+  grid-column: 1 / -1;
+}
+
+.portfolio-marquee .home-marquee-track {
+  padding-left: 3rem;
+}
+
+.portfolio-back {
+  grid-column: 1;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: 0 0.75rem;
+  border-right: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--background-color);
+}
+
+.portfolio-back:link,
+.portfolio-back:visited {
+  text-decoration: none;
+}
+
+.portfolio-back:hover,
+.portfolio-back:focus-visible {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/*** Home ***/
+body.home {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.home-photo {
+  border-right: 2px solid var(--border-color);
+  overflow: hidden;
+}
+
+#headshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.home-right {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(min-content, 1fr));
+  min-height: 0;
+  overflow: auto;
+}
+
+.home-panel {
+  padding: clamp(1rem, 2vw, 2rem);
+  min-height: 0;
+  overflow: auto;
+}
+
+.home-about,
+.home-work {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.home-panel h1 {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.home-panel p {
+  max-width: 60ch;
+  margin: 0.9rem 0;
+  font-family: var(--font-family-serif);
+  font-weight: 400;
+  letter-spacing: normal;
+  font-size: clamp(1.4rem, 2vw, 2.25rem);
+  line-height: 1.15;
+}
+
+@media only screen and (max-width: 768px) {
+  body.home {
+    height: auto;
+    overflow: auto;
+  }
+
+  /* Single column: photo, then each panel in source order */
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-right {
+    display: contents;
+  }
+
+  .home-photo {
+    border-right: 0;
+    border-bottom: 2px solid var(--border-color);
+    max-height: 45vh;
+  }
+
+  .home-panel {
+    padding: 0 1rem;
+  }
+
+  .home-about,
+  .home-work {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-panel h1 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+}
+
+/*** Projects ***/
+#portfolio {
+  flex: 1;
+  padding-top: 1.5rem;
+}
+
+.portfolio-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-monospace);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-controls button {
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.15rem 0.6rem;
+  transition:
+    background-color 0.1s,
+    color 0.1s;
+}
+
+.portfolio-controls button:hover,
+.portfolio-controls button[aria-pressed="true"] {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--border-color);
+}
+
+.portfolio-item {
+  padding: 2rem;
+  border-right: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* Set by the filter script: the last visible item in each row has no right border */
+.portfolio-item.is-end-of-row {
+  border-right: 0;
+}
+
+.portfolio-year {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-monospace);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.portfolio-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.portfolio-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.portfolio-title,
+a.portfolio-title {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--font-family-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+}
+
+a.portfolio-title:focus-visible {
+  outline-offset: 4px;
+}
+
+.portfolio-featured {
+  margin-right: 0.35em;
+}
+
+.portfolio-client-subtitle {
+  margin-top: 0.25rem;
+  font-family: var(--font-family-monospace);
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.portfolio-thumb {
+  flex: 0 0 auto;
+}
+
+.portfolio-thumb img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.portfolio-desc {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Large image preview that follows the pointer over a thumbnail */
+.portfolio-image-tooltip {
+  position: fixed;
+  z-index: 1100;
+  pointer-events: none;
+  max-width: 80vw;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  box-shadow: 0 4px 12px rgba(27, 21, 18, 0.1);
+}
+
+.portfolio-image-tooltip img {
+  max-height: 50vh;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .portfolio-desc {
+    margin-top: 0.35rem;
+    padding-top: 0.35rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #portfolio {
+    padding: 1.5rem 1rem 0;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    border: 0;
+  }
+
+  .portfolio-item {
+    border: 0;
+    border-bottom: 2px solid var(--border-color);
+    padding: 2rem 1rem;
+    margin: 0 -1rem;
+  }
+
+  .portfolio-year {
+    opacity: 0.6;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/*** Status bar (footer) ***/
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0.45rem 0.75rem;
+  border-top: 2px solid var(--border-color);
+  background-color: var(--background-color);
+  white-space: nowrap;
+}
+
+/* Overlap the last grid row's bottom border */
+#portfolio ~ .status-bar {
+  margin-top: -2px;
+  position: relative;
+  z-index: 10;
+}
+
+.status-bar a:link,
+.status-bar a:visited {
+  text-decoration-style: dotted;
+}
+
+.sitemap {
+  position: relative;
+}
+
+.sitemap summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.sitemap summary::-webkit-details-marker {
+  display: none;
+}
+
+.sitemap summary:hover {
+  background-color: var(--text-hover-color);
+}
+
+.sitemap-list {
+  position: absolute;
+  bottom: calc(100% + 1.5rem);
+  left: 0;
+  z-index: 9999;
+  min-width: 280px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  box-shadow: 0 -4px 12px rgba(27, 21, 18, 0.1);
+  font-size: 0.9em;
+  list-style: none;
+}
+
+.sitemap-list ul {
+  list-style: none;
+  margin-left: 0.25em;
+  padding-left: 1.25em;
+  border-left: 1px solid rgba(127, 127, 127, 0.2);
+}
+
+.sitemap li {
+  margin: 0.25em 0;
+}
+
+.sitemap-dir {
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+.sitemap-list a:link,
+.sitemap-list a:visited {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/*** Print & motion ***/
+@media print {
+  body {
+    padding: 0.75in;
+    font-size: 11pt;
+    font-weight: 400;
+  }
+
+  #headshot {
+    display: none;
+  }
+
+  a:link,
+  a:visited {
+    color: #000000;
+    background: transparent;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-family: var(--font-family-monospace);
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
